@@ -18,3 +18,7 @@ _Note: Some images and other assets have been removed due to copyright and non-d
 ## Site building
 
 * [Drupal 8 custom module example](project_a/web/modules/custom/micro): This simple Drupal 8 custom entity module created a new entity that was used in BEAN-like form across pages and features, as opposed to having the client create and manage many custom blocks. While this isn't a complicated custom module, I think it demonstrates my understandings of how to work with custom entities. Includes menu routing, permissions, an administration view, and overridable Twig templates.
+
+## Documentation
+
+* For the first project above (Project A), I was working with several junior developers, both on our team and on the client's team. As a result, I spent a lot of time developing tools and documentation to aid in their work. Two good examples of this are my writeups of [general development documentation](project_a/docs/development.md) and [frontend documentation](project_a/docs/frontend.md), which mentions specific gulp- and node-based tools that I created to ease their workflow.

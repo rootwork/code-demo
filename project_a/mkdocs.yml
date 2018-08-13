@@ -1,0 +1,9 @@
+site_name: PROJECT_A Drupal 8 Developer Documentation
+theme: readthedocs
+pages:
+- Overview: index.md
+- Development: development.md
+- Backend: backend.md
+- Frontend: frontend.md
+- Deployment: deployment.md
+- Releases: releases.md
