@@ -1,0 +1,58 @@
+{
+  "fonts": {
+    "base": "public/assets/fonts/",
+    "dest": "assets/fonts/"
+  },
+  "images": {
+    "base": "public/assets/images/",
+    "dest": "assets/images/"
+  },
+  "patternlab": {
+    "base": "patternlab/",
+    "source": "source/_patterns/"
+  },
+  "scripts": {
+    "base": "source/assets/js/",
+    "files": [
+      "../../../node_modules/jquery.easing/jquery.easing.min.js",
+      "../../../node_modules/isotope-layout/dist/isotope.pkgd.min.js",
+      "../../../node_modules/slick-carousel/slick/slick.min.js",
+      "../../../node_modules/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js",
+      "vendor/*.js",
+      "project_a/util.js",
+      "project_a/window-events.js",
+      "project_a/block-toggle-item.js",
+      "project_a/carousel-article.js",
+      "project_a/carousel-hero.js",
+      "project_a/carousel-social.js",
+      "project_a/carousel-text.js",
+      "project_a/filter-checkbox.js",
+      "project_a/filter-date.js",
+      "project_a/filter-highlights.js",
+      "project_a/filter-primary-search.js",
+      "project_a/filter-program.js",
+      "project_a/filter-selected.js",
+      "project_a/filter-sub-option-toggle.js",
+      "project_a/filter-toggle.js",
+      "project_a/overlay-link.js",
+      "project_a/layout-masonry.js",
+      "project_a/main-search.js",
+      "project_a/mobile-nav.js",
+      "project_a/init.js"
+    ],
+    "dest": "assets/js/",
+    "compiled": "pl.js"
+  },
+  "styles": {
+    "base": "public/assets/css/",
+    "files": [
+      "style.css"
+    ],
+    "dest": "assets/css/",
+    "compiled": "pl.css"
+  },
+  "theme": {
+    "base": "web/themes/custom/project_a_v2/",
+    "assets": "assets"
+  }
+}
