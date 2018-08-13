@@ -1,0 +1,39 @@
+// News callout listing
+//
+// .news--brief - The "brief" news variant.
+//
+// Markup: news-listing.twig
+//
+// Style guide: modules.news-listing
+
+.news-listing {
+  @include clearfix;
+}
+
+
+// Non-BEMy bits we're not proud of.
+.feed-icon {
+  position: absolute;
+  top: 1ex;
+  right: 0;
+
+  img {
+    @extend %img--border-off;
+  }
+
+  &:hover,
+  &:active {
+    text-decoration: none;
+    border-bottom: none;
+  }
+
+  .sidebar & {
+    display: none;
+  }
+}
+
+// This is done to help position the feed-icon.
+.block.project_c-news-tags,
+.block.project_c-news-tags--brief {
+  position: relative;
+}

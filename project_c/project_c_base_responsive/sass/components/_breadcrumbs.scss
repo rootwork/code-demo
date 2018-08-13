@@ -1,0 +1,45 @@
+// Breadcrumbs
+//
+// Markup:
+// <div id="breadcrumb"><div class="breadcrumb"><a href="/">Home</a> / <a href="/admin">Administration</a> / <a href="/admin/appearance" title="Select and configure your themes.">Appearance</a></div></div>
+//
+// Style guide: components.breadcrumbs
+
+.breadcrumb {
+  @include typeface(sans-serif);
+  @include typeset(breadcrumb);
+}
+
+.breadcrumb-list {
+  @include margin(0);
+  @include padding(0);
+
+  li {
+    @extend %list-item-none;
+    display: inline-block;
+    @include margin(0);
+
+    &::after {
+      display: inline-block;
+      @include margin(0 0.25);
+      @include font-size(s);
+      content: '/';
+    }
+
+    &.active {
+      color: color(default);
+
+      &::after {
+        content: '';
+      }
+    }
+  }
+
+  a {
+    color: color(link);
+
+    @include is-on {
+      color: color(link--active);
+    }
+  }
+}

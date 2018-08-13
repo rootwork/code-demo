@@ -1,0 +1,12 @@
+// Skip-to-content link
+//
+// To test, click on the word "Example" below and then hit the <tab> key.
+//
+// Markup:
+// <p class="skip-link__wrapper"><a href="#main-content" class="skip-link visually-hidden visually-hidden--focusable" id="skip-link">Skip to main content</a></p>
+//
+// Style guide: components.skip-link
+
+.skip-link__wrapper {
+  margin: 0;
+}

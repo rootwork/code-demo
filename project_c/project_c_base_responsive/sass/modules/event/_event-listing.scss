@@ -1,0 +1,11 @@
+// Event listing
+//
+// .event--caption - The "caption" event variant.
+//
+// Markup: event-listing.twig
+//
+// Style guide: modules.event-listing
+
+.event-listing {
+  @include clearfix;
+}

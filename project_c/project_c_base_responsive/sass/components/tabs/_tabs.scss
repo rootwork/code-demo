@@ -1,0 +1,113 @@
+// Tabs
+//
+// .tabs--secondary - The secondary, smaller tab variant.
+//
+// Markup: tabs.twig
+//
+// Style guide: components.tabs
+
+%tabs {
+  @extend %list-unlist;
+  margin: 0;
+  overflow: hidden;
+  text-align: left;
+  border-bottom: 1px color(border) solid;
+}
+
+%tabs--secondary {
+  border-bottom: none;
+}
+
+%tabs__tab {
+  @extend %list-item-none;
+  display: inline-block;
+}
+
+%tabs__link {
+  @include typeface(sans-serif);
+  @include typeset(tab);
+  display: inline-block;
+  padding: $gutter;
+  color: color(tab);
+  background-color: color(tab-bg);
+  border-radius: $border-radius;
+
+  @include mq(medium) {
+    padding: $gutter ($gutter * 2 / 3);
+    border-radius: $border-radius $border-radius 0 0;
+    transform: translateY($gutter / 3);
+  }
+
+  @include mq(large) {
+    padding: $gutter;
+  }
+
+  @include is-on {
+    color: color(tab);
+    border-bottom-color: transparent;
+    transform: translateY(0);
+  }
+
+  &:visited {
+    color: color(tab);
+  }
+
+  &.is-active {
+    color: color(tab--active);
+    background-color: color(tab-bg--active);
+    transform: translateY(0);
+  }
+}
+
+%tabs--secondary__link {
+  @include typeset(tab-secondary);
+  padding: ($gutter / 2) $gutter;
+  background-color: color(tab-secondary-bg);
+
+  @include mq(medium) {
+    padding: ($gutter / 2) ($gutter * 2 / 3);
+    border-radius: $border-radius;
+    transform: translateY(0);
+  }
+
+  @include mq(large) {
+    padding: ($gutter / 2) $gutter;
+  }
+
+  &.is-active {
+    text-decoration: underline;
+
+    @include mq(medium) {
+      border-radius: $border-radius;
+      transform: translateY(0);
+    }
+  }
+}
+
+ul.tabs {
+  @extend %tabs;
+
+  &.tabs--secondary {
+    @extend %tabs--secondary;
+  }
+}
+
+div.tabs:not(:empty) {
+  border-bottom: 1px solid color(border);
+
+  ul.tabs:only-of-type li.active {
+    border-bottom-width: 0;
+  }
+}
+
+.tabs__tab {
+  @extend %tabs__tab;
+}
+
+.tabs__link {
+  @extend %tabs__link;
+
+  .tabs--secondary & {
+    @extend %tabs--secondary__link;
+  }
+}

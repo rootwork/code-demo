@@ -1,0 +1,18 @@
+.slideshow-wrapper {
+  @include mq(large) {
+    max-width: width(slideshow--small);
+  }
+}
+
+.slide-img-medium {
+  @include mq(large) {
+    display: none;
+  }
+}
+
+.slide-img-small {
+  display: none;
+  @include mq(large) {
+    display: block;
+  }
+}

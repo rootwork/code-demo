@@ -1,0 +1,98 @@
+// Footer
+//
+// See non-layout styles in modules/footer.
+//
+// No style guide reference.
+
+.footer {
+  @include clearfix;
+  overflow: visible;
+
+  @include mq(large) {
+    position: relative;
+    padding-top: (width(footer-height) + 4.5rem);
+  }
+}
+
+.footer__wrapper {
+  position: relative;
+
+  @include mq(large) {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: width(footer-height);
+  }
+}
+
+.footer__content {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  max-width: 100vw;
+  padding: $gutter $outside-gutter;
+
+  @include mq(medium) {
+    display: block;
+    max-width: 100%;
+    padding: 0 $outside-gutter;
+  }
+
+  @include mq(large) {
+    max-width: width(max-content);
+    margin: 0 auto;
+    padding-top: width(footer-height);
+  }
+}
+
+.navigation--footer {
+  width: 100%;
+  @include margin(2 0 1);
+
+  @include mq(medium) {
+    display: inline-block;
+    width: 66%;
+    vertical-align: top;
+    @include margin(1 0);
+  }
+
+  .links,
+  .links.inline {
+    text-align: left;
+
+    @include mq(medium) {
+      text-align: right;
+      display: block;
+      margin: 0;
+    }
+
+    li {
+      display: block;
+      @include margin-bottom(0.25);
+      @include padding(0);
+
+      @include mq(medium) {
+        display: inline-block;
+        vertical-align: top;
+        @include margin-left(0.5);
+
+        &:first-of-type {
+          @include margin-left(0);
+        }
+      }
+    }
+  }
+}
+
+.copyright {
+  order: 2;
+  width: 100%;
+  @include margin(0 0 1);
+
+  @include mq(medium) {
+    float: left;
+    width: 33%;
+    @include margin(1 0);
+  }
+}
+

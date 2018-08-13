@@ -1,0 +1,12 @@
+{# Markup for the styleguide display of this module. #}
+{% if modifier_class == 'people-profile--listing' or modifier_class == 'people-profile--spotlight' or modifier_class == 'people-profile--simple' %}
+  <div class="people-profile-listing">
+    {% include "people-profile.twig" %}
+    {% include "people-profile.twig" %}
+    {% include "people-profile.twig" %}
+    {% set image_none = "yes" %}
+    {% include "people-profile.twig" %}
+    {% include "people-profile.twig" %}
+    {% include "people-profile.twig" %}
+  </div>
+{% endif %}

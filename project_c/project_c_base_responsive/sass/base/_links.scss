@@ -1,0 +1,21 @@
+// Links
+//
+// Markup:
+// <p>Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing</a> elit.</p>
+//
+// Style guide: base.links
+
+a {
+  color: color(link);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+
+  &:visited {
+    color: color(link);
+  }
+
+  @include is-on {
+    color: color(link--active);
+    border-color: color(link--active);
+  }
+}

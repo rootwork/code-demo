@@ -1,0 +1,35 @@
+// Body container
+//
+// See non-layout styles in base/body.
+//
+// No style guide reference.
+
+body {
+
+  &::after {
+    content: 'small';
+    display: none;
+
+    @include mq(medium) {
+      content: 'medium';
+    }
+
+    @include mq(large) {
+      content: 'large';
+    }
+  }
+}
+
+.body-wrapper {
+  flex: 1;
+  position: relative;
+  z-index: 1;
+
+  @include mq(large) {
+    max-width: width(max-content);
+    margin: 0 auto (width(content-footer-overlay) * -1);
+    background-color: color(background);
+    border-bottom: width(content-footer-border) solid color(page-bottom);
+    box-shadow: 0 4px 3px 1px color(page-border);
+  }
+}

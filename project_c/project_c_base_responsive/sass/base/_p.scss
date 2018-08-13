@@ -1,0 +1,16 @@
+// Paragraphs
+//
+// Markup:
+// <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lacinia ante non dolor viverra iaculis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Thequickbrownfoxjumpedoverthelazydogthequickbrownfoxjumpedoverthelazydogthequickbrownfoxjumpedoverthelazydogthequickbrownfoxjumpedoverthelazydogthequickbrownfoxjumpedoverthelazydogthequickbrownfoxjumpedoverthelazydog In adipiscing pulvinar eros, vitae dictum elit cursus a. Praesent a hendrerit urna. Maecenas neque libero, viverra in neque at, posuere tempor metus. Vestibulum neque nisi, malesuada sed ipsum varius, bibendum ornare nisl.</p>
+// <p>Aliquam adipiscing vehicula varius. Morbi a interdum lacus. Integer luctus lobortis magna, nec vulputate augue blandit ac.</p>
+//
+// Style guide: base.paragraphs
+
+p {
+  @include typeset(paragraph);
+  @include margin(0 0 1);
+
+  .sidebar & {
+    @include font-size(s);
+  }
+}

@@ -1,0 +1,41 @@
+// File upload
+//
+// markup:
+// <div id="edit-submitted-file-ajax-wrapper">
+//   <div class="form-item">
+//     <label for="edit-submitted-file-upload">File</label>
+//     <div class="form-managed-file">
+//       <label class="form-file-label"><span style="display: none;" class="form-file-label__text">Choose file</span><input type="file" id="edit-submitted-file-upload" name="files[submitted_file]" size="22" class="form-file" /></label>
+//       <input type="submit" id="edit-submitted-file-upload-button" name="submitted_file_upload_button" value="Upload" class="form-submit" />
+//       <input type="hidden" name="submitted[file][fid]" value="0" />
+//     </div>
+//   <div class="description">Files must be less than <strong>2 MB</strong>.<br />Allowed file types: <strong>gif jpg jpeg png</strong>.</div>
+// </div>
+//
+// Style guide: base.forms.file-upload
+
+input[type='file'] {
+  @include font-size(m);
+}
+
+.form-managed-file {
+
+  // File upload submit
+  input[type='submit'] {
+    @extend %button;
+  }
+
+  // File icon and filename
+  .file {
+    display: inline-block;
+    margin-right: $gutter;
+    @include typeface(sans-serif);
+    @include font-size(s);
+  }
+
+  .file-icon {
+    vertical-align: middle;
+    margin-right: ($gutter / 10);
+    border: none;
+  }
+}

@@ -1,0 +1,21 @@
+// Project_c logo
+//
+// For responsive themes, this is a vector-based SVG file with internal links.
+//
+// Markup: logo.twig
+//
+// Style guide: components.logo
+
+.logo {
+  max-width: 100%;
+  margin-bottom: $gutter;
+  line-height: 1;
+}
+
+// Project_c-PROJECT_C logo
+//
+// This variation of the logo is selected in the theme settings.
+//
+// Markup: logo--project_c.twig
+//
+// Style guide: components.logo.project_c

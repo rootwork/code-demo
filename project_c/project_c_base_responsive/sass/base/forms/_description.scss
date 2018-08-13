@@ -1,0 +1,18 @@
+// Form element descriptions
+//
+// markup:
+// <div class="form-item">
+//   <label>Label</label>
+//   <input type="text" placeholder="placeholder">
+//   <div class="description">Form element description.</div>
+// </div>
+//
+//
+// Style guide: base.forms.descriptions
+
+.description {
+  @include margin(0.25 0);
+  @include typeface(sans-serif);
+  @include font-size(13px);
+  color: color(label);
+}

@@ -1,0 +1,40 @@
+// Radio buttons
+//
+// markup:
+// <div class="form-item">
+//   <label for="edit-submitted-options-radio">Label</label>
+//   <div id="edit-submitted-options-radio" class="form-radios">
+//     <div class="form-item form-type-radio form-item-submitted-options-radio">
+//       <input type="radio" id="edit-submitted-options-radio-1" name="submitted[options_radio]" value="sunday" class="form-radio" />
+//       <label class="option" for="edit-submitted-options-radio-1">Sunday</label>
+//     </div>
+//     <div class="form-item form-type-radio form-item-submitted-options-radio">
+//       <input type="radio" id="edit-submitted-options-radio-2" name="submitted[options_radio]" value="monday" class="form-radio" />
+//       <label class="option" for="edit-submitted-options-radio-2">Monday</label>
+//     </div>
+//     <div class="form-item form-type-radio form-item-submitted-options-radio">
+//       <input type="radio" id="edit-submitted-options-radio-3" name="submitted[options_radio]" value="tuesday" class="form-radio" />
+//       <label class="option" for="edit-submitted-options-radio-3">Tuesday</label>
+//     </div>
+//     <div class="form-item form-type-radio form-item-submitted-options-radio">
+//       <input type="radio" id="edit-submitted-options-radio-4" name="submitted[options_radio]" value="wednesday" class="form-radio" />  <label class="option" for="edit-submitted-options-radio-4">Wednesday</label>
+//     </div>
+//     <div class="form-item form-type-radio form-item-submitted-options-radio">
+//       <input type="radio" id="edit-submitted-options-radio-5" name="submitted[options_radio]" value="thursday" class="form-radio" />
+//       <label class="option" for="edit-submitted-options-radio-5">Thursday</label>
+//     </div>
+//     <div class="form-item form-type-radio form-item-submitted-options-radio">
+//       <input type="radio" id="edit-submitted-options-radio-6" name="submitted[options_radio]" value="friday" class="form-radio" />  <label class="option" for="edit-submitted-options-radio-6">Friday</label>
+//     </div>
+//     <div class="form-item form-type-radio form-item-submitted-options-radio">
+//       <input type="radio" id="edit-submitted-options-radio-7" name="submitted[options_radio]" value="saturday" class="form-radio" />
+//       <label class="option" for="edit-submitted-options-radio-7">Saturday</label>
+//     </div>
+//   </div>
+// </div>
+//
+// Style guide: base.forms.radiobuttons
+
+.form-type-radio {
+  display: block;
+}

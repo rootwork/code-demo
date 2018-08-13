@@ -1,0 +1,10 @@
+// Breadcrumbs
+//
+// See non-layout styles in components/breadcrumbs.
+//
+// No style guide reference.
+
+.breadcrumb {
+  @include margin(0.75 0);
+  @include padding(0);
+}

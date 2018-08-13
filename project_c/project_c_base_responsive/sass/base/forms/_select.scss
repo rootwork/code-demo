@@ -1,0 +1,68 @@
+// Select elements
+//
+// markup:
+// <div class="form-item">
+//   <select name="submitted[options]" class="form-select">
+//     <option value="" selected="selected">- None -</option>
+//     <option value="sunday">Sunday</option>
+//     <option value="monday">Monday</option>
+//     <option value="tuesday">Tuesday</option>
+//     <option value="wednesday">Wednesday</option>
+//     <option value="thursday">Thursday</option>
+//     <option value="friday">Friday</option>
+//     <option value="saturday">Saturday</option>
+//   </select>
+// </div>
+// <div class="form-item">
+//   <select multiple="multiple" name="submitted[options_select2][]" size="4" class="form-select">
+//     <option value="sunday">Sunday</option>
+//     <option value="monday">Monday</option>
+//     <option value="tuesday">Tuesday</option>
+//     <option value="wednesday">Wednesday</option>
+//     <option value="thursday">Thursday</option>
+//     <option value="friday">Friday</option>
+//     <option value="saturday">Saturday</option>
+//   </select>
+// </div>
+//
+// Style guide: base.forms.select
+
+select {
+  width: 100%;
+  max-width: 100%;
+  height: 2.5rem;
+  @include padding(0 0.5);
+  @include typeface(sans-serif);
+  @include font-size(s);
+  color: color(input);
+  border: 1px solid color(border--form);
+  border-radius: ($border-radius / 2);
+  background-image: linear-gradient(color(input__background), color(background));
+
+  @include mq(medium) {
+    width: 80%;
+  }
+
+  @include mq(large) {
+    width: 50%;
+  }
+
+  .sidebar & {
+    width: 100%;
+  }
+
+  .webform-component--date &,
+  .webform-component--time & {
+    width: auto;
+    @include padding(0);
+  }
+
+  &.error {
+    border: 2px solid color(error);
+    background-color: color(background--sidebar);
+  }
+
+  &:disabled {
+    background-image: linear-gradient(color(input__background), color(input__background));
+  }
+}

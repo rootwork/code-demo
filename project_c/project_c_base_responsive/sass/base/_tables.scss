@@ -1,0 +1,50 @@
+// Tables
+//
+// Markup:
+// <table>
+//   <thead>
+//     <th>Lorem</th>
+//     <th>Ipsum</th>
+//     <th>Dolor</th>
+//   </thead>
+//   <tbody>
+//     <tr>
+//       <td>Sit amet, consectetur adipiscing elit.</td>
+//       <td>Vestibulum lacinia ante non dolor viverra iaculis.</td>
+//       <td>Class aptent taciti sociosqu ad litora torquent per conubia nostra.</td>
+//     </tr>
+//     <tr>
+//       <td>Per inceptos himenaeos.</td>
+//       <td>In adipiscing pulvinar eros, vitae dictum elit cursus a.</td>
+//       <td>Maecenas neque libero, viverra in neque at, posuere tempor metus.</td>
+//     </tr>
+//   </tbody>
+// </table>
+//
+// Style guide: base.tables
+
+table {
+  width: 100%;
+  @include margin(1 0);
+  border-collapse: collapse;
+  font-size: inherit;
+  color: inherit;
+  text-align: left;
+}
+
+thead,
+tbody {
+}
+
+th {
+  vertical-align: top;
+  @include padding(0.5);
+  font-weight: weight(bold);
+  text-transform: uppercase;
+}
+
+td {
+  vertical-align: top;
+  @include padding(0.5);
+  border-bottom: 1px solid color(border);
+}

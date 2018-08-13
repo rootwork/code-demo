@@ -1,0 +1,21 @@
+// Unpublished nodes
+//
+// Markup: unpublished.twig
+//
+// Style guide: components.unpublished
+
+.node--unpublished {
+  margin: ($gutter * -0.25);
+  padding: ($gutter * 0.25);
+  background-color: color(background--unpublished);
+}
+
+.watermark--unpublished {
+  display: inline-block;
+  @include margin(0 0 1);
+  @include padding(0.5);
+  @include typeface(sans-serif);
+  @include font-size(l);
+  color: $white;
+  background-color: $red;
+}

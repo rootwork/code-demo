@@ -1,0 +1,152 @@
+// Drupal messages and help text
+//
+// Markup: drupal-messages.twig
+//
+// Style guide: components.drupal-messages
+
+%message {
+  @include margin(0);
+  padding: $gutter $outside-gutter;
+  @include typeface(sans-serif);
+  @include font-size(s);
+  text-align: center;
+  background-image: none;
+  background-color: color(messages);
+
+  @include mq(medium) {
+    margin-left: ($outside-gutter * -1);
+    margin-right: ($outside-gutter * -1);
+    text-align: left;
+  }
+
+  p {
+    @include font-size(s);
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+div.messages, // div necessary to override Drupal styles
+.region-help {
+  @extend %message;
+  border: none;
+  border-top: 1px color(background--body) solid;
+}
+
+.action-links {
+  @extend %message;
+  @include margin(1 0);
+}
+
+div.messages {
+
+  &:last-of-type {
+    @include margin-bottom(1);
+  }
+
+  @include mq(medium) {
+    margin-left: ($outside-gutter * -1);
+    margin-right: ($outside-gutter * -1);
+  }
+}
+
+// Status (success) message
+.messages.messages--status {
+  background-color: color(messages--status);
+}
+
+// Warning message
+.messages.messages--warning {
+  background-color: color(messages--warning);
+}
+
+// Error message
+.messages.messages--error {
+  background-color: color(messages--error);
+}
+
+// Metadata message
+.messages.messages--metadata {
+}
+
+// Post state message
+.messages.messages--post-status {
+  font-weight: weight(bold);
+}
+
+// Post state: Published
+.messages.messages--published {
+  background-color: color(messages--status);
+}
+
+// Post state: Published with draft
+.messages.messages--published-draft {
+  background-color: color(messages--warning);
+}
+
+// Post state: Unpublished
+.messages.messages--unpublished {
+  background-color: color(messages--error);
+}
+
+// Webform confirmation message
+.messages.messages--webform-confirmation {
+  @include margin-bottom(1);
+  background-color: color(messages--status);
+
+  @include mq(medium) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+// Messages icon
+.messages__icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: $gutter;
+
+  .messages--metadata &,
+  .messages--post-status & {
+    display: inline;
+    margin-right: 0;
+  }
+}
+
+.messages__message,
+.messages__list {
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  text-align: left;
+
+  @include mq(medium) {
+    width: 90%;
+  }
+
+  .messages--metadata &,
+  .messages--post-status & {
+    @include mq(medium) {
+      width: 100%;
+    }
+  }
+}
+
+.messages__list {
+  padding: 0;
+  margin: 0;
+}
+
+.messages__item {
+  margin: $gutter 0 $gutter ($gutter / 2);
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

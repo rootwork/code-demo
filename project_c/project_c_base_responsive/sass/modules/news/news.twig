@@ -1,0 +1,38 @@
+{# Markup for the styleguide display of this module. #}
+{% if image_small or image_large %}
+  {% set image = 'yes' %}
+{% endif %}
+{% if image_none %}
+  {% set image = '' %}
+  {% set image_class = 'news--no-image' %}
+{% endif %}
+
+{% block news_item %}
+  <div class="news {{modifier_class}} {{image_class}}">
+    {% if image %}
+      <div class="news__image-wrapper">
+        {% if modifier_class == 'news--featured' or modifier_class == 'news--brief news--featured' %}
+          <a href="{{url}}" class="news__image-link"><img class="news__image" src="{{image_large}}" /></a>
+        {% else %}
+          <a href="{{url}}" class="news__image-link"><img class="news__image" src="{{image_small}}" /></a>
+        {% endif %}
+      </div>
+    {% endif %}
+    <div class="news__content-wrapper">
+    <h3 class="news__title"><a href="{{url}}">{{title}}</a></h3>
+    {% if modifier_class != 'news--brief' %}
+      <div class="news__date">{{date}}</div>
+      <div class="news__body">
+        {{body}}
+        <a href="{{url}}" class="news__link">Read more.</a>
+      </div>
+    {% endif %}{#
+    <div class="news__tags">
+      <div class="news__tags-label">Tags:</div>
+      <div class="news__tag">
+        <a href="#" class="news__tag-link">{{tags}}</a>
+      </div>
+    </div>
+    #}</div>
+  </div>
+{% endblock %}

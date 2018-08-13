@@ -1,0 +1,67 @@
+// Footer
+//
+// Markup: footer.twig
+//
+// Weight: -1
+//
+// Style guide: modules.footer
+
+.footer {
+  @include typeface(sans-serif);
+  color: color(footer-text);
+  background-color: color(footer-bg);
+
+  @include mq(medium) {
+    border-top: 10px color(footer-border) solid;
+  }
+
+  @include mq(large) {
+    border-top: none;
+  }
+}
+
+.footer__wrapper {
+
+  @include mq(large) {
+    background-image: linear-gradient(color(footer__inner-top), color(footer__inner-bottom));
+    border-bottom: 1px color(footer__inner-bottom) solid;
+    box-shadow: 0 -1px 0 color(footer-bg) inset;
+
+    &::before {
+      display: block;
+      background-color: color(footer-bg);
+    }
+  }
+}
+
+.navigation--footer {
+
+  .links,
+  .links.inline {
+
+    li {
+      @include font-size(s);
+    }
+
+    a {
+      color: color(footer-text);
+      border-color: transparent;
+
+      @include is-on {
+        border-color: color(footer-text);
+      }
+    }
+  }
+}
+
+.copyright {
+  @include font-size(s);
+
+  a {
+    color: color(footer-text);
+
+    @include is-on {
+      border-color: color(footer-text);
+    }
+  }
+}

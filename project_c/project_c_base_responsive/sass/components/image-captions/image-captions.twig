@@ -1,0 +1,9 @@
+{# Markup for the styleguide display of this component. #}
+{% for image in images %}
+  <figure class="image-caption">
+    <img src="{{image.image_src}}" />
+    <figcaption>
+      <p>{{image.caption}}</p>
+    </figcaption>
+  </figure>
+{% endfor %}

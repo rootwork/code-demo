@@ -1,0 +1,17 @@
+// Form label
+//
+// markup:
+// <div class="form-item"><label>Label</label> <input type="text"></div>
+//
+// Style guide: base.forms.label
+
+label {
+  @include typeface(sans-serif);
+  @include typeset(label);
+  @include margin-bottom(0.25);
+  color: color(label);
+
+  &.option {
+    font-weight: weight(normal);
+  }
+}

@@ -1,0 +1,138 @@
+// Secondary navigation
+//
+// Markup: navigation-secondary.twig
+//
+// Style guide: modules.navigation.secondary
+
+// Standard link colors for submenus.
+%nav-link {
+  color: color(nav-link);
+
+  @include is-on {
+    color: color(nav-link-alt);
+  }
+}
+
+// Alternate link colors for submenus.
+%nav-link-alt {
+  color: color(nav-link-alt);
+
+  @include is-on {
+    color: color(nav-link);
+  }
+}
+
+// Active trail link colors for submenus. !important is appropriate here
+// because we want it to override regardless of the nesting level it's at.
+%nav-link--active-trail {
+  color: color(nav-link) !important;
+
+  @include is-on {
+    color: color(nav-link-alt) !important;
+  }
+}
+
+.navigation--secondary {
+  background-color: color(background--sidebar);
+  border-bottom: 3px solid color(border--sidebar);
+
+  > .menu {
+    @include margin(0);
+    @include padding(0);
+    @include typeface(sans-serif);
+    @include typeset(menu-secondary);
+
+    .menu {
+      padding: 0;
+    }
+
+    li {
+      @extend %list-item-none;
+      @include margin-left(0);
+      @include padding(0);
+
+      a {
+        display: block;
+        @include padding (0.5 1.5);
+        color: color(default);
+
+        @include is-on {
+          color: color(link);
+          border-bottom-color: transparent;
+        }
+
+        &.active-trail {
+          font-weight: weight(bold);
+        }
+      }
+    }
+
+    // Menu section header
+    > li.active-trail > a {
+      @extend %h1;
+      display: inline-block;
+      width: 100%;
+      @include margin(0);
+      @include padding (0.5);
+      color: color(page-header);
+      background-color: color(page-header-bg);
+
+      @include mq(medium) {
+        @include padding (0.5 1.5);
+        @include typeface(sans-serif);
+        @include typeset(menu-secondary);
+        font-weight: weight(bold);
+        color: color(link);
+        background-color: transparent;
+      }
+    }
+
+    // Section menu
+    > li > .menu {
+
+      @include mq(medium) {
+        @include padding-top(0.5);
+        border-top: 1px color(border) solid;
+      }
+
+      // First-level submenu
+      > li {
+
+        &.active-trail {
+          background-color: color(nav-secondary-bg);
+
+          > a.active-trail {
+            background-color: color(nav-secondary-bg--active);
+          }
+        }
+
+        // Second-level submenus and beyond
+        .menu li {
+          @include padding (0 0.5);
+
+          a {
+            @extend %nav-link;
+          }
+
+          // Third-level submenus and beyond
+          .menu li {
+            a {
+              @extend %nav-link-alt;
+
+              &.active {
+                @extend %nav-link;
+              }
+            }
+          }
+        }
+
+        // Active items and active trail
+        &.is-active-trail > a,
+        .is-active-trail,
+        .active {
+          @extend %nav-link--active-trail;
+        }
+      }
+    }
+  }
+}

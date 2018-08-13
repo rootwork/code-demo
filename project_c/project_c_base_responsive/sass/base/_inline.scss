@@ -1,0 +1,94 @@
+// Inline styles
+//
+// Style guide: base.inline
+
+// Strong text
+//
+// Markup:
+// <p><strong>Strong text.</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lacinia ante non dolor viverra iaculis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In adipiscing pulvinar eros, vitae dictum.</p>
+//
+// Weight: -2
+//
+// Style guide: base.inline.strong
+
+strong,
+b {
+  font-weight: weight(bold);
+}
+
+// Emphasized text
+//
+// Markup:
+// <p><em>Emphasized text.</em> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lacinia ante non dolor viverra iaculis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In adipiscing pulvinar eros, vitae dictum.</p>
+//
+// Weight: -1
+//
+// Style guide: base.inline.emphasized
+
+em,
+i {
+  font-style: italic;
+}
+
+// Underlined text
+//
+// Markup:
+// <p><u>(Attempted) underlined text.</u> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lacinia ante non dolor viverra iaculis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In adipiscing pulvinar eros, vitae dictum.</p>
+//
+// Style guide: base.inline.underlined
+
+u,
+ins {
+  text-decoration: none;
+  font-style: italic;
+}
+
+// Small text
+//
+// Markup:
+// <p><small>Small text.</small> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lacinia ante non dolor viverra iaculis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In adipiscing pulvinar eros, vitae dictum.</p>
+//
+// Style guide: base.inline.small
+
+small {
+  @include font-size(s);
+}
+
+// Superscript and subscript
+//
+// Markup:
+// <p>Text with <sup>superscript</sup> and <sub>subscript</sub>. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lacinia ante non dolor viverra iaculis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In adipiscing pulvinar eros, vitae dictum.</p>
+//
+// Style guide: base.inline.supsub
+
+sub,
+sup {
+  @include font-size(s);
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5rem;
+}
+
+sub {
+  bottom: -0.25rem;
+}
+
+// Preformatted and code text
+//
+// Markup:
+// <p><pre>Preformatted and code text.
+// Lorem ipsum dolor sit amet, consectetur
+// adipiscing elit.  Vestibulum lacinia ante
+// non dolor viverra iaculis.  Class aptent.</pre></p>
+// <p>Some <code>inline code</code> text.</p>
+//
+// Style guide: base.inline.precode
+
+pre,
+code {
+  @include typeface(monospace);
+  @include typeset(pre);
+}

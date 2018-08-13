@@ -1,0 +1,64 @@
+@charset 'utf-8';
+
+// @file
+// The major stylesheet for this theme.
+//
+// We categorize our components by creating headings in this file. Note that per the KSS documentation, "not every CSS rule should be documented." Only rules that describe visual UI elements are documented in the style guide. Therefore, there is not (and does not need to be) a 1:1 correspondence between the style guide sections and the Sass folders and partials.
+//
+// Because of the way the style guide is compiled, this theme's Sass has to duplicate imports from the base theme prior to adding its own styles.
+
+// Functions, mixins and third-party libraries
+//
+// These are documented by SassDoc or their own help files, and not included in the style guide.
+@import '../../project_c_base_responsive/sass/global/functions';
+@import '../../project_c_base_responsive/sass/global/mixins';
+@import '../../project_c_base_responsive/sass/global/vendor';
+
+// Variables
+//
+// Things like base colors, sizes and typography. These are documented by SassDoc, and not included in the style guide.
+@import '../../project_c_base_responsive/sass/global/variables/*';
+
+// Base defaults
+//
+// These are the default styles applied to HTML elements.
+//
+// Component classes can override these styles, but if no class applies a style to an HTML element, these styles will be the ones displayed.
+//
+// Weight: -1
+//
+// Style guide: base
+@import '../../project_c_base_responsive/sass/base/*';
+@import 'base/*';
+
+// Layout
+//
+// These structural styles are not included in the style guide.
+@import '../../project_c_base_responsive/sass/layout/*';
+@import 'layout/*';
+
+// Components
+//
+// Design components are reusable designs that can be applied using just the CSS class names specified in the component. (Elements in BEM; molecules in atomic design.)
+//
+// Weight: 1
+//
+// Style guide: components
+@import '../../project_c_base_responsive/sass/components/*';
+@import 'components/*';
+
+// Modules
+//
+// Design modules are components constructed into specific items, such as a news article or an event listing. (Blocks in BEM; organisms in atomic design.) Unrelated to Drupal modules.
+//
+// Weight: 2
+//
+// Style guide: modules
+@import '../../project_c_base_responsive/sass/modules/*';
+@import 'modules/*';
+
+// Specific web browser overrides
+//
+// These styles are targeted to individual browser versions.
+@import '../../project_c_base_responsive/sass/global/browser-overrides/*';
+@import 'global/browser-overrides/*';

@@ -1,0 +1,176 @@
+// Various overrides for items when they appear on the home page
+//
+// TODO: Abstract these into individual components or modules.
+
+%sidebar-item-grid {
+  @include mq(large) {
+    display: inline-block;
+    width: 47%;
+    vertical-align: top;
+
+    &:nth-of-type(odd) {
+      margin-right: 5%;
+    }
+  }
+}
+
+.front {
+
+  .content__header {
+    @include padding(0.75 0.75 0);
+
+    @include mq(medium) {
+      overflow: hidden;
+    }
+
+    @include mq(large) {
+      @include padding(1);
+    }
+  }
+
+  // Main site introduction, next to slideshow
+  .region-content {
+    @include typeface(sans-serif);
+    color: color(default--sans);
+    @include padding(0.75);
+
+    @include mq(medium) {
+      overflow: hidden;
+      @include padding(0 1);
+    }
+
+    p {
+      @include font-size(s);
+      @include typeset(front-main);
+
+      @include mq(medium) {
+        @include font-size(m);
+      }
+
+      &:last-of-type {
+        @include mq(medium) {
+          @include margin-bottom(2);
+        }
+
+        @include mq(large) {
+          @include margin-bottom(0);
+        }
+      }
+    }
+  }
+
+  // Second sidebar items
+  .field-name-field-second-sidebar-blocks .block {
+    @include margin-top(1);
+    @include padding-top(1);
+    border-top: color(border--front) 8px solid;
+
+    &:first-of-type {
+      @include margin-top(0);
+      @include padding-top(0);
+      border-top: none;
+    }
+  }
+
+  .main-content--front {
+    order: -2;
+
+    @include mq(medium) {
+      order: -1;
+      flex: 1 1 50%;
+      max-width: 50%;
+    }
+
+    @include padding(0.75);
+
+    @include mq(medium) {
+      @include padding(1);
+    }
+
+    @include mq(large) {
+      @include padding(1.5);
+    }
+
+    h2 {
+      @include typeface(sans-serif);
+      text-transform: uppercase;
+      font-weight: weight(bold);
+
+      @include mq(medium) {
+        @include font-size(22px);
+      }
+    }
+
+    .block {
+      @include margin-top(1);
+
+      &:first-of-type {
+        @include margin-top(0);
+      }
+    }
+
+    .news__date {
+      display: none;
+    }
+  }
+
+  .sidebar--right {
+    @include mq(medium) {
+      flex: 1 1 50%;
+      max-width: 50%;
+    }
+
+    h2 {
+      font-weight: weight(bold);
+    }
+
+    .region {
+      @include mq(medium) {
+        @include padding(1);
+      }
+      @include mq(large) {
+        @include padding(1.5);
+      }
+    }
+
+    // News items
+    .node-project_c-news {
+      @extend %sidebar-item-grid;
+
+      &:nth-of-type(1) {
+        border-top: 1px color(border) solid;
+      }
+
+      // Remove the top border of the first news brief for small and medium.
+      &.news--brief:nth-of-type(-n+1) {
+        border-top: none;
+      }
+
+      // Remove the top border from the second news brief for large breakpoint.
+      @include mq(large) {
+        &.news--brief:nth-of-type(-n+2) {
+          border-top: none;
+        }
+      }
+    }
+
+    // Events
+    .event {
+      @extend %sidebar-item-grid;
+
+      @include mq(large) {
+        margin-bottom: $gutter;
+
+        &:not(:nth-of-type(1)) {
+          border-top: none;
+        }
+
+        &:nth-of-type(odd) {
+          margin-right: 2.5%;
+          padding-right: 2.5%;
+          border-right: 2px color(border) solid;
+        }
+      }
+    }
+  }
+}

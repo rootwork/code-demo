@@ -1,0 +1,25 @@
+// Content Aside
+//
+// Markup: content-aside.twig
+//
+// Style guide: components.content-aside
+
+aside.content,
+.content-aside {
+  background: color(background--sidebar);
+  @include padding(0.5 0.75);
+  @include margin(0 0 0.75 0);
+
+  @include mq(medium) {
+    float: right;
+    clear: right;
+    @include margin(0 0 0.75 0.75);
+  }
+
+  .region-content & {
+    @include mq(medium) {
+      width: width(content-aside);
+      min-width: width(content-aside);
+    }
+  }
+}

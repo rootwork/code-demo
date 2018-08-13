@@ -1,0 +1,103 @@
+// Event item
+//
+// .event--caption - The "caption" event variant.
+//
+// Markup: event.twig
+//
+// Style guide: modules.event
+
+//
+// Default view mode
+//
+.event {
+  @include clearfix;
+  position: relative;
+  @include padding((2/3) 0);
+
+  &:not(:nth-of-type(1)) {
+    border-top: 1px color(border) solid;
+  }
+}
+
+.event__datetime {
+  @extend %h2;
+  @include margin-bottom(0);
+  @include typeface(sans-serif);
+  @include font-size(s);
+  font-weight: weight(bold);
+  text-transform: uppercase;
+  color: color(date);
+
+  @include mq(large) {
+    @include font-size(15px);
+  }
+
+  .event--caption & {
+    font-weight: weight(normal);
+    @include font-size(s);
+  }
+}
+
+.event__date,
+.event__time,
+.event__datetime-separator {
+  display: inline;
+}
+
+.event__datetime-separator {
+  @include padding(0 0.25);
+  font-weight: weight(normal);
+}
+
+.event__title {
+  @extend %h3;
+  @include font-size(18px);
+  font-weight: weight(normal);
+
+  @include mq(medium) {
+    @include font-size(l);
+  }
+
+  .event--caption & {
+    @include margin-bottom(0);
+    @include typeface(sans-serif);
+    @include font-size(s);
+    color: color(default--sans);
+
+    @include mq(medium) {
+      @include font-size(s);
+    }
+  }
+}
+
+.event__location-label,
+.event__location-item,
+.event__type-label,
+.event__type-item {
+  display: inline;
+}
+
+
+.event__location,
+.event__type {
+  @include typeface(sans-serif);
+  @include font-size(s);
+  color: color(default--sans);
+
+  @include mq(medium) {
+    display: inline;
+  }
+}
+
+.event__type {
+  @include mq(medium) {
+    @include margin-left(0.25);
+    @include padding-left(0.5);
+    border-left: 1px color(border) solid;
+  }
+}
+
+.event__location-item,
+.event__type-item {
+  font-weight: weight(bold);
+}

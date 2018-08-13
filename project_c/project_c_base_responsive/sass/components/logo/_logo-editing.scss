@@ -1,0 +1,16 @@
+// Logo editing styles
+//
+// Not included in the style guide.
+
+#edit-project_c-banner-logo-type {
+  input[type='radio'],
+  input[type='radio'] + label img {
+    @extend %img--border-off;
+    vertical-align: middle;
+  }
+
+  #edit-project_c-banner-logo-type-project_c-only + label img {
+    @extend %img--border-off;
+    margin-left: ($gutter / 2);
+  }
+}

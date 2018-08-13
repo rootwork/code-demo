@@ -1,0 +1,64 @@
+// Slides
+//
+// Slides generally appear on the home page and are implemented using the cycle.js library.
+//
+// Markup: slides.twig
+//
+// Style guide: modules.slides
+
+.slideshow-wrapper {
+  position: relative;
+
+  // This is the default width for most themes, but Dept. 3 must override the value.
+  max-width: width(slideshow--large);
+}
+
+.slideshow {
+  img {
+    @extend %img--border-off;
+    height: auto;
+  }
+}
+
+.slide {
+  line-height: 1;
+  position: relative;
+}
+
+.slideshow-pager {
+  // Requires that the container be position: relative (or absolute).
+  position: absolute;
+  bottom: $gutter * 2;
+  right: $gutter * 2;
+  z-index: 10;
+  line-height: 1;
+
+  a {
+    display: inline-block;
+    // Originally font-size: 20px;
+    @include font-size(m);
+    color: color(slideshow-pageritem-fallback);
+    color: color(slideshow-pageritem);
+    margin: auto ($gutter / 4);
+    border-bottom: none;
+
+    &.activeSlide {
+      color: color(slideshow-pageritem--active);
+    }
+  }
+}
+
+.slide__caption {
+  position: absolute;
+  bottom: $gutter * 3;
+  right: $gutter * 2;
+  display: inline-block;
+  padding: ($gutter * 1/4) ($gutter * 3/4);
+  margin: 0;
+  @include typeface(sans-serif);
+  @include typeset(slide);
+  font-style: italic;
+  color: color(slideshow-caption);
+  background-color: color(slideshow-caption--bg);
+  max-width: 75%;
+}

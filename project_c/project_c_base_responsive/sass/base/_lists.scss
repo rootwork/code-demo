@@ -1,0 +1,212 @@
+// Lists
+//
+// Style guide: base.lists
+
+// Unordered lists
+//
+// Markup:
+// <ul>
+//   <li>List item one</li>
+//   <li>List item two: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lacinia ante non dolor viverra iaculis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</li>
+//   <li>List item three: In adipiscing pulvinar eros, vitae dictum elit cursus a. Praesent a hendrerit urna. Maecenas neque libero, viverra in neque at, posuere tempor metus. Vestibulum neque nisi, malesuada sed ipsum varius, bibendum ornare nisl. Aliquam adipiscing vehicula varius.</li>
+//   <li class="none">List item four, "none" class.</li>
+//   <li class="square">List item five, "square" class.</li>
+//   <li class="circle">List item six, "circle" class.</li>
+//   <li class="disc">List item seven, "disc" class.</li>
+//   <li class="inline">List item eight, "inline" class.</li>
+// </ul>
+//
+// Weight: 1
+//
+// Style guide: base.lists.unordered
+
+// Ordered lists
+//
+// Markup:
+// <ol>
+//   <li>List item one</li>
+//   <li>List item two<ol>
+//     <li>List item two point one</li>
+//     <li>List item two point two<ol>
+//       <li>List item two point two point one</li>
+//       </ol></li>
+//     <li>List item two point three</li>
+//     </ol></li>
+//   <li>List item three</li>
+// </ol>
+//
+// Weight: 2
+//
+// Style guide: base.lists.ordered
+
+// Definition lists
+//
+// Markup:
+// <dl>
+//   <dt>Definition title one</dt>
+//   <dd>Definition body one</dd>
+//   <dt>Definition title two</dt>
+//   <dd>Definition body two</dd>
+//   <dt>Definition title three</dt>
+//   <dd>Definition body three</dd>
+// </dl>
+//
+// Weight: 3
+//
+// Style guide: base.lists.definition
+
+ul,
+ol,
+dl {
+  @include margin-bottom(1);
+  @include padding-left(1);
+
+  ul,
+  ol,
+  dl {
+    @include margin-bottom(0);
+  }
+}
+
+ul li {
+  font-size: inherit;
+  line-height: inherit;
+
+  // Drupal resets
+  &.collapsed,
+  &.leaf,
+  &.expanded {
+    @include padding(0);
+    list-style-type: none;
+    list-style-image: none;
+  }
+}
+
+ol {
+  list-style: decimal outside;
+
+  ol {
+    list-style-type: lower-alpha;
+
+    ol {
+      list-style-type: lower-roman;
+    }
+  }
+}
+
+%list-item-square {
+  position: relative;
+  list-style-type: none;
+
+  &::before {
+    content: counter(project_c-counter, square);
+    position: absolute;
+    left: -3.25ex;
+    top: (1ex / 3);
+    @include typeface(serif);
+    @include font-size(11px);
+    line-height: inherit;
+    color: color(list-item);
+  }
+}
+
+%list-item-square--inline {
+  position: static;
+
+  &::before {
+    position: static;
+    display: inline-block;
+    margin-right: 1.25ex;
+    transform: translate(0%, -25%);
+  }
+}
+
+%list-item-none {
+  list-style: none;
+  position: static;
+
+  &::before {
+    content: '';
+    display: none;
+  }
+}
+
+%list-unlist {
+  margin: 0;
+  padding: 0;
+
+  li {
+    position: static;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+ul {
+  counter-reset: project_c-counter;
+
+  > li {
+    @extend %list-item-square;
+
+    &.none {
+      @extend %list-item-none;
+    }
+
+    &.square {
+      @extend %list-item-none;
+      list-style: square outside;
+    }
+
+    &.circle {
+      @extend %list-item-none;
+      list-style: circle outside;
+    }
+
+    &.disc {
+      @extend %list-item-none;
+      list-style: disc outside;
+    }
+  }
+}
+
+ul.inline > li,
+li.inline {
+  @extend %list-item-square--inline;
+}
+
+ul {
+
+  > li {
+    #toolbar &,
+    .page-admin &,
+    .tabs &,
+    .action-links &,
+    .navigation &,
+    .vertical-tabs &,
+    .horizontal-tabs &,
+    #breadcrumb &,
+    #imce-content {
+      @extend %list-item-none;
+    }
+
+    .page-admin-reports-project_c-notification-groups #block-system-main & {
+      list-style: outside;
+    }
+  }
+}
+
+dt,
+dd {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+dt {
+  font-weight: weight(bold);
+}
+
+dd {
+  @include margin(1 0);
+  @include padding-left(1);
+}

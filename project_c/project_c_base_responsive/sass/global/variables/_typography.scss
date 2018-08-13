@@ -1,0 +1,187 @@
+////
+/// Fonts and Typey settings
+///
+/// For details on the syntax, see https://github.com/jptaranto/typey
+///
+/// @group typography
+////
+
+/// Base typographical unit
+$base-unit: rem;
+/// Base font size
+$base-font-size: 16px;
+/// Base line height
+$base-line-height: 24px;
+
+/// Typey line height method
+$line-height-method: ratio;
+/// Typey line height ratio
+$base-line-height-ratio: 1.5;
+
+/// Print stylesheet font size
+$print-font-size: 12pt;
+
+/// PROJECT_C font sizes. Use `@include font-size();` with these variables, or any
+/// arbitrary pixel value, to set the font size in rems, with a pixel fallback.
+///
+/// @type Map
+///
+/// @prop {size} xs [12px] - extra-small font size
+/// @prop {size} s [14px] - small font size
+/// @prop {size} m [16px] - medium font size
+/// @prop {size} l [24px] - large font size
+/// @prop {size} xl [32px] - extra-large font size
+/// @prop {size} xxl [36px] - extra-extra-large font size
+///
+/// @example scss - Sass
+///   p {
+///     @include font-size(l);
+///
+///     &.special-size {
+///       @include font-size(21px);
+///     }
+///   }
+///
+/// @example css - CSS output
+///   p {
+///     font-size: 24px;
+///     font-size: 1.5rem;
+///   }
+///
+///   p.special-size {
+///     font-size: 21px;
+///     font-size: 1.3125rem;
+///   }
+///
+$font-size: (
+  xs: 12px,
+  s:  14px,
+  m:  16px,
+  l:  24px,
+  xl: 32px,
+  xxl: 36px,
+);
+
+/// PROJECT_C font weights. Use `weight()` with these variables in `font-weight`
+/// definitions.
+///
+/// @type Map
+///
+/// @prop {string} light [300]
+/// @prop {string} normal [400]
+/// @prop {string} bold [700]
+///
+/// @example scss - Sass
+///   p {
+///     font-weight: weight(light);
+///   }
+///
+/// @example css - CSS output
+///   p {
+///     font-weight: 300;
+///   }
+///
+$font-weight: (
+  light: 300,
+  normal: 400,
+  bold: 700,
+);
+
+/// Times font stack, extending Typey
+$times: extend-font-stack('Times New Roman', $serif-stack);
+/// Helvetica font stack
+$helvetica: $sans-serif-stack;
+/// Monospace font stack
+$monospace: $monospace-stack;
+
+/// PROJECT_C typefaces. Use with `typeface()`.
+///
+/// @type Map
+///
+/// @requires $times
+/// @requires $helvetica
+/// @requires $monospace
+///
+/// @prop {string} sans-serif [font-family: $helvetica] - Helvetica font stack
+/// @prop {string} serif [font-family: $times] - Times font stack
+/// @prop {string} monospace [font-family: $monospace, letter-spacing: 0.5px] - Monospace font stack
+///
+/// @example scss - Sass
+///   p {
+///     @include typeface(serif);
+///
+///     span {
+///       @include typeface(monospace);
+///     }
+///   }
+///
+/// @example css - CSS output
+///   p {
+///     font-family: "Times New Roman", "Calisto MT", "Book Antiqua", serif;
+///   }
+///
+///   p span {
+///     font-family: Consolas, "Lucida Console", monospace, monospace;
+///     letter-spacing: 0.03125em;
+///   }
+///
+$typefaces: (
+  sans-serif: $helvetica,
+  serif: $times,
+  monospace: (
+    font-family: $monospace,
+    letter-spacing: 0.5px,
+  )
+);
+
+/// PROJECT_C typesets. This allows you to set several typographic definitions
+/// together. Use with `typeset()`.
+///
+/// @type Map
+///
+/// @example scss - Sass
+///   h1 {
+///     @include typeset(heading-1);
+///   }
+///
+///   .nav {
+///     @include typeset(menu);
+///   }
+///
+/// @example css - CSS output
+///   h1 {
+///     font-size: 24px;
+///     font-size: 1.5rem;
+///     line-height: 1.5;
+///     font-weight: 400;
+///   }
+///
+///   .nav {
+///     font-size: 12px;
+///     font-size: 0.75rem;
+///     line-height: 1.5;
+///     font-weight: 300;
+///     text-transform: uppercase;
+///   }
+///
+$typestyles: (
+  heading-1:      l    1.5 normal,
+  heading-1--med: xl   1.5 normal,
+  heading-2:      20px 1.5 normal,
+  heading-2--med: l    1.5 normal,
+  heading-3:      m    1.5 bold,
+  heading-4:      m    1.5 normal,
+  heading-5:      m    1.5 normal,
+  heading-6:      m    1.5 normal,
+  paragraph:      m    1.5 normal,
+  front-main:     m    2   normal,
+  pre:            s    1.5 normal,
+  breadcrumb:     s    1   normal,
+  menu:           xs   1.5 light   uppercase,
+  menu--med:      s    1.5 light   none,
+  menu-secondary: m    1.2 normal,
+  tab:            s    1   bold,
+  tab-secondary:  s    1   normal,
+  label:          s    1   bold,
+  slide:          s    1.3 light,
+);

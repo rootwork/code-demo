@@ -1,0 +1,17 @@
+// Sidebar container styles
+//
+// No style guide reference.
+
+.sidebar {
+  @include typeface(sans-serif);
+  @include font-size(s);
+  color: color(default--sans);
+}
+
+.block--sidebar_first {
+  border-bottom: 8px color(border--sidebar) solid;
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+}
