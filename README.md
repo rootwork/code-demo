@@ -14,3 +14,7 @@ _Note: Some images and other assets have been removed due to copyright and non-d
 
 * [Drupal 7 custom child theme example](project_c/project_c_dept3_responsive): This child theme of the previous example inherited all of the atomic design, and compiled it along with the child theme's additions into a [KSS styleguide](project_c/project_c_dept3_responsive/documentation/styleguide/) 
 ([view rendered Sass module guide](https://rootwork.github.io/code-examples/project_c/project_c_dept3_responsive/documentation/styleguide/section-modules.html)) and a [SassDoc listing](project_c/project_c_dept3_responsive/documentation/sassdoc/) ([view rendered SassDoc](https://rootwork.github.io/code-examples/project_c/project_c_dept3_responsive/documentation/sassdoc/)).
+
+## Site building
+
+* [Drupal 8 custom module example](project_a/web/modules/custom/micro): This simple Drupal 8 custom entity module created a new entity that was used in BEAN-like form across pages and features, as opposed to having the client create and manage many custom blocks. While this isn't a complicated custom module, I think it demonstrates my understandings of how to work with custom entities. Includes menu routing, permissions, an administration view, and overridable Twig templates.
