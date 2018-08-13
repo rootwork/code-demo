@@ -1,0 +1,10 @@
+{
+  "name": "drupal/micro",
+  "type": "drupal-module",
+  "description": "Enables the creation of custom micro content entities.",
+  "keywords": ["Drupal"],
+  "license": "PRIVATE",
+  "minimum-stability": "dev",
+  "support": { },
+  "require": { }
+}

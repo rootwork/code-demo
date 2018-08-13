@@ -1,0 +1,19 @@
+{% extends "block.html.twig" %}
+{#
+/**
+ * @file
+ * Theme override for local actions (primary admin actions.)
+ */
+#}
+{% set attributes = attributes.addClass('tab-block') %}
+{% block content %}
+  {% if content %}
+    {%
+      include "@pl/05-navigation/13-tabs.twig" with {
+        heading: 'Actions'|t,
+        modifier_class: 'tabs--secondary tabs--actions',
+        tabs: content,
+      } only
+    %}
+  {% endif %}
+{% endblock %}

@@ -1,0 +1,57 @@
+@charset 'UTF-8';
+// sass-lint:disable no-ids, no-color-literals, no-important
+//
+// PROJECT_A style overrides
+//
+// Styles overriding default Pattern Lab styles. In general, styles should be
+// edited directly in Pattern Lab, but some things need Drupa-specific
+// overrides, for instance when they appear in administration forms or collide
+// with developer modules.
+//
+// CSS's "initial" and "inherit" values will be your friend here ("unset" would
+// be ideal if IE supported it).
+// @see https://developer.mozilla.org/en-US/docs/Web/CSS/initial
+// @see https://developer.mozilla.org/en-US/docs/Web/CSS/inherit
+//
+// The "!important" CSS flag can also be legitimately used here, with care!
+//
+// IMPORTANT MAINTENANCE NOTE: When adding a style override in this file, add
+// a comment above referencing the location of the style being overridden in
+// Pattern Lab file.
+//
+// Not included in the style guide.
+
+// patternlab/assets/scss/modules/_html.scss:11
+.toolbar,
+#coffee-form,
+#coffee-results {
+  a {
+    text-decoration: initial;
+    background-color: inherit;
+    background-image: none;
+    transition: initial;
+
+    &:hover {
+      text-decoration: initial;
+      background-image: none;
+    }
+
+    &:focus {
+      outline: initial;
+    }
+  }
+}
+
+// patternlab/assets/scss/modules/_html.scss:11
+#coffee-form #coffee-results {
+  a.ui-state-hover,
+  a:focus,
+  a:hover,
+  a.ui-state-focus,
+  .ui-menu-item:focus a,
+  .ui-menu-item:hover a {
+    padding-left: 1rem !important;
+    background-color: #d1d1d1 !important;
+  }
+}
+

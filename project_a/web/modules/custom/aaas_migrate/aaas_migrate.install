@@ -1,0 +1,6 @@
+<?php
+
+/**
+ * @file
+ * This file contains update hooks which are executed on deployment.
+ */

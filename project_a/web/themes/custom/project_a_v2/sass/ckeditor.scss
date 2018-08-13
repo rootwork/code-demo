@@ -1,0 +1,59 @@
+@charset 'UTF-8';
+// sass-lint:disable class-name-format, no-color-keywords, no-color-literals, no-important
+//
+// CKEditor styles
+//
+// Styles applying to the CKEditor editing area and toolbars.
+//
+// Not included in the style guide.
+
+body.cke_editable {
+  background-color: white;
+  background-image: none;
+  background-position: fixed;
+  padding: 1rem;
+}
+
+.cke_format,
+.cke_styles,
+.cke_combo_text,
+.cke_combopanel,
+.cke_panel,
+.cke_panel_frame,
+.cke_panel_container,
+.cke_panel_block,
+.cke_panel_list,
+.cke_menu_panel {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  width: auto;
+  background-color: white !important;
+  background-image: none !important;
+  font-family: sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  text-transform: none;
+  color: black;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  div,
+  span {
+    font-family: sans-serif;
+    font-weight: normal;
+    font-size: 0.9em;
+    text-transform: none;
+    color: black;
+  }
+
+  .paneltitle {
+    font-weight: bold;
+  }
+}
+

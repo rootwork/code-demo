@@ -1,0 +1,5 @@
+name: 'PROJECT_A Custom 403'
+description: 'Provides a special 403 menu callback that can display different nodes depending on the access denied reason.'
+core: '8.x'
+type: 'module'
+package: 'PROJECT_A'

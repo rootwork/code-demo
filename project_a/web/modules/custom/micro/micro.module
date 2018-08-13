@@ -1,0 +1,58 @@
+<?php
+
+/**
+ * @file
+ * Contains micro.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function micro_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the micro module.
+    case 'help.page.micro':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Enables the create of custom micro content entities.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function micro_theme() {
+  $theme = [];
+  $theme['micro'] = [
+    'render element' => 'elements',
+    'file' => 'micro.page.inc',
+    'template' => 'micro',
+  ];
+  $theme['micro_content_add_list'] = [
+    'render element' => 'content',
+    'variables' => ['content' => NULL],
+    'file' => 'micro.page.inc',
+  ];
+  return $theme;
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK().
+ */
+function micro_theme_suggestions_micro(array $variables) {
+  $suggestions = [];
+  $entity = $variables['elements']['#micro'];
+  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+
+  $suggestions[] = 'micro__' . $sanitized_view_mode;
+  $suggestions[] = 'micro__' . $entity->bundle();
+  $suggestions[] = 'micro__' . $entity->bundle() . '__' . $sanitized_view_mode;
+  $suggestions[] = 'micro__' . $entity->id();
+  $suggestions[] = 'micro__' . $entity->id() . '__' . $sanitized_view_mode;
+  return $suggestions;
+}

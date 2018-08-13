@@ -1,0 +1,7 @@
+project_a_custom_403.route:
+  path: '/project_a/403'
+  defaults:
+    _title: 'Access denied'
+    _controller: 'Drupal\project_a_custom_403\Controller\Custom403PageController::display403'
+  requirements:
+    _access: 'TRUE'

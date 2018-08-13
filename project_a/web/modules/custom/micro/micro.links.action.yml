@@ -1,0 +1,11 @@
+entity.micro.add_form:
+  route_name: entity.micro.add_page
+  title: 'Add Micro Content'
+  appears_on:
+    - entity.micro.collection
+    - view.micro_content.overview
+entity.micro_type.add_form:
+  route_name: entity.micro_type.add_form
+  title: 'Add Micro Content type'
+  appears_on:
+    - entity.micro_type.collection

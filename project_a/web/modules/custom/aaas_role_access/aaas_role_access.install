@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file
+ * Functions called while (un)installing the module.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function project_a_role_access_install() {
+  node_access_rebuild();
+}

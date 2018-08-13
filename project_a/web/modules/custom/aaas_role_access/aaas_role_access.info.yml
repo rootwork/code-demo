@@ -1,0 +1,7 @@
+name: 'PROJECT_A Role Access'
+description: 'A simple node access module that restricts access to nodes by user role.'
+core: '8.x'
+type: 'module'
+package: 'PROJECT_A'
+dependencies:
+  - options
