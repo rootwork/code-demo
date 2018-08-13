@@ -1,0 +1,67 @@
+/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
+/* Splitbuttons */
+@media screen and (min-width: 600px) {
+  .form-actions .dropbutton-wrapper {
+    float: none;
+  }
+}
+
+.js .form-actions .dropbutton-widget,
+.js td .dropbutton-widget,
+.dropbutton-widget {
+  border: 0;
+}
+
+/* UL styles are over-scoped in core, so this selector needs weight parity. */
+.dropbutton-widget .dropbutton,
+.js .dropbutton-widget .dropbutton {
+  border: 0;
+}
+
+.dropbutton li,
+.js .dropbutton li {
+  display: block;
+}
+
+@media (min-width: 640px) {
+  .dropbutton li,
+  .js .dropbutton li {
+    display: inline-block;
+  }
+}
+
+.dropbutton .dropbutton-action input {
+  padding: 0.5em 1.5em;
+  white-space: normal;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .dropbutton .dropbutton-action input {
+    width: auto;
+  }
+}
+
+.js .dropbutton-multiple .dropbutton-widget {
+  padding-right: 0;
+}
+
+.dropbutton-multiple .dropbutton .secondary-action {
+  display: block;
+  border: 0;
+}
+
+@media (min-width: 640px) {
+  .dropbutton-multiple .dropbutton .secondary-action {
+    display: inline-block;
+  }
+}
+
+.dropbutton .dropbutton-toggle,
+.js .dropbutton .dropbutton-toggle,
+.dropbutton .dropbutton-arrow,
+.js .dropbutton .dropbutton-arrow {
+  display: none;
+}
+
+/*# sourceMappingURL=dropbutton-unset.css.map */

@@ -1,0 +1,94 @@
+@import 'init';
+
+// Social media links
+//
+// Social media icons in the header and footer. Note that social media sharing
+// icons that appear in the body of many pages are styled in
+// `components/slm/social-share`.
+//
+// Markup: block--social-media.twig
+//
+// Style guide: navigation.social-media
+
+$social-icon-size: 35px;
+
+.social-media {
+
+  ul.social-media__wrapper {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    display: inline;
+    padding: 0;
+  }
+
+  &__link {
+    display: inline-block;
+    width: $social-icon-size;
+    height: $social-icon-size;
+    color: transparent;
+    overflow: hidden;
+    opacity: 0.8;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: transparent;
+      opacity: 1;
+    }
+
+    & span.ext { // Remove external link markers.
+      display: none;
+    }
+
+    &[href='https://www.facebook.com/pages/Project_ser-Lunchroom-Movement/172911796067369'] {
+      @include margin-right(0.5);
+      background: no-repeat center/cover imagemin-url('fb-round.svg');
+    }
+
+    &[href='https://twitter.com/project_slunchrooms'] {
+      background: no-repeat center/cover imagemin-url('twitter-round.svg');
+    }
+
+    &[title='Project S YouTube'] {
+      background: no-repeat center/cover imagemin-url('yt-round.svg');
+    }
+  }
+
+  &--header {
+    display: none;
+
+    @include respond-to(4xl) {
+      display: inline-block;
+    }
+
+    ul.social-media__wrapper {
+      text-align: right;
+    }
+  }
+
+  &--footer {
+    position: absolute;
+    top: 0.5rem;
+    left: 0;
+    width: 100%;
+
+    @include respond-to(xxxl) {
+      top: 0;
+      left: auto;
+      right: $page-margin;
+      width: unset;
+      text-align: right;
+    }
+
+    ul.menu {
+      text-align: center;
+
+      @include respond-to(xxxl) {
+        text-align: right;
+      }
+    }
+  }
+}

@@ -1,0 +1,478 @@
+// sass-lint:disable no-vendor-prefixes, no-css-comments
+
+// Form defaults
+//
+// These are the default base styles applied to HTML form elements.
+//
+// Component classes can override these styles, but if no class applies a style
+// to an HTML form element, these styles will be the ones displayed.
+//
+// Weight: -1
+//
+// Style guide: forms.base
+
+//
+// The following rules are from normalize.css and help to fix inconsistencies
+// across various browsers. You should probably leave these rules as is and jump
+// to the "Buttons" rule on line 92 before you start editing this file.
+//
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  @extend %base-font;
+  // Keep form elements constrained in their containers.
+  box-sizing: border-box;
+  max-width: 100%;
+  // Remove the margin in Firefox and Safari.
+  margin: 0;
+  @if support-for(ie, 7) {
+    // Address `font-family` inconsistency between `textarea` and other form in IE 7
+    @include typeface(body);
+    // Improve appearance and consistency with IE 6/7.
+    *vertical-align: middle;
+  }
+}
+
+// Show the overflow in IE.
+button {
+  overflow: visible;
+}
+
+// Remove the inheritance of text transform in Edge, Firefox, and IE.
+button,
+select {
+  text-transform: none;
+}
+
+// Show the overflow in Edge.
+input {
+  overflow: visible;
+  @if support-for(firefox, 29) {
+    // Firefox sets `line-height` using `!important` in the UA stylesheet.
+    line-height: normal;
+  }
+}
+
+// Correct the cursor style of increment and decrement buttons in Chrome.
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type='search'] {
+  // Correct the odd appearance in Chrome and Safari.
+  -webkit-appearance: textfield;
+  // Correct the outline style in Safari.
+  outline-offset: -2px;
+
+  // Remove the inner padding and cancel buttons in Chrome and Safari on OS X.
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+}
+
+// Correct the text style of placeholders in Chrome, Edge, and Safari.
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: .54;
+}
+
+::-webkit-file-upload-button {
+  // Correct the inability to style clickable types in iOS and Safari.
+  -webkit-appearance: button;
+  // Change font properties to `inherit` in Safari.
+  font: inherit;
+}
+
+// Buttons
+//
+// Buttons built with the `<button>` element are the most flexible for styling
+// purposes. But `<input>` elements with `type` set to `submit`, `image`,
+// `reset`, or `button` are also supported.
+//
+// Below is the default button styling. To see variations on the button styling
+// see the [button component](section-forms.html#kssref-forms-button).
+//
+// :hover        - Hover styling.
+// :active:hover - Depressed button styling.
+//
+// Markup: forms-button.twig
+//
+// Style guide: forms.base.button
+
+@import 'forms/button/button';
+
+// The %text-form-element can be used to style `<input>` text types and
+// `<textarea>` elements at the same time.
+%text-form-element {
+  @include margin-bottom(0.75);
+  @include padding(0.3333);
+  appearance: none;
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+  color: color(black);
+  background-color: color(white);
+  border: $border;
+  border-radius: $border-radius;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.06);
+  transition: border-color $duration $timing;
+}
+
+// Inputs
+//
+// The `<input>` element is mostly used for text-based inputs that include the
+// HTML5 types: `text`, `search`, `tel`, `url`, `email`, `password`, `date`,
+// `time`, `number`, `range`, `color`, and `file`.
+//
+// Markup: forms-input.twig
+//
+// Style guide: forms.base.input
+
+[type='text'],
+[type='search'],
+[type='tel'],
+[type='url'],
+[type='email'],
+[type='password'],
+[type='date'],
+[type='time'],
+[type='number'] {
+  @extend %text-form-element !optional;
+}
+
+[type='range'] {
+  // Add your styles.
+}
+
+[type='color'] {
+  // Add your styles.
+}
+
+[type='file'] {
+  width: 100%;
+  margin-bottom: 0.75em;
+}
+
+// Checkboxes
+//
+// If an `<input>` element has the `type='checkbox'` attribute set, the form
+// field is displayed as a checkbox.
+//
+// It's recommended that you don't attempt to style these elements. Firefox's
+// implementation doesn't respect `box-sizing`, `padding`, or `width`.
+//
+// Markup: forms-input-checkbox.twig
+//
+// Style guide: forms.base.input-checkbox
+
+// Radio buttons
+//
+// If an `<input>` element has the `type='radio'` attribute set, the form field
+// is displayed as a radio button.
+//
+// It's recommended that you don't attempt to style these elements. Firefox's
+// implementation doesn't respect `box-sizing`, `padding`, or `width`.
+//
+// Markup: forms-input-radio.twig
+//
+// Style guide: forms.base.input-radio
+
+[type='checkbox'],
+[type='radio'] {
+  display: inline;
+  margin-right: 0.75em;
+  // Add the correct box sizing in IE <11.
+  box-sizing: border-box;
+  // Remove the padding in IE <11.
+  padding: 0;
+  @if support-for(ie, 7) {
+    // Remove excess padding in IE 7.
+    // Known issue: excess padding remains in IE 6.
+    *height: 13px;
+    *width: 13px;
+  }
+}
+
+// Checkbox custom styles
+//
+// @author Geoffrey Crofte, Ivan Boothe
+// @link http://codepen.io/CreativeJuiz/pen/zqKtp
+
+$checkbox__height: (($base-font-size * 2) - 2px);
+
+.form-type-checkbox {
+  label,
+  .option {
+    display: inline-block;
+  }
+}
+
+[type='checkbox']:not(:checked),
+[type='checkbox']:checked {
+  position: absolute;
+  left: -9999px;
+}
+
+[type='checkbox']:not(:checked) + label,
+[type='checkbox']:checked + label {
+  position: relative;
+  padding-left: 75px;
+  cursor: pointer;
+}
+
+[type='checkbox']:not(:checked) + label::before,
+[type='checkbox']:checked + label::before,
+[type='checkbox']:not(:checked) + label::after,
+[type='checkbox']:checked + label::after {
+  content: '';
+  position: absolute;
+}
+
+[type='checkbox']:not(:checked) + label::before,
+[type='checkbox']:checked + label::before {
+  left: 0;
+  top: -3px;
+  width: 65px;
+  height: $checkbox__height;
+  background: #fff;
+  border-radius: $border-radius;
+  transition: background-color 0.2s;
+}
+
+[type='checkbox']:not(:checked) + label::after,
+[type='checkbox']:checked + label::after {
+  margin: 0;
+  width: 20px;
+  height: 20px;
+  transition: all .2s;
+  border-radius: 50%;
+  background-color: color(red);
+  background-image: none;
+  top: 2px;
+  left: 5px;
+}
+
+/* not checked */
+[type='checkbox']:not(:checked) + label::before {
+  content: '\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0no';
+  line-height: $checkbox__height;
+}
+
+/* on checked */
+[type='checkbox']:checked + label::before {
+  background-color: color(yellow);
+  content: '\00a0\00a0\00a0yes';
+  line-height: $checkbox__height;
+  color: color(green);
+}
+
+[type='checkbox']:checked + label::after {
+  background-color: color(green);
+  top: 2px;
+  left: 40px;
+}
+
+// Radio button custom styles
+//
+// @author Karen Menezes, Ivan Boothe
+// @link http://blog.karenmenezes.com/2014/nov/1/another-pure-css-checkbox-article/
+
+input[type='radio'],
+input[type='radio'] + label {
+  display: inline-block;
+  vertical-align: middle;
+  margin: ($spacing / 8);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+input[type='radio'] {
+  opacity: 0;
+  position: absolute;
+}
+
+input[type='radio'] + label {
+  position: relative;
+}
+
+input[type='radio'] + label::before {
+  content: '';
+  background: color(white);
+  border: 1px solid color(green);
+  display: inline-block;
+  vertical-align: middle;
+  width: 1.25rem;
+  height: 1.25rem;
+  padding: 1px;
+  margin-right: ($spacing / 2);
+  text-align: center;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+
+input[type='radio']:checked + label {
+  color: color(green-dark);
+}
+
+input[type='radio']:checked + label::before {
+  background: color(green);
+  border-color: color(green);
+  box-shadow: inset 0 0 0 4px color(white);
+}
+
+input[type='radio']:focus + label {
+  outline: 1px solid color(green);
+}
+
+// Fieldsets
+//
+// The `<fieldset>` element groups a set of form fields, optionally under a
+// common name given by the `<legend>` element.
+//
+// Markup: forms-fieldset.twig
+//
+// Style guide: forms.base.fieldset
+
+fieldset,
+%fieldset {
+  @include padding(.35 .625 .65);
+  border: 2px solid color('border--highlight');
+  margin: 0 2px;
+
+  @include pdf {
+    border: 3px solid color('green');
+  }
+}
+
+@import 'base/headings/headings';
+
+%legend,
+legend {
+  // Correct the text wrapping in Edge and IE.
+  box-sizing: border-box;
+  display: table;
+  max-width: 100%;
+  white-space: normal;
+  // Correct the color inheritance from `fieldset` elements in IE.
+  color: inherit;
+  background-color: color('page-bg');
+  // Align legend text with a fieldset's text while removing left padding so
+  // people aren't caught out if they zero out fieldset padding.
+  margin-left: -5px;
+  @include margin-bottom(0.5);
+  padding: 0 5px;
+  font-weight: 600;
+  @extend %base-font;
+  @include type-layout(m, 1);
+  text-transform: none;
+  border-radius: $border-radius;
+  @if support-for(ie, 7) {
+    // Correct alignment displayed oddly in IE 6/7.
+    *margin-left: -7px;
+  }
+
+  @include pdf {
+    margin-bottom: 0;
+  }
+
+  // When a field description (help text) occurs at the top of the field,
+  // unset the bolding.
+  .description {
+    font-weight: normal;
+  }
+}
+
+.fieldset-legend,
+.fieldset-legend.form-required,
+.fieldset-legend.form-item__required {
+  @extend %h3;
+  @include margin-bottom(0);
+
+  // Some <legend> elements exist outside of what we would expect to be
+  // fieldsets -- for instance, checkbox and radio button sets. These fieldsets
+  // have the `fieldgroup` class, and we reset them here.
+  .fieldgroup & {
+    @extend %legend;
+    display: inline;
+  }
+}
+
+// Labels
+//
+// The `<label>` element represents a caption of a form field. The label can be
+// associated with a specific form control by using the `for` attribute or by
+// putting the form control inside the label element itself.
+//
+// Markup: forms-label.twig
+//
+// Style guide: forms.base.label
+
+label {
+  // Drupal-style form labels.
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.75em;
+}
+
+// Select list
+//
+// The `<select>` element represents a form field for selecting amongst a set of
+// options.
+//
+// Known limitation: by default, Chrome and Safari on OS X allow very limited
+// styling of `<select>`, unless a `border` property is set.
+//
+// Markup: forms-select.twig
+//
+// Style guide: forms.base.select
+
+select {
+  @extend %base-font;
+  @include type-layout(m, 1);
+  width: 100%;
+  margin-bottom: 0.75em;
+  padding: 0.25em 1.25em 0.25em 0.75em;
+  border: 1px solid color('grey');
+  background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7.41 8.58L12 13.17l4.59-4.59L18 10l-6 6-6-6 1.41-1.42z"/></svg>'); // Down arrow
+  background-repeat: no-repeat;
+  background-position: 97.5% 50%;
+  background-color: color(grey-extra-light);
+  box-shadow: none;
+  border-radius: $border-radius;
+  transition: all 0.3s ease;
+  appearance: none;
+  -webkit-appearance: none;
+
+  &:active,
+  &:hover,
+  &:focus {
+    outline: none;
+    border-color: color(green);
+  }
+}
+
+optgroup {
+  // Restore the font weight unset by a previous rule.
+  @extend %base-font;
+  font-weight: bold;
+}
+
+// Text areas
+//
+// The `<textarea>` element represents a multi-line plain text form field.
+//
+// Markup: forms-textarea.twig
+//
+// Style guide: forms.base.textarea
+
+textarea {
+  @extend %text-form-element !optional;
+  resize: vertical;
+  // Remove the default vertical scrollbar in IE.
+  overflow: auto;
+}

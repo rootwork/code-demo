@@ -1,0 +1,188 @@
+# Drupal's .info.yml files allow themers to easily specify some of the static
+# properties of your theme. Properties such as its name, libraries of style
+# sheets and javascripts, and block regions.
+#
+# Drupal 8 stores a cache of the data in this .info.yml files. If you modify any
+# lines in this file, you MUST refresh Drupal 8's cache. You can do this with
+# the "drush cr" command or by simply visiting the Appearance page at
+# admin/appearance.
+
+
+
+# The name, description and screenshot used for this theme on the Appearance
+# page at admin/appearance.
+
+name: Project S Movement
+description: The Project S custom theme. <a href="/themes/custom/project_s/styleguide/index.html"><strong>Read the documentation and front-end development style guide for this theme.</strong></a> Project S is a child theme of the Zen base theme, and <em>requires</em> the <a href="https://www.drupal.org/project/components">Components Libraries module</a> to be enabled in order to function properly.
+screenshot: screenshot.png
+
+
+
+# This theme is compatible with Drupal 8 core. And it is a sub-theme of Zen.
+
+core: 8.x
+type: theme
+# Classy vs. Stable as a base theme: https://www.lullabot.com/articles/a-tale-of-two-base-themes-in-drupal-8-core
+# Zen uses classy as its base theme.
+base theme: zen
+
+
+
+# This section controls the libraries for your theme. For full documentation,
+# see https://www.drupal.org/node/2216195
+
+# The "libraries-override:" section will allow you to:
+# - Replace an entire library.
+# - Remove an entire library.
+# - Replace an asset in a library with another asset.
+# - Remove an asset from a library.
+libraries-override:
+  core/normalize: false
+  system/base:
+    css:
+      component:
+        css/components/clearfix.module.css: false
+  classy/base:
+    css:
+      component:
+        css/components/breadcrumb.css: false
+        css/components/button.css: false
+        css/components/more-link.css: false
+        css/components/pager.css: false
+        css/components/tabs.css: false
+  stable/base:
+    css:
+      component:
+        css/components/dropbutton.css: false
+
+# The "libraries-extend:" section will allow you to add your own JS or CSS to
+# existing libraries.
+# libraries-extend:
+
+# The "libraries:" section will add a library to ALL pages. The contents of
+# these libraries are defined in `project_s.libraries.yml`.
+#
+# Note you should duplicate any new library declarations that apply to the body
+# area in the `ckeditor_stylesheets` section further down.
+libraries:
+  - project_s/base
+
+  # @TODO Remove these library declarations and use attach_library() for all
+  # component styles. See, for instance,
+  # `components/scorecards/scorecards-form/form--scorecard-add.twig`. This
+  # ensures that these libraries are only included when these components are
+  # used, instead of (like `project_s/base`) on every page.
+  - project_s/box
+  - project_s/comment
+  - project_s/header
+  - project_s/hidden
+  - project_s/inline-links
+  - project_s/inline-sibling
+  - project_s/print-none
+  - project_s/responsive-video
+  - project_s/wireframe
+  - project_s/autocomplete
+  - project_s/collapsible-fieldset
+  - project_s/dropbutton-unset
+  - project_s/form-item
+  - project_s/form-table
+  - project_s/progress-bar
+  - project_s/progress-throbber
+  - project_s/resizable-textarea
+  - project_s/table-drag
+  - project_s/nav-menu
+  - project_s/navbar
+  - project_s/footer-logo
+  - project_s/footer-nav
+  - project_s/pager
+  - project_s/account-menu
+  - project_s/scorecards
+  - project_s/search
+  - project_s/social-media
+  - project_s/slm
+  - project_s/user
+
+  # @TODO Only load this library on admin and entity editing paths (unless
+  # comments are ever used).
+  - project_s/ckeditor
+
+  # @TODO Only load this library for admin users.
+  - project_s/admin-nav
+
+# This section is used by the contrib module, Component Libraries. It allows you
+# to reference .twig files in your sass/ directory by using the Twig namespace:
+# @project_s
+component-libraries:
+  project_s:
+    paths:
+      - components
+      - templates
+
+
+# CKEditor stylesheet. This can be a separate stylesheet, but it's best practice
+# to simply provide the main stylesheet and then add CKEditor editing area
+# overrides as necessary. Note not every stylesheet needs to be added here, only
+# those that would be needed in the main content area of a page or article.
+ckeditor_stylesheets:
+  - components/asset-builds/css/base.css
+  - components/asset-builds/css/box.css
+  - components/asset-builds/css/hidden.css
+  - components/asset-builds/css/inline-links.css
+  - components/asset-builds/css/inline-sibling.css
+  - components/asset-builds/css/print-none.css
+  - components/asset-builds/css/responsive-video.css
+  - components/asset-builds/css/wireframe.css
+  - components/asset-builds/css/collapsible-fieldset.css
+  - components/asset-builds/css/resizable-textarea.css
+  - components/asset-builds/css/social-media.css
+  - components/asset-builds/css/slm.css
+  # CKEditor overrides should always come last.
+  - components/asset-builds/css/ckeditor.css
+
+# Print/PDF stylesheets.
+entity_print:
+  node:
+    all: project_s/pdf
+    certificate: project_s/pdf--certificate
+    scorecard: project_s/pdf--scorecard
+
+# Logo settings.
+logo:
+  path: "themes/custom/project_s/logo.png"
+  use_default: false
+
+
+# This section lists the regions defined in Zen's default page.html.twig and
+# maintenance-page.html.twig files. The name before the semi-colon is the
+# machine name of the region. The text after the semi-colon is the region's
+# description used on the admin/structure/block page.
+#
+# In the page.html.twig, the contents of the region are output with a
+# {{page.MACHINE_NAME}} variable. For example, with these lines in the .info.yml
+# file:
+#   regions:
+#     header_top: Header top
+# You'll use this variable in page.html.twig:
+#   {{ page.header_top }}
+
+regions:
+  header: Header
+  featured: Featured
+  breadcrumb: Breadcrumb
+  title: Title
+  help: Help
+  content: Content
+  sidebar_first: First sidebar
+  sidebar_second : Second sidebar
+  front_first: Front first region
+  front_second: Front second region
+  front_third: Front third region
+  footer_first: Footer first region
+  footer_second: Footer second region
+  footer_third: Footer third region
+  bottom: Page bottom
+  # The page_top and page_bottom regions are hidden, which means they will not
+  # show up on the block layout page. But they are required in order for the
+  # html.html.twig to work properly, so do not delete them.
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'

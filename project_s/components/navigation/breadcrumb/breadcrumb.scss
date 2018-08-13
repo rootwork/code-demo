@@ -1,0 +1,59 @@
+@import 'init';
+
+// Breadcrumb navigation
+//
+// The path to the current page in the form of a list of links.
+//
+// Markup: breadcrumb.twig
+//
+// Style guide: navigation.breadcrumb
+
+.block-system-breadcrumb-block {
+  @include margin-bottom(1);
+  clear: both;
+  padding-left: $page-margin;
+  padding-right: $page-margin;
+  background-color: color(text-bg);
+}
+
+.breadcrumb,
+%breadcrumb {
+  display: inline-block;
+  border: 1px solid color(breadcrumb-border);
+
+  @media print {
+    display: none;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0 0 0 1rem;
+  }
+
+  &__item {
+    display: inline-block;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__link {
+    @extend %highlight-font;
+    position: relative;
+    display: inline-block;
+    padding: 0 0.5rem 0 0;
+    background-color: color(breadcrumb-bg);
+    color: color(breadcrumb-link);
+
+    &.breadcrumb-active {
+      padding-right: 1rem;
+      color: color(breadcrumb-link--active);
+    }
+  }
+
+  &__divider {
+    @extend %base-font;
+    display: inline-block;
+    color: color(breadcrumb-border);
+  }
+}

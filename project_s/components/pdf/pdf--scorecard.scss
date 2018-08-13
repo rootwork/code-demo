@@ -1,0 +1,167 @@
+@import 'init';
+
+// PDF styles for scorecards
+//
+// These styles apply to scorecards only when generated into PDFs. Remember that
+// length values should be specified in absolute units (in, cm, pt, pc) or
+// relative units that can be calculated from absolute font size (%, ex, ch).
+//
+// As an alternative to defining styles here, they can also be integrated
+// directly into component styles using the `pdf()` mixin.
+//
+// Also see `project_s.info.yml` entity_print section.
+//
+// Not included in the style guide.
+
+@import 'base/headings/headings';
+
+.pdf-page--scorecard {
+
+  // Scorecard introduction, PDF only
+  .field--name-field-scorecard-introduction {
+    padding-left: 4pc;
+    background: transparent imagemin-url('banana.svg') 0 50% no-repeat;
+    background-size: 3pc;
+  }
+
+  .scorecard-introduction-button {
+    float: right;
+    margin-left: 1pc;
+    font-weight: normal;
+    text-transform: none;
+    color: color('white');
+    background-color: color('red');
+  }
+
+  // Copyrights, PDF only
+  .field--name-field-scorecard-copyright-1,
+  .field--name-field-scorecard-copyright-2 {
+    font-size: 10pt;
+  }
+
+  .field--name-field-scorecard-copyright-2 {
+    page-break-after: always;
+  }
+
+  // Checklist fruit background
+  %checklist-fruit {
+    &::before {
+      position: absolute;
+      display: block;
+      content: '';
+      bottom: 0;
+      left: 50%;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      vertical-align: middle;
+    }
+  }
+
+  // Section checklists
+  .item-list ul {
+    padding: 0;
+    column-count: 2;
+
+    // The version of webkit used by wkhtmltopdf currently doesn't support
+    // `column-count` except with the following nonstandard settings.
+    //
+    // Note all of this will look off in the most recent Safari, e.g. using
+    // the `/debug` URL. You have two options: Generate the PDF, or in the
+    // browser developer tools, disable the `width: 50%` rule below.
+    //
+    // @see https://bugs.webkit.org/show_bug.cgi?id=122214
+    // @see https://bugs.webkit.org/show_bug.cgi?id=156300
+    // @see https://bugs.webkit.org/show_bug.cgi?id=15546
+    height: 25pc; // You must define a fixed height, unfortunately. Default.
+    -webkit-column-count: 0; // Value must be set to 0.
+    -webkit-columns: 0 0; // Value must be set to 0 0.
+    width: 50%; // Webkit's bizarre way to define columns: 50% = 2, 33% = 3...
+  }
+
+  .field--name-field-atmosphere .item-list ul {
+    @extend %checklist-fruit;
+    height: 20pc;
+
+    &::before {
+      background-image: imagemin-url('watermelon.svg');
+      width: 8pc;
+      height: 8pc;
+    }
+  }
+
+  .field--name-field-community .item-list ul {
+    @extend %checklist-fruit;
+    height: 18pc;
+
+    &::before {
+      background-image: imagemin-url('strawberry.svg');
+      transform: rotate(90deg);
+      width: 6.5pc;
+      height: 6.5pc;
+    }
+  }
+
+  .field--name-field-fruit .item-list ul {
+    height: 11pc;
+  }
+
+  .field--name-field-milk .item-list ul {
+    height: 9pc;
+  }
+
+  .field--name-field-reimbursable .item-list ul {
+    height: 20pc;
+  }
+
+  .field--name-field-salads .item-list ul {
+    @extend %checklist-fruit;
+    height: 8pc;
+
+    &::before {
+      background-image: imagemin-url('carrot.svg');
+      transform: rotate(90deg);
+      width: 4.5pc;
+      height: 4.5pc;
+    }
+  }
+
+  .field--name-field-students .item-list ul {
+    height: 11pc;
+  }
+
+  .field--name-field-vegetables .item-list ul {
+    height: 15pc;
+  }
+
+  // End matter, PDF only
+  .field--name-field-scorecard-end-matter {
+    position: relative;
+    margin-top: 2.5pc;
+    padding-right: 10pc;
+    font-size: 11pt;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: block;
+      width: 9pc;
+      height: 9pc;
+      background: transparent imagemin-url('logo.svg') no-repeat;
+      background-size: contain;
+    }
+  }
+
+  .scorecard-end-matter__link {
+    display: block;
+    font-size: 14pt;
+  }
+
+  // Uploaded images
+  .scorecard__fieldset--images {
+    page-break-before: always;
+    page-break-inside: avoid;
+  }
+}

@@ -1,0 +1,104 @@
+// Tables
+//
+// The `<table>` element displays tabular data in rows, columns, and cells.
+//
+// Markup: tables-table.twig
+//
+// Weight: 1
+//
+// Style guide: base.table
+
+table {
+  // Add vertical rhythm margins.
+  @include margin(1 0);
+  // Remove most spacing between table cells.
+  border-collapse: collapse;
+  border-spacing: 0;
+  // Prevent cramped-looking tables
+  table-layout: fixed;
+  width: 100%;
+
+  caption {
+    text-align: left;
+  }
+}
+
+th,
+td {
+  vertical-align: top;
+}
+
+th {
+  @include padding(0.5);
+  font-weight: 600;
+  text-align: left;
+  border-bottom: 1px solid color(table-border);
+
+  tfoot & {
+    border-top: 1px solid color(table-border);
+    border-bottom: 0;
+  }
+}
+
+td {
+  @include padding(0.5);
+}
+
+tbody {
+
+  tr:hover > td,
+  tr:hover > th {
+    background-color: color(table-hover);
+  }
+
+  tr:first-child td {
+    border-top: 2px solid color(table-border);
+  }
+
+  td {
+    border-bottom: 0;
+    border-top: 1px solid color(table-border);
+  }
+}
+
+// Responsive tables.
+
+th.priority-low,
+td.priority-low,
+th.priority-medium,
+td.priority-medium {
+  display: none;
+}
+
+@include respond-to(xs) {
+  th.priority-medium,
+  td.priority-medium {
+    display: table-cell;
+  }
+}
+
+@include respond-to(l) {
+  th.priority-low,
+  td.priority-low {
+    display: table-cell;
+  }
+}
+
+.tableresponsive-toggle-columns {
+  text-align: right;
+}
+
+.tableresponsive-toggle[type='button'] {
+  border-radius: 0;
+  font-weight: normal;
+  font-style: italic;
+  text-transform: none;
+
+  &:active,
+  &:hover,
+  &:focus {
+    color: color(button);
+    background-color: transparent;
+    text-decoration: underline;
+  }
+}

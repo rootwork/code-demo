@@ -1,0 +1,22 @@
+{#
+  Overriding `templates/content/entity-print.html.twig`.
+#}
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Project S Scorecard</title>
+  {{ entity_print_css }}
+</head>
+<body class="pdf-page pdf-page--scorecard">
+  <div class="page-container">
+    <div class="layout-center">
+      <div class="layout-3col">
+        <main class="layout-3col__full" role="main">
+          <h1 class="page-title"><span class="page-title__first">Project S </span><span class="page-title__second">Scorecard</span></h1>
+          {{ content }}
+        </main>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

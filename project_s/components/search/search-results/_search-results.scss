@@ -1,0 +1,28 @@
+// Search results
+
+.is-path-search {
+
+  .search-page-form {
+    .form-submit {
+      float: left; // Brings the help link to the same line.
+      margin-left: 0;
+    }
+
+    .search-help-link {
+      margin-left: 1rem;
+      line-height: 2.1em;
+    }
+  }
+
+  main > h2 {
+    @include visually-hidden(); // "Search Results"
+  }
+
+  .search-results {
+    padding-left: 0;
+
+    li {
+      margin-left: 0;
+    }
+  }
+}

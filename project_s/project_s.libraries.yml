@@ -1,0 +1,305 @@
+# These lines define the project_s/base library.
+base:
+  css:
+    # The SMACSS category, "base", is loaded before other categories. Drupal 8
+    # loads stylesheets based on the SMACSS ordering of:
+    # base, layout, component, state, theme
+    base:
+      # The {} brackets allow you to specify the additional options, weight and
+      # media. For example, you can specify this is a print media stylesheet by
+      # specifying: { media: print } Note: this isn't recommended since
+      # separate print stylesheets is bad for front-end performance.
+      components/asset-builds/css/base.css: {}
+  js:
+    components/base/fonts/fontfaceobserver.js: {}
+    components/base/fonts/fonts.js: {}
+  dependencies:
+    - project_s/clearfix
+    - project_s/visually-hidden
+
+layouts:
+  css:
+    # The SMACSS category, "layout", is loaded after "base" styles.
+    layout:
+      components/asset-builds/css/layouts.css: {}
+  dependencies:
+    - project_s/clearfix
+
+account-menu:
+  css:
+    component:
+      components/asset-builds/css/account-menu.css: {}
+  dependencies:
+    - project_s/clearfix
+
+admin-nav:
+  css:
+    component:
+      components/asset-builds/css/admin-nav.css: {}
+
+autocomplete:
+  css:
+    component:
+      components/asset-builds/css/autocomplete.css: {}
+
+breadcrumb:
+  css:
+    component:
+      components/asset-builds/css/breadcrumb.css: {}
+  dependencies:
+    - project_s/visually-hidden
+
+box:
+  css:
+    component:
+      components/asset-builds/css/box.css: {}
+
+ckeditor:
+  css:
+    component:
+      components/asset-builds/css/ckeditor.css: {}
+
+clearfix:
+  css:
+    component:
+      components/asset-builds/css/clearfix.css: {}
+
+collapsible-fieldset:
+  css:
+    component:
+      components/asset-builds/css/collapsible-fieldset.css: {}
+
+comment:
+  css:
+    component:
+      components/asset-builds/css/comment.css: {}
+
+dropbutton-unset:
+  css:
+    component:
+      components/asset-builds/css/dropbutton-unset.css: {}
+
+footer:
+  css:
+    component:
+      components/asset-builds/css/footer.css: {}
+
+footer-logo:
+  css:
+    component:
+      components/asset-builds/css/footer-logo.css: {}
+
+footer-nav:
+  css:
+    component:
+      components/asset-builds/css/footer-nav.css: {}
+
+form-item:
+  css:
+    component:
+      components/asset-builds/css/form-item.css: {}
+
+form-table:
+  css:
+    component:
+      components/asset-builds/css/form-table.css: {}
+
+header:
+  css:
+    component:
+      components/asset-builds/css/header.css: {}
+  dependencies:
+    - project_s/clearfix
+
+hidden:
+  css:
+    component:
+      components/asset-builds/css/hidden.css: {}
+
+highlight-mark:
+  css:
+    component:
+      components/asset-builds/css/highlight-mark.css: {}
+
+inline-links:
+  css:
+    component:
+      components/asset-builds/css/inline-links.css: {}
+
+inline-sibling:
+  css:
+    component:
+      components/asset-builds/css/inline-sibling.css: {}
+
+messages:
+  css:
+    component:
+      components/asset-builds/css/messages.css: {}
+
+more-link:
+  css:
+    component:
+      components/asset-builds/css/more-link.css: {}
+
+nav-menu:
+  css:
+    component:
+      components/asset-builds/css/nav-menu.css: {}
+
+navbar:
+  css:
+    component:
+      components/asset-builds/css/navbar.css: {}
+  dependencies:
+    - project_s/clearfix
+    - project_s/visually-hidden
+
+pager:
+  css:
+    component:
+      components/asset-builds/css/pager.css: {}
+
+pdf:
+  css:
+    component:
+      components/asset-builds/css/base.css: {}
+      components/asset-builds/css/layouts.css: {}
+      components/asset-builds/css/box.css: {}
+      components/asset-builds/css/clearfix.css: {}
+      components/asset-builds/css/hidden.css: {}
+      components/asset-builds/css/inline-links.css: {}
+      components/asset-builds/css/inline-sibling.css: {}
+      components/asset-builds/css/print-none.css: {}
+      components/asset-builds/css/watermark.css: {}
+      components/asset-builds/css/slm.css: {}
+      components/asset-builds/css/pdf.css: {}
+  dependencies:
+    - project_s/base
+    - project_s/layouts
+    - project_s/box
+    - project_s/clearfix
+    - project_s/hidden
+    - project_s/inline-links
+    - project_s/inline-sibling
+    - project_s/print-none
+    - project_s/watermark
+    - project_s/slm
+
+pdf--certificate:
+  css:
+    component:
+      components/asset-builds/css/pdf--certificate.css: {}
+  dependencies:
+    - project_s/pdf
+
+pdf--scorecard:
+  css:
+    component:
+      components/asset-builds/css/scorecards.css: {}
+      components/asset-builds/css/pdf--scorecard.css: {}
+  dependencies:
+    - project_s/pdf
+    - project_s/scorecards
+
+print-none:
+  css:
+    component:
+      components/asset-builds/css/print-none.css: {}
+
+progress-bar:
+  css:
+    component:
+      components/asset-builds/css/progress-bar.css: {}
+
+progress-throbber:
+  css:
+    component:
+      components/asset-builds/css/progress-throbber.css: {}
+
+resizable-textarea:
+  css:
+    component:
+      components/asset-builds/css/resizable-textarea.css: {}
+
+responsive-video:
+  css:
+    component:
+      components/asset-builds/css/responsive-video.css: {}
+
+scorecards:
+  css:
+    component:
+      components/asset-builds/css/scorecards.css: {}
+  js:
+    components/scorecards/scorecards-form/scorecards-image-upload.js: {}
+    components/scorecards/scorecards-form/scorecards-school-operations.js: {}
+    components/scorecards/scorecards-node/scorecards-pdf-open.js: {}
+  dependencies:
+    - project_s/visually-hidden
+
+search:
+  css:
+    component:
+      components/asset-builds/css/search.css: {}
+  dependencies:
+    - project_s/clearfix
+    - project_s/visually-hidden
+
+skip-link:
+  css:
+    component:
+      components/asset-builds/css/skip-link.css: {}
+
+slm:
+  css:
+    component:
+      components/asset-builds/css/slm.css: {}
+
+social-media:
+  css:
+    component:
+      components/asset-builds/css/social-media.css: {}
+  dependencies:
+    - project_s/clearfix
+
+superfish:
+  css:
+    component:
+      components/asset-builds/css/superfish.css: {}
+  js:
+    components/navigation/superfish/superfish-mobile.js: {}
+
+table-drag:
+  css:
+    component:
+      components/asset-builds/css/table-drag.css: {}
+
+tabs:
+  css:
+    component:
+      components/asset-builds/css/tabs.css: {}
+  dependencies:
+    - project_s/clearfix
+    - project_s/visually-hidden
+
+user:
+  css:
+    component:
+      components/asset-builds/css/user.css: {}
+  js:
+    components/user/user.js: {}
+
+visually-hidden:
+  css:
+    component:
+      components/asset-builds/css/visually-hidden.css: {}
+
+watermark:
+  css:
+    component:
+      components/asset-builds/css/watermark.css: {}
+
+wireframe:
+  css:
+    component:
+      components/asset-builds/css/wireframe.css: {}

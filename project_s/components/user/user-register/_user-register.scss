@@ -1,0 +1,20 @@
+@import 'init';
+
+// User registration form.
+//
+// No style guide entry.
+
+.user--register {
+
+  // Terms (privacy statement) checkbox.
+  .form-item-terms-of-use-checkbox {
+
+    label {
+
+      > a {
+        text-transform: lowercase;
+        text-decoration: underline;
+      }
+    }
+  }
+}

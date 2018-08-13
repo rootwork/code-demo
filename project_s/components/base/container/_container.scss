@@ -1,0 +1,39 @@
+// Page colors and background images.
+//
+// Layout-related styles go in the `container` directory within `layouts`.
+//
+// No style guide entry.
+
+.page-container {
+  background-color: color(page-bg);
+
+  @include respond-to(xxl) {
+    background-color: color(page-bg--large);
+    background-image:
+      imagemin-url('fruitveg-background.svg'),
+      imagemin-url('fruitveg-background.svg');
+    background-repeat:
+      repeat-y,
+      repeat-y;
+    background-position:
+      left,
+      right;
+  }
+
+  @include pdf {
+    @include respond-to(xxl) {
+      background-color: color(page-bg);
+      background-image: none;
+    }
+  }
+}
+
+.layout-center,
+.layout-3col,
+.layout-swap {
+  background-color: color(text-bg);
+}
+
+[role='article'] {
+  position: relative;
+}

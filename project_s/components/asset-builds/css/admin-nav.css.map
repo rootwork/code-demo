@@ -1,0 +1,1 @@
+{"version":3,"sources":["admin-nav.css"],"names":[],"mappings":"AAAA;EACE,eAAe;CAChB;;AAED;EACE,yBAAyB;CAC1B","file":"admin-nav.css","sourcesContent":["#toolbar-administration {\n  z-index: 99999;\n}\n\n#toolbar-administration ul li.menu-item {\n  font-family: 'Open Sans';\n}\n"]}

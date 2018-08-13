@@ -1,0 +1,52 @@
+@import 'init';
+
+// Footer logo
+//
+// Note this is actually a menu item.
+//
+// Markup: block--footer-nav.twig
+//
+// Style guide: navigation.footer-logo
+
+.menu--footer-logo {
+  bottom: calc(90px + #{$page-margin});
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  position: absolute;
+  width: 325px;
+  height: 45px;
+
+  @include respond-to(xxxl) {
+    bottom: $page-margin;
+    margin: 0;
+    left: auto;
+    right: $page-margin;
+  }
+
+  .menu {
+    margin: 0;
+    display: inline-block;
+  }
+
+  .menu-item {
+    padding: 0;
+  }
+
+  .menu-link {
+    display: block;
+    background: no-repeat center/cover imagemin-url('project_s-national-logo.png');
+    color: transparent !important; // Necessary for overriding core menu.css specificity.
+    overflow: hidden;
+    width: 325px;
+    height: 45px;
+    opacity: 0.9;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: transparent;
+      opacity: 1;
+    }
+  }
+}

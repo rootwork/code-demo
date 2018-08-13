@@ -1,0 +1,9 @@
+#toolbar-administration {
+  z-index: 99999;
+}
+
+#toolbar-administration ul li.menu-item {
+  font-family: 'Open Sans';
+}
+
+/*# sourceMappingURL=admin-nav.css.map */

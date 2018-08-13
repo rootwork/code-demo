@@ -1,0 +1,24 @@
+uuid: f6feea02-b083-46f0-8b20-c90fdae00c99
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - project_s
+id: mainnavigation_2
+theme: project_s
+region: footer_second
+weight: -12
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 8
+visibility: {  }

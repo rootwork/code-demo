@@ -1,0 +1,134 @@
+@import 'init';
+
+// Tabs
+//
+// The primary and secondary tabs.
+//
+// Markup: tabs.twig
+//
+// .tabs--secondary - Secondary tabs
+//
+// Style guide: navigation.tabs
+
+// Tabs (stacked)
+//
+// When the secondary tabs appear directly after the primary tabs, the styling
+// is slightly different.
+//
+// Markup: tabs--stacked.twig
+//
+// Style guide: navigation.tabs.stacked
+
+.block-local-tasks-block {
+  margin: 1rem 0;
+}
+
+.tabs,
+%tabs {
+  // The line height of a tab.
+  $tab-height: 1.25;
+
+  @include margin((2 - $tab-height) 0 0);
+  @include line-height($tab-height);
+  padding: 0 2px 0 0;
+  list-style: none;
+  white-space: nowrap;
+
+  @media print {
+    display: none;
+  }
+
+  &__tab {
+    float: left;
+    margin: 0 3px;
+    // Clip the background colors on tab links.
+    overflow: hidden;
+
+    &:first-of-type {
+      margin-left: 0;
+    }
+
+    @include rtl() {
+      float: right;
+
+      &:first-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__tab-link {
+    @include padding(0 1);
+    display: block;
+    text-decoration: none;
+    transition: color 0.3s, background-color 0.3s, border 0.3s;
+    color: color(tab-link);
+    background-color: color(tab-inactive);
+    letter-spacing: 1px;
+
+    &:focus,
+    &:hover {
+      color: color(tab-link-active);
+      background-color: color(tab-inactive-hover);
+    }
+
+    &:active,
+    &.is-active,
+    &--is-active {
+      color: color(tab-link-active);
+      background-color: color(tab-bg);
+
+      &:focus,
+      &:hover {
+        background-color: color(tab-bg-active);
+      }
+    }
+  }
+
+  &--secondary {
+    @include margin-top(1);
+    @include font-size(s);
+    background-color: color(tabs-bg);
+  }
+
+  // When secondary tabs appear directly after primary tabs.
+  & + &--secondary,
+  & + h2 + &--secondary {
+    @include margin-top(0);
+    background-image: linear-gradient(to top, color(tabs-border) 1px, transparent 1px);
+  }
+
+  &--secondary &__tab {
+    @include margin((2 - $tab-height)/2 3px);
+    border: 0;
+    background: transparent;
+
+    @include rtl() {
+      float: right;
+    }
+
+    &.is-active {
+      border-bottom-color: transparent;
+    }
+  }
+
+  &--secondary &__tab-link {
+    border-radius: $base-line-height;
+    color: color(tab-link);
+    background: lighten(color(tab-bg), 8%);
+    letter-spacing: normal;
+
+    &:focus,
+    &:hover {
+      color: darken(color(tab-link), 20%);
+      background: color(tab-bg);
+    }
+
+    &:active,
+    &.is-active,
+    &--is-active {
+      color: color(tab-link);
+      background: color(tab-bg);
+    }
+  }
+}

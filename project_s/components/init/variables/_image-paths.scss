@@ -1,0 +1,19 @@
+// Image path to source
+//
+// The relative path from the build directory, components/asset-builds/css/, to
+// the source directory, components/
+//
+// Default: `$image-url-path-to-source`: '../../'
+//
+// Style guide: sass.variables.image-url-path-to-source
+$image-url-path-to-source: '../../' !default;
+
+// Image path to source
+//
+// The relative path from the root sass directory to where your components
+// usually lie.
+//
+// Default: `$image-url-subdirectory`: 'components'
+//
+// Style guide: sass.variables.image-url-subdirectory
+$image-url-subdirectory: 'components' !default;

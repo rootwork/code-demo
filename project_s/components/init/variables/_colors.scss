@@ -1,0 +1,133 @@
+// sass-lint:disable indentation, no-color-keywords
+
+// Colors
+//
+// Use the `color()` function to add colors to CSS properties. To learn more,
+// [read the Chroma documentation](http://johnalbin.github.io/chroma/).
+//
+// Markup: chroma.twig
+//
+// Weight: -1
+//
+// Style guide: sass.colors
+
+// Define the default color scheme's color names.
+$chroma: define-default-color-scheme('branding', 'The site\'s main colors. Can be used to define colors in other color schemes. Variables in parentheses to the right of the arrow → represent the color variable, if any, upon which this color depends.');
+
+$chroma: add-colors((
+  black:                  #000,
+  grey-dark:              #1a1a1a,
+  'grey':                 ('black' lighten 60%), // #999
+  grey-light:             ('black' lighten 80%), // #ccc
+  grey-extra-light:       ('black' lighten 93.33%), // #eee
+  white:                  #fff,
+
+  blue:                   #616db2,
+  red:                    #a32a29,
+  red-light:              ('red' lighten 57%),
+  orange:                 #d4451d,
+  orange-dark:            ('orange' darken 5%),
+  yellow:                 #ffb819,
+  yellow-dark:            ('yellow' darken 10%),
+  green:                  #73984a,
+  green-dark:             ('green' darken 10%),
+));
+
+// Define color names for functional uses.
+$chroma: define-color-scheme('functional', 'Colors used by functional parts of the design.');
+$chroma: add-colors('functional', (
+  root-bg:                'yellow',
+
+  page-bg:                'white',
+  page-bg--large:         'root-bg',
+
+  text:                   'grey-dark',
+  text-bg:                'page-bg',
+
+  link:                   'red',
+  link-visited:           ('link' darken 3%),
+  link-active:            ('link' darken 10%),
+  link-active-trail:       'green',
+
+  border:                 'grey-light',
+  border--active:         'grey',
+  border--highlight:      'red',
+
+  autocomplete:           'text',
+  autocomplete-bg:        'text-bg',
+  autocomplete-select:    'white',
+  autocomplete-select-bg: 'blue',
+
+  body-bg:                'text-bg',
+
+  breadcrumb-bg:                 'text-bg',
+  breadcrumb-border:             'yellow',
+  breadcrumb-link:               'green',
+  breadcrumb-link--active:       'red',
+
+  button:                 'link',
+  button-bg:              'yellow',
+  button--active:         'white',
+  button-bg--active:      'red',
+  button--go:             'white',
+  button-bg--go:          'green',
+  button--warning:        'white',
+  button-bg--warning:     'red',
+  fieldset-summary:       'grey',
+  form-error:             'red',
+
+  footer-top-bg:          'red',
+  footer-bottom-bg:       'orange',
+  footer-text:            'white',
+  footer-disclaimer:      transparentize(color('white'), 0.35),
+  footer-link:            transparentize(color('white'), 0.6),
+
+  hero-text:              'white',
+
+  mark-highlight:         'red',
+  mark-bg:                'yellow',
+
+  menu-active:            'text',
+  menu-bg-active:         'grey-extra-light',
+
+  preview-bg:             ('yellow' lighten 43%),
+
+  progress-bar:           'blue',
+  progress-bar-bg:        'grey-light',
+  progress-bar-border:    'grey-dark',
+
+  resizable-grippie:      'grey-extra-light',
+
+  row-stripe:             'grey-extra-light',
+  row-disabled:           'grey-light',
+
+  skip-link:              'white',
+  skip-link-bg:           'grey-dark',
+
+  status:                 'blue',
+  status-bg:              (status lighten 62%),
+  status-highlight:       text,
+  warning:                text,
+  warning-bg:             ('yellow' lighten 45%),
+  warning-border:         'yellow',
+  error:                  'red',
+  error-bg:               'red-light',
+
+  tabs-border:            'border',
+  tabs-bg:                'text-bg',
+  tab-link:               'link',
+  tab-link-active:        'link-active',
+  tab-bg:                 'grey-light',
+  tab-bg-active:          'grey-light',
+  tab-inactive:           'grey-extra-light',
+  tab-inactive-hover:     'grey-light',
+
+  table-border:           ('border' darken 10%),
+  table-hover:            ('grey-light' lighten 10%),
+  table-drag:             ('yellow' lighten 43%),
+  table-select:           ('yellow' lighten 47%),
+
+  watermark:              'red',
+));
+
+$chroma-active-scheme: 'functional';

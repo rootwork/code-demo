@@ -1,0 +1,83 @@
+@import 'init';
+
+// pdf()
+//
+// Styles included within this mixin will only be applied when an element is
+// rendered on generated PDFs.
+//
+// No parameters.
+//
+// @author Ivan Boothe
+//
+// Usage:
+// ```scss
+// h2 {
+//   color: blue;
+//
+//   @include pdf {
+//     color: red;
+//   }
+// }
+// ```
+//
+// Result:
+//
+// ```css
+// h2 {
+//   color: blue;
+// }
+//
+// .pdf-page h2 {
+//   color: red;
+// }
+// ```
+//
+// Style guide: sass.mixins.pdf
+@mixin pdf {
+  @at-root {
+    .pdf-page & {
+      @content;
+    }
+  }
+}
+
+// pdf-hide()
+//
+// Remove elements from generated PDFs entirely.
+//
+// No parameters.
+//
+// Because these elements should not be present at all in PDFs, there is no need
+// for screenreader fallbacks like `visually-hidden()`.
+//
+// @author Ivan Boothe
+//
+// Usage:
+// ```scss
+// h2 {
+//   color: blue;
+//
+//   @include pdf-hide;
+// }
+// ```
+//
+// Result:
+//
+// ```css
+// h2 {
+//   color: blue;
+// }
+//
+// .pdf-page h2 {
+//   display: none;
+// }
+// ```
+//
+// Style guide: sass.mixins.pdf-hide
+@mixin pdf-hide {
+  @at-root {
+    .pdf-page & {
+      display: none;
+    }
+  }
+}

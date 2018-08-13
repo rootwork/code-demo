@@ -1,0 +1,21 @@
+{#
+  Overriding `templates/content/entity-print.html.twig`.
+#}
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>{{ title }}</title>
+  {{ entity_print_css }}
+</head>
+<body class="pdf-page">
+  <div class="page-container">
+    <div class="layout-center">
+      <div class="layout-3col">
+        <main class="layout-3col__full" role="main">
+          {{ content }}
+        </main>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

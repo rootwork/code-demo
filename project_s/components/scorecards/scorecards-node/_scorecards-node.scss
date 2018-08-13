@@ -1,0 +1,250 @@
+// Scorecard content types
+//
+// Markup: node--scorecard.twig
+//
+// Style guide: scorecards.nodes
+
+.scorecard {
+
+  // Node title
+  .entity-title {
+    @include pdf-hide;
+  }
+
+  // School name, PDF only
+  .field--name-field-school {
+    @include pdf {
+      @extend %h2;
+      margin-bottom: 0;
+    }
+  }
+
+  // Checklists
+  &__checklists {
+    clear: both;
+  }
+
+  .field--type-list-string {
+
+    .wrapper__links__link {
+      margin: 1rem 0.5rem;
+      list-style-type: none;
+
+      @include pdf {
+        margin: 0 0.5pc 0.5pc 0;
+        break-inside: avoid;
+
+        &:last-of-type {
+          margin-bottom: 3pc;
+        }
+      }
+
+      &::before {
+        display: inline-block;
+        content: '✘';
+        width: 1.25rem;
+        height: 1.25rem;
+        margin-right: 0.25rem;
+        padding-left: 0.25rem;
+        color: color('white');
+        background-color: color('yellow-dark');
+        border-radius: $border-radius;
+        vertical-align: middle;
+
+        @include pdf {
+          content: '';
+          background-color: color('white');
+          border: 2px color('green') solid;
+        }
+      }
+
+      &.selected {
+        &::before {
+          content: '✔';
+          background-color: color('green');
+
+          @include pdf {
+            border-width: 0;
+          }
+        }
+      }
+    }
+
+    .selected__label {
+      @include visually-hidden;
+    }
+  }
+
+  .admin-ask-star {
+    display: none;
+
+    @include pdf {
+      display: inline;
+    }
+  }
+
+  // Find strategies links
+  .field--name-field-link-atmosphere,
+  .field--name-field-link-community,
+  .field--name-field-link-fruit,
+  .field--name-field-link-milk,
+  .field--name-field-link-reimbursable,
+  .field--name-field-link-salads,
+  .field--name-field-link-students,
+  .field--name-field-link-vegetables {
+    margin-top: 2rem;
+  }
+
+  .item-list ul {
+    margin: 0;
+    padding: 0 0 0.75em;
+  }
+
+  // Image uploads
+  .field--type-image {
+    margin: 1rem 0.5rem;
+
+    @include pdf {
+      margin: 0.5pc 0;
+    }
+
+    .field__item {
+      display: inline-block;
+      margin: 0.25rem;
+      vertical-align: top;
+
+      @include pdf {
+        margin: 0 0.5pc 0 0;
+      }
+    }
+  }
+}
+
+@import 'base/headings/headings';
+
+// "Completed by"
+.scorecard__completed {
+  @extend %h2;
+
+  @include pdf {
+    @extend %h4;
+  }
+}
+
+// Download PDF
+.print__wrapper {
+  text-align: right;
+}
+
+.print__link {
+  @extend %button;
+  @extend %button--go;
+}
+
+// All fieldsets
+.scorecard__fieldset {
+  border-radius: $border-radius;
+
+  @include pdf {
+    position: relative;
+    page-break-inside: avoid;
+    margin: 1pc 0;
+    padding: 0.5pc;
+  }
+
+  &--notes {
+    @include pdf {
+      height: 30rem;
+    }
+  }
+
+  // Strategy links
+  .field--type-markup {
+    font-weight: bold;
+
+    p {
+      margin: -1rem 0 0;
+      font-weight: bold;
+      text-align: right;
+    }
+
+    a {
+      border-bottom: 1px color('link') dotted;
+    }
+  }
+}
+
+// Scorecard overall total fieldset
+.scorecard__fieldset--total {
+  background-color: color('green');
+
+  legend {
+    padding: 0;
+    background-color: color('yellow');
+  }
+
+  .fieldset-legend {
+    padding: 0.25rem 0.75rem;
+  }
+}
+
+// Individual section totals within the overall total fieldset
+.scorecard-total {
+  @include font-size(l);
+  margin: 0 0.5rem 0.75rem;
+  color: color('white');
+
+  // Numbers
+  strong {
+    font-size: 125%;
+  }
+
+  // Grand total, out of 60
+  &--total {
+    @include font-size(xl);
+    margin: 0;
+    padding: 0.5rem;
+    color: color('red');
+    background-color: color('yellow');
+    border-radius: $border-radius;
+  }
+}
+
+// Section totals within each section fieldset
+//
+// Specific classes also exist for each section, e.g. `.scorecard-count--fruit`
+.scorecard-count {
+  @include font-size(l);
+  margin: 0;
+  padding: 0.5rem 0.75rem;
+  font-weight: bold;
+  color: color('white');
+  background-color: color('green');
+  border-radius: $border-radius;
+
+  @include pdf {
+    position: absolute;
+    display: inline-block;
+    right: 0.5pc;
+    bottom: 0.5pc;
+    padding: 0.25pc 0.5pc;
+    font-weight: weight('lighter');
+    background-color: color('yellow-dark');
+  }
+}
+
+// Dynamic award level
+//
+// @see `scorecards/award-levels/award-levels`
+
+// Image lightbox
+.mfp-close {
+  @include font-size(32px);
+  opacity: 1;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: transparent;
+  }
+}

@@ -1,0 +1,11 @@
+// Administration menu bar overrides
+//
+// Not included in the style guide.
+
+#toolbar-administration {
+  z-index: 99999;
+
+  ul li.menu-item {
+    font-family: 'Open Sans';
+  }
+}

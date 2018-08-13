@@ -1,0 +1,148 @@
+// User profile and profile editing form.
+
+@import 'base/headings/headings';
+
+// User fields on profile page
+.profile {
+
+  // Pseudo-title
+  .field--name-field-name {
+    @extend %h1;
+  }
+
+  // TAP-verified
+  .field--name-field-tap-verified {
+    @include font-size(l);
+    text-align: center;
+  }
+}
+
+// TAP-verified
+.profile__verified {
+  font-weight: bold;
+  color: color('green');
+
+  &::before {
+    display: inline-block;
+    content: '✔';
+    padding-right: 0.5rem;
+    color: color('green');
+  }
+}
+
+// User link buttons
+.user-links {
+  @include margin(1 0);
+  text-align: center;
+}
+
+// 'Edit my information' button
+.block-views-blockuser-links-user-links__information {
+}
+
+// 'Change email/password' button
+.block-views-blockuser-links-user-links__email-password {
+}
+
+
+// Profile editing form
+.user-form {
+
+  // Collapse first and last name onto one line
+  .name-given-wrapper,
+  .name-family-wrapper {
+    width: 48%;
+    float: left;
+  }
+
+  .name-family-wrapper {
+    margin-left: 4%;
+  }
+
+  // Associated schools
+  .field--name-field-school {
+
+    // Table element
+    .field-multiple-table {
+      width: auto;
+
+      .odd {
+        background-color: color(white);
+      }
+
+      tr:first-child td {
+        border-top: 0;
+      }
+
+      tbody {
+        border-top: 0;
+      }
+
+      tbody td {
+        border-top: 0;
+      }
+
+      tbody tr {
+        border-bottom: 0;
+      }
+    }
+
+    // Hide draggability and weights completely
+    .tabledrag-toggle-weight-wrapper,
+    .field-multiple-drag,
+    .delta-order {
+      display: none;
+    }
+
+    // Responsive tables
+    tbody,
+    tr,
+    td {
+      display: block;
+      padding: 0.5em 0;
+    }
+
+    @include respond-to(s) {
+      tbody {
+        display: table-row-group;
+        padding: 0;
+      }
+
+      tr {
+        display: table-row;
+        padding: 0.1em 0.6em;
+      }
+
+      td {
+        display: table-cell;
+        padding: 0.75em;
+      }
+    }
+
+    td {
+      width: 100%;
+    }
+
+    // Hide table headings for sighted users.
+    .field-multiple-table > thead {
+      @include visually-hidden;
+    }
+
+    // School name field
+    .form-type-entity-autocomplete {
+      .ui-autocomplete-input {
+        margin-bottom: 0;
+      }
+    }
+
+    // Remove button
+    .delta-remove {
+      padding-right: 0;
+    }
+
+    // Add school button
+    .field-add-more-submit {
+      float: right;
+    }
+  }
+}

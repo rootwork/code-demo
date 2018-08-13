@@ -1,0 +1,84 @@
+// Embedded content
+//
+// Weight: 2
+//
+// Style guide: base.embedded
+
+// Image
+//
+// An `<img>` element represents an image.
+//
+// Markup: embedded-img.twig
+//
+// Style guide: base.embedded.img
+
+img {
+  // Remove the border on images inside links in IE <11.
+  border-style: none;
+  @if support-for(ie, 7) {
+    // Improve image quality when scaled in IE 7.
+    // sass-lint:disable no-vendor-prefixes
+    -ms-interpolation-mode: bicubic;
+  }
+}
+
+img,
+svg {
+  @include margin(0);
+
+  // Suppress the space beneath the baseline
+  // vertical-align: bottom;
+
+  // Responsive images
+  max-width: 100%;
+  height: auto;
+}
+
+// Scalable vector
+//
+// A `<svg>` element represents an image encoded as a Scalable Vector Graphic.
+//
+// Markup: embedded-svg.twig
+//
+// Style guide: base.embedded.svg
+
+svg:not(:root) {
+  // Hide the overflow in IE.
+  overflow: hidden;
+}
+
+// Drupal embedded entity
+//
+// Inline entities (image, video, etc.) inserted using the rich text editor.
+//
+// .align-left - Floated left.
+// .align-right - Floated right.
+// .align-center - Centered.
+//
+// Markup: embedded-entity.twig
+//
+// Style guide: base.embedded.entity
+
+.embedded-entity {
+
+  &.align-left {
+    float: left;
+    clear: left;
+    margin: 0 1rem 1rem 0;
+  }
+
+  &.align-right {
+    float: right;
+    clear: right;
+    margin: 0 0 1rem 1rem;
+  }
+
+  &.align-center {
+    clear: both;
+    text-align: center;
+  }
+
+  &.caption article {
+    margin: 0;
+  }
+}

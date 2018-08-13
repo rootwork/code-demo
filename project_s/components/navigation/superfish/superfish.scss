@@ -1,0 +1,155 @@
+@import 'init';
+
+// Superfish menus
+//
+// Markup: menu.twig
+//
+// Style guide: navigation.superfish
+
+.block-superfishmain {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  @include respond-to(xxxl) {
+    position: static;
+    width: unset;
+    float: right;
+    max-width: calc(100% - 140px);
+  }
+
+  .sf-main {
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+
+    &.sf-expanded {
+      flex-direction: column;
+    }
+
+    a {
+      @extend %heading-font;
+      @include padding(2/3);
+      @include font-size(19px);
+      color: color(link);
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: color(link-active);
+      }
+
+      &.is-active {
+        color: color(link-active-trail);
+      }
+    }
+
+    // Cloned top-level links used for touchscreens.
+    .sf-has-clone-parent {
+      padding-left: 0.5rem;
+    }
+
+    .sf-clone-parent {
+      @include respond-to(4xl) {
+        display: none;
+      }
+
+      > a {
+        @extend %highlight-font;
+        padding-left: 1em;
+        border-bottom: 2px color(red) solid;
+
+        &::after {
+          content: ' 〉';
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+          background-color: color(menu-bg-active);
+        }
+      }
+    }
+
+    .active-trail > a {
+      color: color(link-active-trail);
+    }
+  }
+
+  .sf-depth-1 {
+    flex: 1 1 auto;
+    text-transform: uppercase;
+
+    &:last-of-type {
+      > a {
+        padding-right: 0;
+      }
+    }
+  }
+
+  .sf-depth-2 {
+    background-color: color(white);
+    padding-left: 1em;
+
+    a {
+      @extend %highlight-font;
+      text-transform: none;
+
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: color(menu-bg-active);
+      }
+    }
+  }
+}
+
+#superfish-main-toggle {
+  position: relative;
+  font-size: 11.25px !important; // Scaling the dropdown menu element.
+  float: right;
+  background: color(yellow);
+  color: color(white);
+  border: 0;
+  padding: 2.5em 0.75em 0.25em;
+
+  span {
+    @extend %highlight-font;
+    text-transform: uppercase;
+  }
+
+  &::after {
+    display: none;
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    content: '≡';
+    font-size: 4em;
+    line-height: 0.75em;
+    color: color(white);
+    transform: translateX(-50%);
+  }
+
+  &.sf-expanded {
+    background: none;
+
+    span {
+      display: none;
+    }
+
+    &::before {
+      content: '×';
+      font-weight: 300;
+      font-family: Helvetica, sans-serif;
+      color: color(red);
+    }
+  }
+}
+
+#superfish-main-accordion {
+  max-width: 50vw;
+  float: right;
+}

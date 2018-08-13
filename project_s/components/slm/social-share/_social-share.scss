@@ -1,0 +1,60 @@
+// Social sharing icons at the top of most pages
+
+.shariff {
+  @include clearfix;
+  @include margin(1 0);
+
+  ul {
+    margin: 0;
+    padding-left: 20px;
+    float: left;
+  }
+
+  &::before {
+    content: 'Share: ';
+    font-size: 0.9em;
+    float: left;
+  }
+
+  .shariff-button {
+    background: transparent;
+    display: inline;
+  }
+
+  .fa,
+  .share_text {
+    display: none;
+  }
+
+  a {
+    float: left;
+    margin-right: 20px;
+    opacity: 0.8;
+
+    &:hover,
+    &:active,
+    &:focus {
+      opacity: 1;
+    }
+  }
+
+  a[title='Share on Facebook'] {
+    width: 11px;
+    height: 22px;
+    background: no-repeat center/cover imagemin-url('fb.svg');
+  }
+
+  a[title='Send by email'] {
+    width: 22px;
+    height: 20px;
+    margin-top: 1px;
+    background: no-repeat center/cover imagemin-url('email.svg');
+  }
+
+  a[title='Share on Twitter'] {
+    width: 22px;
+    height: 20px;
+    margin-top: 1px;
+    background: no-repeat center/cover imagemin-url('twitter.svg');
+  }
+}

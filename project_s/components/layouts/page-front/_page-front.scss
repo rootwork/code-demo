@@ -1,0 +1,33 @@
+// Front page-specific styles.
+//
+// Non-Layout styles go in the `page-landing` directory within `slm`.
+//
+// No style guide entry.
+//
+
+.front-regions {
+  @include clearfix;
+  margin-top: $gutter;
+
+  @include respond-to(l) {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    margin: 1rem 0 0 -1rem;
+  }
+}
+
+.region-front {
+  margin: 1rem auto;
+  max-width: $col-3-width;
+
+  @include respond-to(l) {
+    flex: 0 0 33.3333%;
+    align-self: flex-start;
+    margin: 0;
+    padding-left: 1rem;
+  }
+}

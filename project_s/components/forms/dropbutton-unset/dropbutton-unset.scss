@@ -1,0 +1,84 @@
+@import 'init';
+
+// Convert any dropbuttons into side-by-side buttons
+//
+// This overrides `core/themes/stable/css/core/dropbutton/dropbutton.css`.
+//
+// To use this on a page, you need to include
+// {{ attach_library('@project_s/forms/dropbutton-unset') }}
+// in a Twig template for the form in which you want this to apply.
+//
+// @see https://www.drupal.org/node/2216195
+//
+// No style guide entry.
+
+.js .dropbutton-wrapper,
+.js .dropbutton-widget {
+  // display: block;
+  // position: relative;
+}
+
+@media screen and (max-width: 600px) {
+  .js .dropbutton-wrapper {
+    // width: 100%;
+  }
+}
+
+/* Splitbuttons */
+
+@media screen and (min-width: 600px) {
+  .form-actions .dropbutton-wrapper {
+    float: none;
+  }
+}
+
+.js .form-actions .dropbutton-widget,
+.js td .dropbutton-widget,
+.dropbutton-widget {
+  border: 0;
+}
+
+/* UL styles are over-scoped in core, so this selector needs weight parity. */
+.dropbutton-widget .dropbutton,
+.js .dropbutton-widget .dropbutton {
+  border: 0;
+}
+
+.dropbutton li,
+.js .dropbutton li {
+  display: block;
+
+  @include respond-to(s) {
+    display: inline-block;
+  }
+}
+
+.dropbutton .dropbutton-action input {
+  padding: 0.5em 1.5em;
+  white-space: normal;
+  width: 100%;
+
+  @include respond-to(s) {
+    width: auto;
+  }
+}
+
+.js .dropbutton-multiple .dropbutton-widget {
+  padding-right: 0;
+}
+
+.dropbutton-multiple .dropbutton .secondary-action {
+  display: block;
+  border: 0;
+
+  @include respond-to(s) {
+    display: inline-block;
+  }
+}
+
+.dropbutton .dropbutton-toggle,
+.js .dropbutton .dropbutton-toggle,
+.dropbutton .dropbutton-arrow,
+.js .dropbutton .dropbutton-arrow {
+  display: none;
+}

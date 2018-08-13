@@ -1,0 +1,16 @@
+{#
+/**
+ * @file
+ * Theme override for a 'form' element.
+ *
+ * Available variables
+ * - attributes: A list of HTML attributes for the wrapper element.
+ * - children: The child elements of the form.
+ *
+ * @see template_preprocess_form()
+ */
+#}
+{{ attach_library('project_s/user') }}
+<form{{ attributes.addClass('user--profile') }}>
+  {{ children }}
+</form>

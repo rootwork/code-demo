@@ -1,0 +1,107 @@
+// image-url()
+//
+// If you include your images next to your component Sass files, you need to
+// specify a url() to point from the generated CSS to the Sass source like this:
+//
+// ```css
+// content: url('../../components/is-quite/long.svg');
+// ```
+//
+// With the `image-url()` function the path to all your components is assumed to
+// start with `../../components/` and you just need to give it the last, short
+// bit of the path in your Sass code like this:
+//
+// ```scss
+// content: image-url('is-quite/short.svg');
+// ```
+//
+// If you want to point at an image that is not in the components sub-directory
+// of your sass directory, you can override the default $subdirectory by
+// passing it in as the first parameter of `image-url()` like this:
+//
+// ```scss
+// content: image-url(base, 'grouping/blockquote.svg');
+// ```
+//
+// which would output `url('../../base/grouping/blockquote.svg')`.
+//
+// $subdirectory   = $image-url-subdirectory - Optional. The relative path from
+//                   the root of your Sass source to the sub-directory where
+//                   components usually lie.
+// $path           - Required. The path to the image relative to the
+//                   `$subdirectory`.
+// $path-to-source = $image-url-path-to-source - Optional. The relative path
+//                   from the css build directory to the sass source directory.
+//
+// Style guide: sass.functions.image-url
+@function image-url($subdirectory, $path: null, $path-to-source: $image-url-path-to-source) {
+  // If only 1 parameter is given, its value is intended for the $path.
+  @if type-of($path) == 'null' {
+    $path: $subdirectory;
+    $subdirectory: $image-url-subdirectory;
+  }
+  @return url(unquote($path-to-source + '/' + $subdirectory + '/' + $path));
+}
+
+// imagemin-url()
+//
+// As an alternative to keeping images in component directories, you can point
+// to minified images in the theme's `images` folder.
+//
+// $filename            - Required. Image file name.
+// $relative-image-path = '../../../images/' - Optional. Image assets directory,
+//                        relative path from the CSS file
+//
+// Style guide: sass.functions.imagemin-url
+@function imagemin-url($filename, $image-path: '../../../images/') {
+  @return url('#{$image-path}#{$filename}');
+}
+
+// svg-url()
+//
+// Create an optimized SVG URL for embedding.
+//
+// @requires str-replace
+//
+// @link http://codepen.io/tigt/post/optimizing-svgs-in-data-uris
+// @author Jakob Eriksen
+//
+// Style guide: sass.functions.svg-url
+@function svg-url($svg) {
+
+  // Chunk up string in order to avoid "stack level too deep" error
+  $encoded: '';
+  $slice: 2000;
+  $index: 0;
+  $loops: ceil(str-length($svg)/$slice);
+  @for $i from 1 through $loops {
+    $chunk: str-slice($svg, $index, $index + $slice - 1);
+
+    // Encode (may need a few extra replacements)
+    $chunk: str-replace($chunk, '"', '\'');
+    $chunk: str-replace($chunk, '<', '%3C');
+    $chunk: str-replace($chunk, '>', '%3E');
+    $chunk: str-replace($chunk, '&', '%26');
+    $chunk: str-replace($chunk, '#', '%23');
+    $encoded: #{$encoded}#{$chunk};
+    $index: $index + $slice;
+  }
+  @return url("data:image/svg+xml,#{$encoded}");
+}
+
+// Replace characters in a string.
+//
+// @link http://codepen.io/Tigt/blog/optimizing-svgs-in-data-uris
+// @author Jakob Eriksen
+//
+// Style guide: sass.functions.str-replace
+
+@function str-replace($string, $search, $replace: '') {
+  $index: str-index($string, $search);
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace +
+    str-replace(str-slice($string, $index +
+    str-length($search)), $search, $replace);
+  }
+  @return $string;
+}

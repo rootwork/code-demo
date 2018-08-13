@@ -1,0 +1,35 @@
+// Spacing
+//
+// `$spacing`: `$base-line-height`
+//
+// `$spacing-small`: `$spacing` / 2
+//
+// Style guide: sass.variables.spacing
+$spacing: $base-line-height;
+$spacing-small: $spacing / 2;
+
+// Padding
+//
+// `$gutter`: `$zen-gutters` / 2 (32px / 2rem)
+//
+// `$page-margin`: `$gutter`
+//
+// `$content-padding-large`: `$gutter`
+//
+// `$content-padding-small`: `$gutter` / 8 (4px / 0.25rem)
+//
+// Style guide: sass.variables.padding
+$gutter: $zen-gutters / 2; // 32px / 2rem
+$page-margin: $gutter;
+$content-padding-large: $gutter;
+$content-padding-small: $gutter / 8; // 4px / 0.25rem
+
+// Widths
+//
+// `$max-width`: 952px
+//
+// `$col-3-width`: 325px
+//
+// Style guide: sass.variables.widths
+$max-width: 952px;
+$col-3-width: 325px;

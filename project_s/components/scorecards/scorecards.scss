@@ -1,0 +1,16 @@
+@import 'init';
+
+// Scorecards
+//
+// Theming for scorecard content types, forms, and blocks.
+//
+// Weight: 4
+//
+// Style guide: scorecards
+
+@import 'admin-ask-star/admin-ask-star';
+@import 'award-levels/award-levels';
+@import 'definitions/definitions';
+@import 'scorecards-form/scorecards-form';
+@import 'scorecards-my/scorecards-my';
+@import 'scorecards-node/scorecards-node';

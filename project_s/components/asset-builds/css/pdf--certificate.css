@@ -1,0 +1,309 @@
+h1, h2, .pdf-page--certificate .field--name-field-certificate-school, h3, .pdf-page--certificate .certificate__banner .field--name-title {
+  font-family: Frutiger, 'Frutiger Linotype', Univers, Calibri, 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', Myriad, 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.font-nexa-loaded h1, .font-nexa-loaded h2, .font-nexa-loaded .pdf-page--certificate .field--name-field-certificate-school, .pdf-page--certificate .font-nexa-loaded .field--name-field-certificate-school, .font-nexa-loaded h3, .font-nexa-loaded .pdf-page--certificate .certificate__banner .field--name-title, .pdf-page--certificate .certificate__banner .font-nexa-loaded .field--name-title,
+.cke_editable h1,
+.cke_editable h2,
+.cke_editable .pdf-page--certificate .field--name-field-certificate-school, .pdf-page--certificate
+.cke_editable .field--name-field-certificate-school,
+.cke_editable h3,
+.cke_editable .pdf-page--certificate .certificate__banner .field--name-title, .pdf-page--certificate .certificate__banner
+.cke_editable .field--name-title {
+  font-family: 'NexaRustSansBlack';
+}
+
+.pdf-page h1, .pdf-page h2, .pdf-page .pdf-page--certificate .field--name-field-certificate-school, .pdf-page--certificate .pdf-page .field--name-field-certificate-school, .pdf-page h3, .pdf-page .pdf-page--certificate .certificate__banner .field--name-title, .pdf-page--certificate .certificate__banner .pdf-page .field--name-title {
+  font-family: 'NexaRustSansBlack';
+}
+
+/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
+h1 {
+  font-size: 1.5rem;
+  line-height: 1.875rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  border-radius: 16px;
+  border: 2px solid #a32a29;
+  padding: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #73984a;
+}
+
+p + h1,
+ul + h1,
+ol + h1,
+dl + h1,
+address + h1,
+audio + h1,
+blockquote + h1,
+pre + h1,
+hr + h1,
+fieldset + h1,
+video + h1 {
+  margin-top: 1.5rem;
+}
+
+h2,
+.pdf-page--certificate .field--name-field-certificate-school {
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #a32a29;
+}
+
+p + h2,
+ul + h2,
+ol + h2,
+dl + h2,
+address + h2,
+audio + h2,
+blockquote + h2,
+pre + h2,
+hr + h2,
+fieldset + h2,
+video + h2,
+.pdf-page--certificate p + .field--name-field-certificate-school,
+.pdf-page--certificate
+ul + .field--name-field-certificate-school,
+.pdf-page--certificate
+ol + .field--name-field-certificate-school,
+.pdf-page--certificate
+dl + .field--name-field-certificate-school,
+.pdf-page--certificate
+address + .field--name-field-certificate-school,
+.pdf-page--certificate
+audio + .field--name-field-certificate-school,
+.pdf-page--certificate
+blockquote + .field--name-field-certificate-school,
+.pdf-page--certificate
+pre + .field--name-field-certificate-school,
+.pdf-page--certificate
+hr + .field--name-field-certificate-school,
+.pdf-page--certificate
+fieldset + .field--name-field-certificate-school,
+.pdf-page--certificate
+video + .field--name-field-certificate-school {
+  margin-top: 1.5rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  color: #a32a29;
+  text-transform: uppercase;
+}
+
+p + h3,
+ul + h3,
+ol + h3,
+dl + h3,
+address + h3,
+audio + h3,
+blockquote + h3,
+pre + h3,
+hr + h3,
+fieldset + h3,
+video + h3 {
+  margin-top: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+  line-height: 1.8rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  color: #73984a;
+}
+
+p + h4,
+ul + h4,
+ol + h4,
+dl + h4,
+address + h4,
+audio + h4,
+blockquote + h4,
+pre + h4,
+hr + h4,
+fieldset + h4,
+video + h4 {
+  margin-top: 1.5rem;
+}
+
+h5 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  color: #d4451d;
+}
+
+p + h5,
+ul + h5,
+ol + h5,
+dl + h5,
+address + h5,
+audio + h5,
+blockquote + h5,
+pre + h5,
+hr + h5,
+fieldset + h5,
+video + h5 {
+  margin-top: 1.5rem;
+}
+
+h6 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  color: #1a1a1a;
+}
+
+p + h6,
+ul + h6,
+ol + h6,
+dl + h6,
+address + h6,
+audio + h6,
+blockquote + h6,
+pre + h6,
+hr + h6,
+fieldset + h6,
+video + h6 {
+  margin-top: 1.5rem;
+}
+
+.pdf-page--certificate article {
+  position: relative;
+  text-align: center;
+}
+
+.pdf-page--certificate .page-title {
+  font-size: 28pt;
+  line-height: 1.2;
+}
+
+.pdf-page--certificate .certificate__banner {
+  position: absolute;
+  left: 1pc;
+  bottom: 2pc;
+  width: 8pc;
+  height: 8pc;
+  -webkit-transform: rotate(-15deg);
+      -ms-transform: rotate(-15deg);
+          transform: rotate(-15deg);
+}
+
+.pdf-page--certificate .certificate__banner::before, .pdf-page--certificate .certificate__banner::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8pc;
+  height: 8pc;
+  background-color: currentColor;
+}
+
+.pdf-page--certificate .certificate__banner::before {
+  -webkit-transform: rotate(-30deg);
+      -ms-transform: rotate(-30deg);
+          transform: rotate(-30deg);
+}
+
+.pdf-page--certificate .certificate__banner::after {
+  -webkit-transform: rotate(-60deg);
+      -ms-transform: rotate(-60deg);
+          transform: rotate(-60deg);
+}
+
+.pdf-page--certificate .certificate__banner .field--name-title {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 8pc;
+  height: 8pc;
+  font-size: 24pt;
+  font-weight: bold;
+  text-align: center;
+  line-height: 8pc;
+  color: #fff;
+  z-index: 1;
+}
+
+.pdf-page--certificate .certificate__banner--gold {
+  background-color: #e59e00;
+}
+
+.pdf-page--certificate .certificate__banner--gold::before, .pdf-page--certificate .certificate__banner--gold::after {
+  background-color: #e59e00;
+}
+
+.pdf-page--certificate .certificate__banner--silver {
+  background-color: #999999;
+}
+
+.pdf-page--certificate .certificate__banner--silver::before, .pdf-page--certificate .certificate__banner--silver::after {
+  background-color: #999999;
+}
+
+.pdf-page--certificate .certificate__banner--bronze {
+  background-color: #be3e1a;
+}
+
+.pdf-page--certificate .certificate__banner--bronze::before, .pdf-page--certificate .certificate__banner--bronze::after {
+  background-color: #be3e1a;
+}
+
+.pdf-page--certificate .field--name-field-certificate-school {
+  margin: 5pc 0;
+  font-size: 32pt;
+}
+
+.pdf-page--certificate .certificate__level {
+  font-size: 16pt;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.pdf-page--certificate .certificate__level--gold {
+  color: #e59e00;
+}
+
+.pdf-page--certificate .certificate__level--silver {
+  color: #999999;
+}
+
+.pdf-page--certificate .certificate__level--bronze {
+  color: #be3e1a;
+}
+
+.pdf-page--certificate .certificate__sig-image {
+  margin-top: 4pc;
+  margin-bottom: 0;
+}
+
+.pdf-page--certificate .certificate__sig-text {
+  position: relative;
+  width: 50%;
+  margin: 0 auto;
+  padding-top: 2pc;
+  border-top: 1px #000 solid;
+}
+
+.pdf-page--certificate .certificate__sig-text-slm {
+  display: block;
+}
+
+/*# sourceMappingURL=pdf--certificate.css.map */

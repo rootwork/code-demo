@@ -1,0 +1,25 @@
+uuid: 3180ef45-c6d1-4e5c-8f97-762e5d3a993f
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:9ad6dd4e-2192-4e0b-9b58-c2267513f42c'
+  module:
+    - block_content
+  theme:
+    - project_s
+id: newslettersignup
+theme: project_s
+region: footer_first
+weight: 0
+provider: null
+plugin: 'block_content:9ad6dd4e-2192-4e0b-9b58-c2267513f42c'
+settings:
+  id: 'block_content:9ad6dd4e-2192-4e0b-9b58-c2267513f42c'
+  label: 'Newsletter signup'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

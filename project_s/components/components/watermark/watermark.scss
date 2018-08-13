@@ -1,0 +1,31 @@
+@import 'init';
+
+// Watermark
+//
+// Make the element appear beneath sibling elements, like a watermark.
+//
+// Markup: watermark.twig
+//
+// Style guide: components.watermark
+
+.watermark,
+%watermark {
+  @extend %heading-font;
+  @include margin-top(0);
+  top: 0;
+  right: 0;
+  display: block;
+  overflow: visible;
+  // Remove background highlighting from <mark> in normalize.
+  background-color: transparent;
+  color: color(watermark);
+  font-size: 75px;
+  line-height: 1;
+  font-weight: bold;
+  // sass-lint:disable no-color-literals
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  word-wrap: break-word;
+  z-index: 100;
+
+  @include pdf-hide;
+}

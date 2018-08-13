@@ -1,0 +1,84 @@
+/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
+.social-media ul.social-media__wrapper {
+  margin: 0;
+  padding: 0;
+}
+
+.social-media__item {
+  display: inline;
+  padding: 0;
+}
+
+.social-media__link {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  color: transparent;
+  overflow: hidden;
+  opacity: 0.8;
+}
+
+.social-media__link:hover, .social-media__link:active, .social-media__link:focus {
+  color: transparent;
+  opacity: 1;
+}
+
+.social-media__link span.ext {
+  display: none;
+}
+
+.social-media__link[href='https://www.facebook.com/pages/Project_ser-Lunchroom-Movement/172911796067369'] {
+  margin-right: 0.75rem;
+  background: no-repeat center/cover url("../../../images/fb-round.svg");
+}
+
+.social-media__link[href='https://twitter.com/project_slunchrooms'] {
+  background: no-repeat center/cover url("../../../images/twitter-round.svg");
+}
+
+.social-media__link[title='Project S YouTube'] {
+  background: no-repeat center/cover url("../../../images/yt-round.svg");
+}
+
+.social-media--header {
+  display: none;
+}
+
+@media (min-width: 1400px) {
+  .social-media--header {
+    display: inline-block;
+  }
+}
+
+.social-media--header ul.social-media__wrapper {
+  text-align: right;
+}
+
+.social-media--footer {
+  position: absolute;
+  top: 0.5rem;
+  left: 0;
+  width: 100%;
+}
+
+@media (min-width: 1200px) {
+  .social-media--footer {
+    top: 0;
+    left: auto;
+    right: 32px;
+    width: unset;
+    text-align: right;
+  }
+}
+
+.social-media--footer ul.menu {
+  text-align: center;
+}
+
+@media (min-width: 1200px) {
+  .social-media--footer ul.menu {
+    text-align: right;
+  }
+}
+
+/*# sourceMappingURL=social-media.css.map */

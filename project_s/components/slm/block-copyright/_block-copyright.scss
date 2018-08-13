@@ -1,0 +1,36 @@
+// Copyright and funding block
+
+.block-project_s-blocks-copyright {
+  @include font-size(s);
+  position: absolute;
+  bottom: $page-margin;
+  left: $page-margin;
+  right: 0;
+  margin: 0 auto;
+
+  @include respond-to(xxxl) {
+    position: relative;
+    bottom: auto;
+    left: auto;
+  }
+}
+
+.project_s-blocks-copyright__copyright {
+  display: block;
+  vertical-align: top;
+  color: black;
+
+  @include respond-to(4xl) {
+    display: inline-block;
+  }
+}
+
+.project_s-blocks-copyright__funding {
+  clear: both;
+  margin-left: 0;
+
+  @include respond-to(4xl) {
+    margin-left: 1.5rem;
+    clear: none;
+  }
+}

@@ -1,0 +1,83 @@
+/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
+.messages,
+.messages--status {
+  margin: 1.5rem 0;
+  position: relative;
+  padding: 10px 10px 10px 44px;
+  border: 1px solid #616db2;
+  background-color: white;
+  color: #616db2;
+}
+
+[dir="rtl"] .messages,
+[dir="rtl"] .messages--status {
+  padding: 10px 44px 10px 10px;
+}
+
+.messages a, .messages--status a {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.messages__icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  height: 24px;
+  width: 24px;
+  margin-top: -12px;
+  line-height: 1;
+}
+
+[dir="rtl"] .messages__icon {
+  left: auto;
+  right: 10px;
+}
+
+.messages__icon path {
+  fill: #616db2;
+}
+
+.messages__highlight {
+  color: #1a1a1a;
+}
+
+.messages__list {
+  margin: 0;
+}
+
+.messages__item {
+  list-style-image: none;
+}
+
+.messages--warning {
+  border-color: #ffb819;
+  background-color: white;
+  color: #1a1a1a;
+}
+
+.messages--warning path {
+  fill: #ffb819;
+}
+
+.messages--error {
+  border-color: #a32a29;
+  background-color: #fcf3f3;
+  color: #a32a29;
+}
+
+.messages--error path {
+  fill: #a32a29;
+}
+
+.form-item--error-message {
+  padding: 0.375rem;
+  color: #a32a29;
+  background-color: #fcf3f3;
+}
+
+.form-item--error-message::before {
+  vertical-align: baseline;
+}
+
+/*# sourceMappingURL=messages.css.map */

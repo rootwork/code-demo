@@ -1,0 +1,91 @@
+@import 'init';
+
+// Footer navigation
+//
+// Markup: block--footer-nav.twig
+//
+// Style guide: navigation.footer-nav
+
+.footer-nav {
+
+  .menu-item {
+    @extend %heading-font;
+    padding: 0;
+
+    > .menu-link {
+      text-align: center;
+      display: block;
+      padding: 0.5em 1em;
+    }
+  }
+
+  .menu {
+    margin: 0;
+    padding: 0;
+
+    @include respond-to(l) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: flex-start;
+    }
+
+    > .menu-item {
+      display: table;
+      vertical-align: top;
+      background-color: color(green);
+      margin: 0 auto;
+      clear: both;
+      margin-bottom: 0.1em;
+
+      @include respond-to(l) {
+        flex: 1 0 170px;
+      }
+
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: color(green-dark);
+      }
+
+      @include respond-to(l) {
+        clear: none;
+        display: inline-block;
+        margin-left: 0;
+        margin-right: 1em;
+        margin-bottom: 2em;
+
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+
+      > .menu-link {
+        color: color(white);
+        text-transform: uppercase;
+        display: block;
+      }
+
+      .menu .menu-item {
+        display: none;
+        margin: 0;
+        background-color: color(yellow);
+        border-bottom: 1px solid color(orange);
+
+        @include respond-to(l) {
+          display: block;
+        }
+
+        > .menu-link {
+          color: color(link);
+
+          &:hover,
+          &:active,
+          &:focus {
+            background-color: color(yellow-dark);
+          }
+        }
+      }
+    }
+  }
+}

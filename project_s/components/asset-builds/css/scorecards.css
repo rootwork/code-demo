@@ -1,0 +1,1283 @@
+@charset "UTF-8";
+button,
+input,
+optgroup,
+select,
+textarea, .button, .my-scorecards .views-field-edit-node > a,
+.my-scorecards .views-field-view-node > a, .print__link,
+[type='button'],
+[type='reset'],
+[type='submit'], .fieldgroup .fieldset-legend, .fieldgroup .fieldset-legend.form-required, .fieldgroup .fieldset-legend.form-item__required,
+legend {
+  font-family: 'Segoe UI', Candara, 'Bitstream Vera Sans', 'DejaVu Sans', 'Bitstream Vera Sans', 'Trebuchet MS', Verdana, 'Verdana Ref', sans-serif;
+}
+
+.font-cabin-loaded button, .font-cabin-loaded
+input, .font-cabin-loaded
+optgroup, .font-cabin-loaded
+select, .font-cabin-loaded
+textarea, .font-cabin-loaded .button, .font-cabin-loaded .my-scorecards .views-field-edit-node > a, .my-scorecards .font-cabin-loaded .views-field-edit-node > a, .font-cabin-loaded
+.my-scorecards .views-field-view-node > a,
+.my-scorecards .font-cabin-loaded .views-field-view-node > a, .font-cabin-loaded .print__link, .font-cabin-loaded
+[type='button'], .font-cabin-loaded
+[type='reset'], .font-cabin-loaded
+[type='submit'], .font-cabin-loaded .fieldgroup .fieldset-legend, .fieldgroup .font-cabin-loaded .fieldset-legend, .font-cabin-loaded
+legend,
+.cke_editable button,
+.cke_editable
+input,
+.cke_editable
+optgroup,
+.cke_editable
+select,
+.cke_editable
+textarea,
+.cke_editable .button,
+.cke_editable .my-scorecards .views-field-edit-node > a, .my-scorecards
+.cke_editable .views-field-edit-node > a,
+.cke_editable
+.my-scorecards .views-field-view-node > a,
+.my-scorecards
+.cke_editable .views-field-view-node > a,
+.cke_editable .print__link,
+.cke_editable
+[type='button'],
+.cke_editable
+[type='reset'],
+.cke_editable
+[type='submit'],
+.cke_editable .fieldgroup .fieldset-legend, .fieldgroup
+.cke_editable .fieldset-legend,
+.cke_editable
+legend {
+  font-family: 'Cabin';
+}
+
+.pdf-page button, .pdf-page
+input, .pdf-page
+optgroup, .pdf-page
+select, .pdf-page
+textarea, .pdf-page .button, .pdf-page .my-scorecards .views-field-edit-node > a, .my-scorecards .pdf-page .views-field-edit-node > a, .pdf-page
+.my-scorecards .views-field-view-node > a,
+.my-scorecards .pdf-page .views-field-view-node > a, .pdf-page .print__link, .pdf-page
+[type='button'], .pdf-page
+[type='reset'], .pdf-page
+[type='submit'], .pdf-page .fieldgroup .fieldset-legend, .fieldgroup .pdf-page .fieldset-legend, .pdf-page
+legend {
+  font-family: 'Cabin';
+}
+
+h1, h2, .pdf-page .scorecard .field--name-field-school, .scorecard__completed, h3, .fieldset-legend,
+.fieldset-legend.form-required,
+.fieldset-legend.form-item__required {
+  font-family: Frutiger, 'Frutiger Linotype', Univers, Calibri, 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', Myriad, 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.font-nexa-loaded h1, .font-nexa-loaded h2, .font-nexa-loaded .pdf-page .scorecard .field--name-field-school, .pdf-page .scorecard .font-nexa-loaded .field--name-field-school, .font-nexa-loaded .scorecard__completed, .font-nexa-loaded h3, .font-nexa-loaded .fieldset-legend,
+.cke_editable h1,
+.cke_editable h2,
+.cke_editable .pdf-page .scorecard .field--name-field-school, .pdf-page .scorecard
+.cke_editable .field--name-field-school,
+.cke_editable .scorecard__completed,
+.cke_editable h3,
+.cke_editable .fieldset-legend {
+  font-family: 'NexaRustSansBlack';
+}
+
+.pdf-page h1, .pdf-page h2, .pdf-page .scorecard .field--name-field-school, .pdf-page .scorecard__completed, .pdf-page h3, .pdf-page .fieldset-legend {
+  font-family: 'NexaRustSansBlack';
+}
+
+/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
+.admin-ask-star {
+  color: #e59e00;
+}
+
+.pdf-page .admin-ask-star {
+  color: #000;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  box-sizing: border-box;
+  max-width: 100%;
+  margin: 0;
+}
+
+button {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+input {
+  overflow: visible;
+}
+
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type='search'] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type='search']::-webkit-search-cancel-button, [type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: .54;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+.button,
+.my-scorecards .views-field-edit-node > a,
+.my-scorecards .views-field-view-node > a,
+.print__link,
+button,
+html [type='button'],
+[type='reset'],
+[type='submit'] {
+  -moz-appearance: button;
+  -webkit-appearance: button;
+}
+
+.button,
+.my-scorecards .views-field-edit-node > a,
+.my-scorecards .views-field-view-node > a,
+.print__link,
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  font-smoothing: antialiased;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  line-height: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  color: #a32a29;
+  border-radius: 16px;
+  border: 2px solid #fff;
+  background-color: #ffb819;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: background-color 0.25s ease;
+  transition: background-color 0.25s ease;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.button::-moz-focus-inner,
+.my-scorecards .views-field-edit-node > a::-moz-focus-inner,
+.my-scorecards .views-field-view-node > a::-moz-focus-inner,
+.print__link::-moz-focus-inner,
+button::-moz-focus-inner,
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.button:-moz-focusring,
+.my-scorecards .views-field-edit-node > a:-moz-focusring,
+.my-scorecards .views-field-view-node > a:-moz-focusring,
+.print__link:-moz-focusring,
+button:-moz-focusring,
+[type='button']:-moz-focusring,
+[type='reset']:-moz-focusring,
+[type='submit']:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+.button:hover, .button:focus, .button:active,
+.my-scorecards .views-field-edit-node > a:hover,
+.my-scorecards .views-field-view-node > a:hover,
+.print__link:hover,
+.my-scorecards .views-field-edit-node > a:focus,
+.my-scorecards .views-field-view-node > a:focus,
+.print__link:focus,
+.my-scorecards .views-field-edit-node > a:active,
+.my-scorecards .views-field-view-node > a:active,
+.print__link:active,
+button:hover,
+button:focus,
+button:active,
+[type='button']:hover,
+[type='button']:focus,
+[type='button']:active,
+[type='reset']:hover,
+[type='reset']:focus,
+[type='reset']:active,
+[type='submit']:hover,
+[type='submit']:focus,
+[type='submit']:active {
+  text-decoration: none;
+  color: #fff;
+  background-color: #a32a29;
+}
+
+.contextual .button:hover, .contextual .button:focus, .contextual .button:active,
+.contextual .my-scorecards .views-field-edit-node > a:hover,
+.my-scorecards .contextual .views-field-edit-node > a:hover,
+.contextual
+.my-scorecards .views-field-view-node > a:hover,
+.my-scorecards .contextual .views-field-view-node > a:hover,
+.contextual .print__link:hover,
+.contextual .my-scorecards .views-field-edit-node > a:focus,
+.my-scorecards .contextual .views-field-edit-node > a:focus,
+.contextual
+.my-scorecards .views-field-view-node > a:focus,
+.my-scorecards .contextual .views-field-view-node > a:focus,
+.contextual .print__link:focus,
+.contextual .my-scorecards .views-field-edit-node > a:active,
+.my-scorecards .contextual .views-field-edit-node > a:active,
+.contextual
+.my-scorecards .views-field-view-node > a:active,
+.my-scorecards .contextual .views-field-view-node > a:active,
+.contextual .print__link:active, .contextual
+button:hover, .contextual
+button:focus, .contextual
+button:active, .contextual
+[type='button']:hover, .contextual
+[type='button']:focus, .contextual
+[type='button']:active, .contextual
+[type='reset']:hover, .contextual
+[type='reset']:focus, .contextual
+[type='reset']:active, .contextual
+[type='submit']:hover, .contextual
+[type='submit']:focus, .contextual
+[type='submit']:active {
+  background-color: #fff;
+}
+
+.button--small {
+  font-size: 0.875rem;
+  text-transform: none;
+}
+
+.button--go,
+.scorecard-form .form-actions .unpublish .button,
+.print__link {
+  color: #fff;
+  background-color: #73984a;
+}
+
+.button--go:hover, .button--go:focus, .button--go:active,
+.scorecard-form .form-actions .unpublish .button:hover,
+.print__link:hover,
+.scorecard-form .form-actions .unpublish .button:focus,
+.print__link:focus,
+.scorecard-form .form-actions .unpublish .button:active,
+.print__link:active {
+  color: #a32a29;
+  background-color: #ffb819;
+}
+
+.button--warning,
+.scorecard-form .form-actions .publish .button {
+  color: #fff;
+  background-color: #a32a29;
+}
+
+.button--warning:hover, .button--warning:focus, .button--warning:active,
+.scorecard-form .form-actions .publish .button:hover,
+.scorecard-form .form-actions .publish .button:focus,
+.scorecard-form .form-actions .publish .button:active {
+  color: #a32a29;
+  background-color: #ffb819;
+}
+
+[disabled].button, .my-scorecards .views-field-edit-node > a[disabled],
+.my-scorecards .views-field-view-node > a[disabled], [disabled].print__link,
+button[disabled],
+[disabled][type='button'],
+[disabled][type='reset'],
+[disabled][type='submit'] {
+  cursor: default;
+  cursor: not-allowed;
+  color: #a32a29;
+  opacity: 0.5;
+}
+
+[disabled].button:hover, .my-scorecards .views-field-edit-node > a[disabled]:hover,
+.my-scorecards .views-field-view-node > a[disabled]:hover, [disabled].print__link:hover,
+button[disabled]:hover,
+[disabled][type='button']:hover,
+[disabled][type='reset']:hover,
+[disabled][type='submit']:hover, [disabled].button:focus, .my-scorecards .views-field-edit-node > a[disabled]:focus,
+.my-scorecards .views-field-view-node > a[disabled]:focus, [disabled].print__link:focus,
+button[disabled]:focus,
+[disabled][type='button']:focus,
+[disabled][type='reset']:focus,
+[disabled][type='submit']:focus, [disabled].button:active, .my-scorecards .views-field-edit-node > a[disabled]:active,
+.my-scorecards .views-field-view-node > a[disabled]:active, [disabled].print__link:active,
+button[disabled]:active,
+[disabled][type='button']:active,
+[disabled][type='reset']:active,
+[disabled][type='submit']:active {
+  color: #fff;
+  background-color: #a32a29;
+}
+
+[type='text'],
+[type='search'],
+[type='tel'],
+[type='url'],
+[type='email'],
+[type='password'],
+[type='date'],
+[type='time'],
+[type='number'], textarea {
+  margin-bottom: 1.125rem;
+  padding: 0.49995rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+  color: #000;
+  background-color: #fff;
+  border: 1px solid #cccccc;
+  border-radius: 16px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
+  -webkit-transition: border-color 0.25s ease;
+  transition: border-color 0.25s ease;
+}
+
+[type='file'] {
+  width: 100%;
+  margin-bottom: 0.75em;
+}
+
+[type='checkbox'],
+[type='radio'] {
+  display: inline;
+  margin-right: 0.75em;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.form-type-checkbox label,
+.form-type-checkbox .option {
+  display: inline-block;
+}
+
+[type='checkbox']:not(:checked),
+[type='checkbox']:checked {
+  position: absolute;
+  left: -9999px;
+}
+
+[type='checkbox']:not(:checked) + label,
+[type='checkbox']:checked + label {
+  position: relative;
+  padding-left: 75px;
+  cursor: pointer;
+}
+
+[type='checkbox']:not(:checked) + label::before,
+[type='checkbox']:checked + label::before,
+[type='checkbox']:not(:checked) + label::after,
+[type='checkbox']:checked + label::after {
+  content: '';
+  position: absolute;
+}
+
+[type='checkbox']:not(:checked) + label::before,
+[type='checkbox']:checked + label::before {
+  left: 0;
+  top: -3px;
+  width: 65px;
+  height: 30px;
+  background: #fff;
+  border-radius: 16px;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+}
+
+[type='checkbox']:not(:checked) + label::after,
+[type='checkbox']:checked + label::after {
+  margin: 0;
+  width: 20px;
+  height: 20px;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  border-radius: 50%;
+  background-color: #a32a29;
+  background-image: none;
+  top: 2px;
+  left: 5px;
+}
+
+/* not checked */
+[type='checkbox']:not(:checked) + label::before {
+  content: '\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0no';
+  line-height: 30px;
+}
+
+/* on checked */
+[type='checkbox']:checked + label::before {
+  background-color: #ffb819;
+  content: '\00a0\00a0\00a0yes';
+  line-height: 30px;
+  color: #73984a;
+}
+
+[type='checkbox']:checked + label::after {
+  background-color: #73984a;
+  top: 2px;
+  left: 40px;
+}
+
+input[type='radio'],
+input[type='radio'] + label {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 3px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+input[type='radio'] {
+  opacity: 0;
+  position: absolute;
+}
+
+input[type='radio'] + label {
+  position: relative;
+}
+
+input[type='radio'] + label::before {
+  content: '';
+  background: #fff;
+  border: 1px solid #73984a;
+  display: inline-block;
+  vertical-align: middle;
+  width: 1.25rem;
+  height: 1.25rem;
+  padding: 1px;
+  margin-right: 12px;
+  text-align: center;
+  border-radius: 50%;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+input[type='radio']:checked + label {
+  color: #597639;
+}
+
+input[type='radio']:checked + label::before {
+  background: #73984a;
+  border-color: #73984a;
+  box-shadow: inset 0 0 0 4px #fff;
+}
+
+input[type='radio']:focus + label {
+  outline: 1px solid #73984a;
+}
+
+fieldset,
+.award-levels--scorecard.scorecard__fieldset {
+  padding: 0.525rem 0.9375rem 0.975rem;
+  border: 2px solid #a32a29;
+  margin: 0 2px;
+}
+
+.pdf-page fieldset,
+.pdf-page .award-levels--scorecard.scorecard__fieldset {
+  border: 3px solid #73984a;
+}
+
+h1 {
+  font-size: 1.5rem;
+  line-height: 1.875rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  border-radius: 16px;
+  border: 2px solid #a32a29;
+  padding: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #73984a;
+}
+
+p + h1,
+ul + h1,
+ol + h1,
+dl + h1,
+address + h1,
+audio + h1,
+blockquote + h1,
+pre + h1,
+hr + h1,
+fieldset + h1,
+video + h1 {
+  margin-top: 1.5rem;
+}
+
+h2,
+.pdf-page .scorecard .field--name-field-school,
+.scorecard__completed {
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #a32a29;
+}
+
+p + h2,
+ul + h2,
+ol + h2,
+dl + h2,
+address + h2,
+audio + h2,
+blockquote + h2,
+pre + h2,
+hr + h2,
+fieldset + h2,
+video + h2,
+.pdf-page .scorecard p + .field--name-field-school,
+p + .scorecard__completed,
+.pdf-page .scorecard
+ul + .field--name-field-school,
+ul + .scorecard__completed,
+.pdf-page .scorecard
+ol + .field--name-field-school,
+ol + .scorecard__completed,
+.pdf-page .scorecard
+dl + .field--name-field-school,
+dl + .scorecard__completed,
+.pdf-page .scorecard
+address + .field--name-field-school,
+address + .scorecard__completed,
+.pdf-page .scorecard
+audio + .field--name-field-school,
+audio + .scorecard__completed,
+.pdf-page .scorecard
+blockquote + .field--name-field-school,
+blockquote + .scorecard__completed,
+.pdf-page .scorecard
+pre + .field--name-field-school,
+pre + .scorecard__completed,
+.pdf-page .scorecard
+hr + .field--name-field-school,
+hr + .scorecard__completed,
+.pdf-page .scorecard
+fieldset + .field--name-field-school,
+fieldset + .scorecard__completed,
+.pdf-page .scorecard
+video + .field--name-field-school,
+video + .scorecard__completed {
+  margin-top: 1.5rem;
+}
+
+h3,
+.fieldset-legend,
+.fieldset-legend.form-required,
+.fieldset-legend.form-item__required {
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  color: #a32a29;
+  text-transform: uppercase;
+}
+
+p + h3,
+ul + h3,
+ol + h3,
+dl + h3,
+address + h3,
+audio + h3,
+blockquote + h3,
+pre + h3,
+hr + h3,
+fieldset + h3,
+video + h3,
+p + .fieldset-legend,
+p +
+.fieldset-legend.form-required,
+p +
+.fieldset-legend.form-item__required,
+ul + .fieldset-legend,
+ul +
+.fieldset-legend.form-required,
+ul +
+.fieldset-legend.form-item__required,
+ol + .fieldset-legend,
+ol +
+.fieldset-legend.form-required,
+ol +
+.fieldset-legend.form-item__required,
+dl + .fieldset-legend,
+dl +
+.fieldset-legend.form-required,
+dl +
+.fieldset-legend.form-item__required,
+address + .fieldset-legend,
+address +
+.fieldset-legend.form-required,
+address +
+.fieldset-legend.form-item__required,
+audio + .fieldset-legend,
+audio +
+.fieldset-legend.form-required,
+audio +
+.fieldset-legend.form-item__required,
+blockquote + .fieldset-legend,
+blockquote +
+.fieldset-legend.form-required,
+blockquote +
+.fieldset-legend.form-item__required,
+pre + .fieldset-legend,
+pre +
+.fieldset-legend.form-required,
+pre +
+.fieldset-legend.form-item__required,
+hr + .fieldset-legend,
+hr +
+.fieldset-legend.form-required,
+hr +
+.fieldset-legend.form-item__required,
+fieldset + .fieldset-legend,
+fieldset +
+.fieldset-legend.form-required,
+fieldset +
+.fieldset-legend.form-item__required,
+video + .fieldset-legend,
+video +
+.fieldset-legend.form-required,
+video +
+.fieldset-legend.form-item__required {
+  margin-top: 1.5rem;
+}
+
+h4,
+.award-levels__level,
+.scorecard-form .field--type-image summary,
+.pdf-page .scorecard__completed {
+  font-size: 1.25rem;
+  line-height: 1.8rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  color: #73984a;
+}
+
+p + h4,
+ul + h4,
+ol + h4,
+dl + h4,
+address + h4,
+audio + h4,
+blockquote + h4,
+pre + h4,
+hr + h4,
+fieldset + h4,
+video + h4,
+p + .award-levels__level,
+.scorecard-form .field--type-image p + summary,
+.pdf-page p + .scorecard__completed,
+ul + .award-levels__level,
+.scorecard-form .field--type-image
+ul + summary,
+.pdf-page
+ul + .scorecard__completed,
+ol + .award-levels__level,
+.scorecard-form .field--type-image
+ol + summary,
+.pdf-page
+ol + .scorecard__completed,
+dl + .award-levels__level,
+.scorecard-form .field--type-image
+dl + summary,
+.pdf-page
+dl + .scorecard__completed,
+address + .award-levels__level,
+.scorecard-form .field--type-image
+address + summary,
+.pdf-page
+address + .scorecard__completed,
+audio + .award-levels__level,
+.scorecard-form .field--type-image
+audio + summary,
+.pdf-page
+audio + .scorecard__completed,
+blockquote + .award-levels__level,
+.scorecard-form .field--type-image
+blockquote + summary,
+.pdf-page
+blockquote + .scorecard__completed,
+pre + .award-levels__level,
+.scorecard-form .field--type-image
+pre + summary,
+.pdf-page
+pre + .scorecard__completed,
+hr + .award-levels__level,
+.scorecard-form .field--type-image
+hr + summary,
+.pdf-page
+hr + .scorecard__completed,
+fieldset + .award-levels__level,
+.scorecard-form .field--type-image
+fieldset + summary,
+.pdf-page
+fieldset + .scorecard__completed,
+video + .award-levels__level,
+.scorecard-form .field--type-image
+video + summary,
+.pdf-page
+video + .scorecard__completed {
+  margin-top: 1.5rem;
+}
+
+h5 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  color: #d4451d;
+}
+
+p + h5,
+ul + h5,
+ol + h5,
+dl + h5,
+address + h5,
+audio + h5,
+blockquote + h5,
+pre + h5,
+hr + h5,
+fieldset + h5,
+video + h5 {
+  margin-top: 1.5rem;
+}
+
+h6 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  color: #1a1a1a;
+}
+
+p + h6,
+ul + h6,
+ol + h6,
+dl + h6,
+address + h6,
+audio + h6,
+blockquote + h6,
+pre + h6,
+hr + h6,
+fieldset + h6,
+video + h6 {
+  margin-top: 1.5rem;
+}
+
+.fieldgroup .fieldset-legend, .fieldgroup .fieldset-legend.form-required, .fieldgroup .fieldset-legend.form-item__required,
+legend {
+  box-sizing: border-box;
+  display: table;
+  max-width: 100%;
+  white-space: normal;
+  color: inherit;
+  background-color: #fff;
+  margin-left: -5px;
+  margin-bottom: 0.75rem;
+  padding: 0 5px;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-transform: none;
+  border-radius: 16px;
+}
+
+.pdf-page .fieldgroup .fieldset-legend, .fieldgroup .pdf-page .fieldset-legend, .pdf-page
+legend {
+  margin-bottom: 0;
+}
+
+.fieldgroup .fieldset-legend .description,
+legend .description {
+  font-weight: normal;
+}
+
+.fieldset-legend,
+.fieldset-legend.form-required,
+.fieldset-legend.form-item__required {
+  margin-bottom: 0;
+}
+
+.fieldgroup .fieldset-legend, .fieldgroup
+.fieldset-legend.form-required, .fieldgroup
+.fieldset-legend.form-item__required {
+  display: inline;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.75em;
+}
+
+select {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  width: 100%;
+  margin-bottom: 0.75em;
+  padding: 0.25em 1.25em 0.25em 0.75em;
+  border: 1px solid #999999;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M7.41 8.58L12 13.17l4.59-4.59L18 10l-6 6-6-6 1.41-1.42z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 97.5% 50%;
+  background-color: #eeeeee;
+  box-shadow: none;
+  border-radius: 16px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+}
+
+select:active, select:hover, select:focus {
+  outline: none;
+  border-color: #73984a;
+}
+
+optgroup {
+  font-weight: bold;
+}
+
+textarea {
+  resize: vertical;
+  overflow: auto;
+}
+
+.award-levels--scorecard.scorecard__fieldset {
+  position: relative;
+  margin: 1rem 0;
+  padding-left: 8rem;
+}
+
+.pdf-page .award-levels--scorecard.scorecard__fieldset {
+  width: 50%;
+  float: right;
+  margin: 0 0 0 1pc;
+  padding-left: 0.5pc;
+}
+
+.award-levels__title {
+  margin-bottom: 0;
+  border-bottom: 2px solid #a32a29;
+}
+
+.award-levels__list {
+  margin-top: 0.5rem;
+}
+
+.scorecard__fieldset--award-level .award-levels__list {
+  margin-bottom: 0.5rem;
+}
+
+.award-levels__level {
+  margin-bottom: 0;
+}
+
+.award-levels__level::after {
+  display: inline-block;
+  content: '';
+  width: 3rem;
+  height: 3rem;
+  margin-left: 0.5rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  vertical-align: middle;
+}
+
+.award-levels--scorecard .award-levels__level::after {
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  width: 7rem;
+  height: 7rem;
+}
+
+.pdf-page .award-levels--scorecard .award-levels__level::after {
+  position: static;
+  width: 3rem;
+  height: 3rem;
+}
+
+.award-levels__level--bronze::after {
+  background-image: url("../../../images/milk.svg");
+}
+
+.award-levels__level--silver::after {
+  background-image: url("../../../images/watermelon.svg");
+}
+
+.award-levels__level--gold::after {
+  background-image: url("../../../images/pear.svg");
+}
+
+.award-levels__description {
+  margin-bottom: 0.75rem;
+  margin-left: 0;
+}
+
+.award-levels__description:last-of-type {
+  margin-bottom: 0;
+}
+
+.award-levels__certificate {
+  display: block;
+  font-weight: bold;
+}
+
+.pdf-page .award-levels__certificate {
+  display: none;
+}
+
+.slm-definitions__title {
+  margin-bottom: 0;
+  border-bottom: 2px solid #a32a29;
+}
+
+.scorecard-form fieldset {
+  border-radius: 16px;
+}
+
+.scorecard-form .form-item .fieldgroup > legend {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  word-wrap: normal;
+}
+
+.scorecard-form .field--type-markup .form-item {
+  margin: 0;
+}
+
+@media (min-width: 555px) {
+  .scorecard-form .field--name-field-grades .form-checkboxes {
+    -webkit-column-count: 3;
+       -moz-column-count: 3;
+            column-count: 3;
+    -webkit-column-gap: 1rem;
+       -moz-column-gap: 1rem;
+            column-gap: 1rem;
+  }
+}
+
+.scorecard-form .field--type-image details {
+  border: 0;
+}
+
+.scorecard-form .field--type-image summary {
+  margin: 0;
+  padding: 0;
+}
+
+.scorecard-form .field--type-image .tabledrag-toggle-weight-wrapper,
+.scorecard-form .field--type-image .field-multiple-drag,
+.scorecard-form .field--type-image .delta-order,
+.scorecard-form .field--type-image .tabledrag-handle {
+  display: none;
+}
+
+.scorecard-form .field--type-image table > thead {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  word-wrap: normal;
+}
+
+.scorecard-form .field--type-image td {
+  vertical-align: top;
+}
+
+.scorecard-form .form-actions .publish {
+  float: right;
+}
+
+.my-scorecards .views-table {
+  table-layout: initial;
+  margin: 0;
+}
+
+@media (min-width: 860px) {
+  .my-scorecards .views-table {
+    margin: 1.5rem 0;
+  }
+}
+
+.my-scorecards .views-field-field-school {
+  font-weight: bold;
+}
+
+.my-scorecards .views-field-edit-node,
+.my-scorecards .views-field-view-node {
+  min-width: 8rem;
+}
+
+@media (min-width: 1400px) {
+  .my-scorecards .views-field-edit-node,
+  .my-scorecards .views-field-view-node {
+    min-width: 15.5rem;
+  }
+}
+
+.my-scorecards .views-field-edit-node > a,
+.my-scorecards .views-field-view-node > a {
+  margin-bottom: 0.75rem;
+}
+
+.my-scorecards__buttons {
+  text-align: center;
+}
+
+.pdf-page .scorecard .entity-title {
+  display: none;
+}
+
+.pdf-page .scorecard .field--name-field-school {
+  margin-bottom: 0;
+}
+
+.scorecard__checklists {
+  clear: both;
+}
+
+.scorecard .field--type-list-string .wrapper__links__link {
+  margin: 1rem 0.5rem;
+  list-style-type: none;
+}
+
+.pdf-page .scorecard .field--type-list-string .wrapper__links__link {
+  margin: 0 0.5pc 0.5pc 0;
+  -webkit-column-break-inside: avoid;
+     page-break-inside: avoid;
+          break-inside: avoid;
+}
+
+.pdf-page .scorecard .field--type-list-string .wrapper__links__link:last-of-type {
+  margin-bottom: 3pc;
+}
+
+.scorecard .field--type-list-string .wrapper__links__link::before {
+  display: inline-block;
+  content: '✘';
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 0.25rem;
+  padding-left: 0.25rem;
+  color: #fff;
+  background-color: #e59e00;
+  border-radius: 16px;
+  vertical-align: middle;
+}
+
+.pdf-page .scorecard .field--type-list-string .wrapper__links__link::before {
+  content: '';
+  background-color: #fff;
+  border: 2px #73984a solid;
+}
+
+.scorecard .field--type-list-string .wrapper__links__link.selected::before {
+  content: '✔';
+  background-color: #73984a;
+}
+
+.pdf-page .scorecard .field--type-list-string .wrapper__links__link.selected::before {
+  border-width: 0;
+}
+
+.scorecard .field--type-list-string .selected__label {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  word-wrap: normal;
+}
+
+.scorecard .admin-ask-star {
+  display: none;
+}
+
+.pdf-page .scorecard .admin-ask-star {
+  display: inline;
+}
+
+.scorecard .field--name-field-link-atmosphere,
+.scorecard .field--name-field-link-community,
+.scorecard .field--name-field-link-fruit,
+.scorecard .field--name-field-link-milk,
+.scorecard .field--name-field-link-reimbursable,
+.scorecard .field--name-field-link-salads,
+.scorecard .field--name-field-link-students,
+.scorecard .field--name-field-link-vegetables {
+  margin-top: 2rem;
+}
+
+.scorecard .item-list ul {
+  margin: 0;
+  padding: 0 0 0.75em;
+}
+
+.scorecard .field--type-image {
+  margin: 1rem 0.5rem;
+}
+
+.pdf-page .scorecard .field--type-image {
+  margin: 0.5pc 0;
+}
+
+.scorecard .field--type-image .field__item {
+  display: inline-block;
+  margin: 0.25rem;
+  vertical-align: top;
+}
+
+.pdf-page .scorecard .field--type-image .field__item {
+  margin: 0 0.5pc 0 0;
+}
+
+.print__wrapper {
+  text-align: right;
+}
+
+.scorecard__fieldset {
+  border-radius: 16px;
+}
+
+.pdf-page .scorecard__fieldset {
+  position: relative;
+  page-break-inside: avoid;
+  margin: 1pc 0;
+  padding: 0.5pc;
+}
+
+.pdf-page .scorecard__fieldset--notes {
+  height: 30rem;
+}
+
+.scorecard__fieldset .field--type-markup {
+  font-weight: bold;
+}
+
+.scorecard__fieldset .field--type-markup p {
+  margin: -1rem 0 0;
+  font-weight: bold;
+  text-align: right;
+}
+
+.scorecard__fieldset .field--type-markup a {
+  border-bottom: 1px #a32a29 dotted;
+}
+
+.scorecard__fieldset--total {
+  background-color: #73984a;
+}
+
+.scorecard__fieldset--total legend {
+  padding: 0;
+  background-color: #ffb819;
+}
+
+.scorecard__fieldset--total .fieldset-legend {
+  padding: 0.25rem 0.75rem;
+}
+
+.scorecard-total {
+  font-size: 1.25rem;
+  margin: 0 0.5rem 0.75rem;
+  color: #fff;
+}
+
+.scorecard-total strong {
+  font-size: 125%;
+}
+
+.scorecard-total--total {
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 0.5rem;
+  color: #a32a29;
+  background-color: #ffb819;
+  border-radius: 16px;
+}
+
+.scorecard-count {
+  font-size: 1.25rem;
+  margin: 0;
+  padding: 0.5rem 0.75rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #73984a;
+  border-radius: 16px;
+}
+
+.pdf-page .scorecard-count {
+  position: absolute;
+  display: inline-block;
+  right: 0.5pc;
+  bottom: 0.5pc;
+  padding: 0.25pc 0.5pc;
+  font-weight: lighter;
+  background-color: #e59e00;
+}
+
+.mfp-close {
+  font-size: 2rem;
+  opacity: 1;
+}
+
+.mfp-close:hover, .mfp-close:active, .mfp-close:focus {
+  background-color: transparent;
+}
+
+/*# sourceMappingURL=scorecards.css.map */

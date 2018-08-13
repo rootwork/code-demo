@@ -1,0 +1,35 @@
+.watermark {
+  font-family: Frutiger, 'Frutiger Linotype', Univers, Calibri, 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', Myriad, 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.font-nexa-loaded .watermark,
+.cke_editable .watermark {
+  font-family: 'NexaRustSansBlack';
+}
+
+.pdf-page .watermark {
+  font-family: 'NexaRustSansBlack';
+}
+
+/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
+.watermark {
+  margin-top: 0;
+  top: 0;
+  right: 0;
+  display: block;
+  overflow: visible;
+  background-color: transparent;
+  color: #a32a29;
+  font-size: 75px;
+  line-height: 1;
+  font-weight: bold;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  word-wrap: break-word;
+  z-index: 100;
+}
+
+.pdf-page .watermark {
+  display: none;
+}
+
+/*# sourceMappingURL=watermark.css.map */

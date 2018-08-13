@@ -1,0 +1,25 @@
+// Containing element for the entire page (including headers and footers).
+//
+// Non-Layout styles go in the `container` directory within `base`.
+//
+// No style guide entry.
+
+.page-container {
+  max-width: 100%;
+  width: 100%;
+  padding: 0 $content-padding-small;
+  margin: 0 auto;
+
+  @include respond-to(xxl) {
+    padding: 0 225px;
+    max-width: 1500px;
+
+    @include pdf {
+      padding: 0;
+    }
+  }
+
+    @include pdf {
+      padding: 0;
+    }
+}

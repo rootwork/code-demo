@@ -1,0 +1,22 @@
+@import 'init';
+
+// User login form.
+//
+// No style guide entry.
+
+.user--login {
+
+  @import 'forms/button/button';
+
+  .user-actions-password {
+    @extend %button--small;
+    @extend %button--go;
+  }
+
+  .user-actions-register {
+    @extend %button--small;
+    @extend %button--go;
+    float: right;
+  }
+}
+

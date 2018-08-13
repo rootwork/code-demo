@@ -1,0 +1,87 @@
+// it-follows()
+//
+// Sets a top margin on the element in which this is included, when that element
+// follows non-header block-level elements.
+//
+// So writing:
+//
+// ```scss
+// h3 {
+//   @include it-follows();
+// }
+//
+// h4 {
+//   @include it-follows(s);
+// }
+//
+// h5 {
+//   @include it-follows(s, 0.5);
+// }
+// ```
+//
+// would be the equivalent of writing:
+//
+// ```scss
+// p + h3,
+// ul + h3,
+// ol + h3,
+// dl + h3,
+// address + h3,
+// audio + h3,
+// blockquote + h3,
+// pre + h3,
+// hr + h3,
+// fieldset + h3,
+// video + h3 {
+//   @include margin-top(1, l);
+// }
+//
+// p + h4,
+// ul + h4,
+// ol + h4,
+// dl + h4,
+// address + h4,
+// audio + h4,
+// blockquote + h4,
+// pre + h4,
+// hr + h4,
+// fieldset + h4,
+// video + h4 {
+//   @include margin-top(1, s);
+// }
+//
+// p + h5,
+// ul + h5,
+// ol + h5,
+// dl + h5,
+// address + h5,
+// audio + h5,
+// blockquote + h5,
+// pre + h5,
+// hr + h5,
+// fieldset + h5,
+// video + h5 {
+//   @include margin-top(0.5, s);
+// }
+// ```
+//
+// $margin-size = l [large] - Optional. The size of the margin, in typey()
+//                            terms.
+// $margin-top  = 1 [one] -  Optional. The amount of margin to insert.
+//
+// Style guide: sass.mixins.it-follows
+@mixin it-follows($margin-size: l, $margin-top: 1) {
+  p + &,
+  ul + &,
+  ol + &,
+  dl + &,
+  address + &,
+  audio + &,
+  blockquote + &,
+  pre + &,
+  hr + &,
+  fieldset + &,
+  video + & {
+    @include margin-top($margin-top, $margin-size);
+  }
+}

@@ -1,0 +1,86 @@
+@import 'forms/button/button';
+
+// Scorecard node creation and edit forms.
+//
+// No style guide entry.
+
+.scorecard-form {
+
+  // Match fieldsets on scorecard nodes
+  fieldset {
+    border-radius: $border-radius;
+  }
+
+  // Multivalue fields are treated by Drupal as fieldsets, but their legends are
+  // redundant to the fieldset that already wraps them, so hide them when they
+  // appear as children of other form items.
+  .form-item .fieldgroup > legend {
+    @include visually-hidden;
+  }
+
+  // Markup fields are used to insert help text and other notes as needed.
+  .field--type-markup .form-item {
+    margin: 0;
+  }
+
+  // Grades served checkboxes
+  .field--name-field-grades {
+    .form-checkboxes {
+      @include respond-to(xs) {
+        column-count: 3;
+        column-gap: 1rem;
+      }
+    }
+  }
+
+  @import 'base/headings/headings';
+
+  // Image upload fields
+  .field--type-image {
+
+    details {
+      border: 0;
+    }
+
+    summary {
+      @extend %h4;
+      margin: 0;
+      padding: 0;
+    }
+
+    // Hide draggability and weights completely
+    .tabledrag-toggle-weight-wrapper,
+    .field-multiple-drag,
+    .delta-order,
+    .tabledrag-handle {
+      display: none;
+    }
+
+    // Hide table headings for sighted users.
+    table > thead {
+      @include visually-hidden;
+    }
+
+    // Place all buttons at the top
+    td {
+      vertical-align: top;
+    }
+  }
+
+  // Submit, save as draft, etc.
+  .form-actions {
+    .unpublish {
+      .button {
+        @extend %button--go;
+      }
+    }
+
+    .publish {
+      float: right;
+
+      .button {
+        @extend %button--warning;
+      }
+    }
+  }
+}

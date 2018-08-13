@@ -1,0 +1,247 @@
+.block-views-blocklunchroom-buzz-lunchroom-buzz-recent h2 {
+  font-family: 'Segoe UI', Candara, 'Bitstream Vera Sans', 'DejaVu Sans', 'Bitstream Vera Sans', 'Trebuchet MS', Verdana, 'Verdana Ref', sans-serif;
+}
+
+.font-cabin-loaded .block-views-blocklunchroom-buzz-lunchroom-buzz-recent h2, .block-views-blocklunchroom-buzz-lunchroom-buzz-recent .font-cabin-loaded h2,
+.cke_editable .block-views-blocklunchroom-buzz-lunchroom-buzz-recent h2, .block-views-blocklunchroom-buzz-lunchroom-buzz-recent
+.cke_editable h2 {
+  font-family: 'Cabin';
+}
+
+.pdf-page .block-views-blocklunchroom-buzz-lunchroom-buzz-recent h2, .block-views-blocklunchroom-buzz-lunchroom-buzz-recent .pdf-page h2 {
+  font-family: 'Cabin';
+}
+
+.is-page-node-type-landing .field--name-field-page-link {
+  font-family: Frutiger, 'Frutiger Linotype', Univers, Calibri, 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', Myriad, 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.font-nexa-loaded .is-page-node-type-landing .field--name-field-page-link, .is-page-node-type-landing .font-nexa-loaded .field--name-field-page-link,
+.cke_editable .is-page-node-type-landing .field--name-field-page-link, .is-page-node-type-landing
+.cke_editable .field--name-field-page-link {
+  font-family: 'NexaRustSansBlack';
+}
+
+.pdf-page .is-page-node-type-landing .field--name-field-page-link, .is-page-node-type-landing .pdf-page .field--name-field-page-link {
+  font-family: 'NexaRustSansBlack';
+}
+
+/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
+.lunchroom-buzz .views-row {
+  margin: 24px 0;
+}
+
+.block-views-blocklunchroom-buzz-lunchroom-buzz-featured h2 {
+  margin-top: 0;
+}
+
+.slm-buzz-featured img {
+  border-radius: 16px;
+  border: 2px solid #a32a29;
+  margin-right: 1em;
+  min-width: 110px;
+}
+
+.slm-buzz-featured .views-field-title,
+.slm-buzz-featured .views-field-field-image-featured {
+  display: table-cell;
+}
+
+.slm-buzz-featured .views-field-title {
+  vertical-align: middle;
+  display: table-cell;
+}
+
+.block-views-blocklunchroom-buzz-lunchroom-buzz-recent h2 {
+  font-size: 1.25rem;
+  line-height: 2.25rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  color: #73984a;
+  text-transform: none;
+}
+
+.lunchroom-buzz-recent {
+  margin: 0 0 24px;
+  background-image: url("/sites/default/files/styles/thumbnail/public/images/inline/2017-02/pear_0.png");
+  background-position: top right;
+  background-repeat: no-repeat;
+  border-bottom: 1px #ffb819 solid;
+}
+
+.lunchroom-buzz-recent .views-field {
+  margin: 24px 0;
+  font-weight: bold;
+}
+
+.block-project_s-blocks-copyright {
+  font-size: 0.875rem;
+  position: absolute;
+  bottom: 32px;
+  left: 32px;
+  right: 0;
+  margin: 0 auto;
+}
+
+@media (min-width: 1200px) {
+  .block-project_s-blocks-copyright {
+    position: relative;
+    bottom: auto;
+    left: auto;
+  }
+}
+
+.project_s-blocks-copyright__copyright {
+  display: block;
+  vertical-align: top;
+  color: black;
+}
+
+@media (min-width: 1400px) {
+  .project_s-blocks-copyright__copyright {
+    display: inline-block;
+  }
+}
+
+.project_s-blocks-copyright__funding {
+  clear: both;
+  margin-left: 0;
+}
+
+@media (min-width: 1400px) {
+  .project_s-blocks-copyright__funding {
+    margin-left: 1.5rem;
+    clear: none;
+  }
+}
+
+#block-newslettersignup {
+  color: #ffb819;
+}
+
+#block-newslettersignup h3 {
+  color: #ffb819;
+  font-size: 1.2em;
+}
+
+#block-newslettersignup [type='email'] {
+  opacity: 0.8;
+}
+
+@media only screen and (max-width: 650px) {
+  #block-newslettersignup .form-submit {
+    margin: 0 auto;
+    width: 130px;
+    display: block;
+  }
+  #block-newslettersignup .form-submit-desktop {
+    display: none;
+  }
+  #block-newslettersignup .form-submit-mobile {
+    display: inherit;
+  }
+  #block-newslettersignup h3 span {
+    text-align: center;
+    display: block;
+    line-height: 1em;
+  }
+  #block-newslettersignup h3 .block-newslettersignup__title-line1 {
+    font-size: 86%;
+  }
+  #block-newslettersignup h3 .block-newslettersignup__title-line2 {
+    font-size: 130%;
+  }
+  #block-newslettersignup h3 .block-newslettersignup__title-line3 {
+    font-size: 160%;
+  }
+}
+
+@media only screen and (min-width: 651px) {
+  #block-newslettersignup .form-type-email {
+    display: block;
+    overflow: hidden;
+    padding-right: 10px;
+  }
+  #block-newslettersignup input[type='email'] {
+    width: 100%;
+  }
+  #block-newslettersignup input[type='submit'] {
+    float: right;
+  }
+  #block-newslettersignup .form-submit-desktop {
+    display: inherit;
+  }
+  #block-newslettersignup .form-submit-mobile {
+    display: none;
+  }
+}
+
+.shariff {
+  margin: 1.5rem 0;
+}
+
+.shariff::before {
+  content: '';
+  display: table;
+}
+
+.shariff::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.shariff ul {
+  margin: 0;
+  padding-left: 20px;
+  float: left;
+}
+
+.shariff::before {
+  content: 'Share: ';
+  font-size: 0.9em;
+  float: left;
+}
+
+.shariff .shariff-button {
+  background: transparent;
+  display: inline;
+}
+
+.shariff .fa,
+.shariff .share_text {
+  display: none;
+}
+
+.shariff a {
+  float: left;
+  margin-right: 20px;
+  opacity: 0.8;
+}
+
+.shariff a:hover, .shariff a:active, .shariff a:focus {
+  opacity: 1;
+}
+
+.shariff a[title='Share on Facebook'] {
+  width: 11px;
+  height: 22px;
+  background: no-repeat center/cover url("../../../images/fb.svg");
+}
+
+.shariff a[title='Send by email'] {
+  width: 22px;
+  height: 20px;
+  margin-top: 1px;
+  background: no-repeat center/cover url("../../../images/email.svg");
+}
+
+.shariff a[title='Share on Twitter'] {
+  width: 22px;
+  height: 20px;
+  margin-top: 1px;
+  background: no-repeat center/cover url("../../../images/twitter.svg");
+}
+
+/*# sourceMappingURL=slm.css.map */

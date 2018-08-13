@@ -1,0 +1,65 @@
+@import 'init';
+
+// PDF styles
+//
+// These styles apply to all entities when generated into PDFs. Remember that
+// length values should be specified in absolute units (in, cm, pt, pc) or
+// percentage-based units that can be calculated from absolute font size
+// (%, ex, ch).
+//
+// As an alternative to defining styles here, they can also be integrated
+// directly into component styles using the `pdf()` mixin.
+//
+// Also see `project_s.info.yml` entity_print section.
+//
+// Not included in the style guide.
+
+.pdf-page {
+  background-color: color('white');
+  font-family: 'Cabin';
+
+  // PDF header
+  .page-title {
+    position: relative;
+    margin-top: 1pc;
+    padding: 0.5pc 0.5pc 0.5pc 14pc;
+    font-size: 34pt;
+    line-height: 1;
+    height: 6.66666pc;
+
+    &__first,
+    &__second {
+      display: block;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -2pc;
+      left: 3pc;
+      display: block;
+      width: 10pc;
+      height: 10pc;
+      border-radius: 100%;
+      background-color: color('page-bg');
+      z-index: 500;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: -1.5pc;
+      left: 3.5pc;
+      display: block;
+      width: 9pc;
+      height: 9pc;
+      background: transparent imagemin-url('logo.svg') no-repeat;
+      background-size: contain;
+      z-index: 1000;
+    }
+  }
+
+  .page-title__first {
+    color: color('yellow');
+  }
+}

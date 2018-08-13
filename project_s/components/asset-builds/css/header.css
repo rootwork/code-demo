@@ -1,0 +1,138 @@
+/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
+.header {
+  position: relative;
+  width: 100%;
+  min-height: 110px;
+  padding: 4px;
+  text-align: right;
+  z-index: 999;
+}
+
+.header::before {
+  content: '';
+  display: table;
+}
+
+.header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+@media (min-width: 1400px) {
+  .header {
+    padding: 32px 32px 4px;
+  }
+}
+
+.header__logo {
+  float: left;
+  padding: 0;
+}
+
+[dir="rtl"] .header__logo {
+  float: right;
+  margin: 0 0 0 10px;
+}
+
+.header__logo-image {
+  display: block;
+  float: left;
+  width: 50px;
+  height: 50px;
+  max-height: 110px;
+  margin: 0 10px 0 0;
+  padding: 0;
+  text-align: center;
+  background-image: url("../../../images/Project_s-Pear-Circle.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 1px;
+  background-size: cover;
+  vertical-align: middle;
+}
+
+@media (min-width: 1400px) {
+  .header__logo-image {
+    width: 130px;
+    height: 110px;
+    background-image: url("../../../images/../logo.svg");
+  }
+}
+
+.header__name-and-slogan {
+  float: left;
+  max-width: 250px;
+}
+
+@media (min-width: 1400px) {
+  .header__name-and-slogan {
+    max-width: 100%;
+  }
+}
+
+.header__site-link:link, .header__site-link:visited {
+  display: block;
+  float: left;
+  width: calc(100% - 100px);
+  height: 50px;
+  color: #1a1a1a;
+  text-decoration: none;
+}
+
+.header__site-link:hover, .header__site-link:focus {
+  text-decoration: none;
+}
+
+.header__site-link::before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em;
+}
+
+@media (min-width: 1400px) {
+  .header__site-link {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    word-wrap: normal;
+  }
+}
+
+.header__site-name {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  display: inline-block;
+  margin: 0;
+  padding: 0 0.25em;
+  color: #a32a29;
+  background-color: transparent;
+  border: 0;
+  vertical-align: middle;
+}
+
+.header__site-slogan {
+  margin: 0;
+}
+
+.header__secondary-menu {
+  float: right;
+}
+
+[dir="rtl"] .header__secondary-menu {
+  float: left;
+}
+
+.header__region {
+  clear: both;
+}
+
+.header-wrapper {
+  position: relative;
+  z-index: 99;
+}
+
+/*# sourceMappingURL=header.css.map */

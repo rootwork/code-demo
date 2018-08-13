@@ -1,0 +1,69 @@
+@import 'init';
+
+// Footer wrapper
+//
+// Not included in the style guide.
+
+.site-footer {
+  clear: both;
+  padding-top: $page-margin;
+}
+
+// First footer
+//
+// Markup: footer-first.twig
+//
+// Style guide: components.footer-first
+
+.footer-first,
+%footer-first {
+  padding: 0.25rem $page-margin;
+  background: color(footer-top-bg);
+
+  footer {
+    @include margin-top(1);
+  }
+}
+
+// Second footer
+//
+// Markup: footer-second.twig
+//
+// Style guide: components.footer-second
+
+.footer-second,
+%footer-second {
+  position: relative;
+  padding: $page-margin;
+  background: color(footer-bottom-bg);
+
+  @include respond-to(xxxl) {
+    padding-bottom: 0;
+  }
+
+  p {
+    margin: auto;
+    color: color(footer-disclaimer);
+    font-size: 0.9em;
+    line-height: 1.5em;
+  }
+}
+
+// Third footer
+//
+// Markup: footer-third.twig
+//
+// Style guide: components.footer-third
+
+.footer-third,
+%footer-third {
+  position: relative;
+  padding: $page-margin;
+  background: color(footer-bottom-bg);
+
+  // PROJECT_S-275 5/18/17 temporarily hide user menu for the client.
+  // `display: none` breaks the layout
+  .user-account-menu {
+    visibility: hidden;
+  }
+}

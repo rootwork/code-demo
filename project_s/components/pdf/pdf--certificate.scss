@@ -1,0 +1,150 @@
+@import 'init';
+
+// PDF styles for certificates
+//
+// These styles apply to certificates only when generated into PDFs. Remember
+// that length values should be specified in absolute units (in, cm, pt, pc) or
+// relative units that can be calculated from absolute font size (%, ex, ch).
+//
+// Also see `project_s.info.yml` entity_print section.
+//
+// Not included in the style guide.
+
+@import 'base/headings/headings';
+
+$gold-color: color('yellow-dark');
+$silver-color: color('grey');
+$bronze-color: color('orange-dark');
+
+.pdf-page--certificate {
+
+  // Container
+  article {
+    position: relative;
+    text-align: center;
+  }
+
+  // Title
+  .page-title {
+    font-size: 28pt;
+    line-height: 1.2;
+  }
+
+  // Starburst
+  $starburst-size: 8pc;
+
+  .certificate__banner {
+    position: absolute;
+    left: 1pc;
+    bottom: 2pc;
+    width: $starburst-size;
+    height: $starburst-size;
+    transform: rotate(-15deg);
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: $starburst-size;
+      height: $starburst-size;
+      background-color: currentColor;
+    }
+
+    &::before {
+      transform: rotate(-30deg);
+    }
+
+    &::after {
+      transform: rotate(-60deg);
+    }
+
+    .field--name-title {
+      @extend %heading-font;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: $starburst-size;
+      height: $starburst-size;
+      font-size: 24pt;
+      font-weight: bold;
+      text-align: center;
+      line-height: $starburst-size;
+      color: color('white');
+      z-index: 1;
+    }
+  }
+
+  .certificate__banner--gold {
+    background-color: $gold-color;
+
+    &::before,
+    &::after {
+      background-color: $gold-color;
+    }
+  }
+
+  .certificate__banner--silver {
+    background-color: $silver-color;
+
+    &::before,
+    &::after {
+      background-color: $silver-color;
+    }
+  }
+
+  .certificate__banner--bronze {
+    background-color: $bronze-color;
+
+    &::before,
+    &::after {
+      background-color: $bronze-color;
+    }
+  }
+
+  // School name
+  .field--name-field-certificate-school {
+    @extend %h2;
+    margin: 5pc 0;
+    font-size: 32pt;
+  }
+
+  // Achievement level
+  .certificate__level {
+    font-size: 16pt;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .certificate__level--gold {
+    color: $gold-color;
+  }
+
+  .certificate__level--silver {
+    color: $silver-color;
+  }
+
+  .certificate__level--bronze {
+    color: $bronze-color;
+  }
+
+  // Signature image
+  .certificate__sig-image {
+    margin-top: 4pc;
+    margin-bottom: 0;
+  }
+
+  // Signature text
+  .certificate__sig-text {
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 2pc;
+    border-top: 1px color('black') solid;
+  }
+
+  .certificate__sig-text-slm {
+    display: block;
+  }
+}

@@ -1,0 +1,42 @@
+@import 'init';
+
+// border-round()
+//
+// Inserts a standard rounded border.
+//
+// Usage:
+//
+// ```scss
+// .a {
+//   @include border-round(#f00);
+// }
+//
+// .b {
+//   @include border-round(color(border));
+// }
+// ```
+//
+// Result:
+//
+// ```css
+// .a {
+//   border-radius: 16px;
+//   border: 2px solid #f00;
+// }
+//
+// .b {
+//   border-radius: 16px;
+//   border: 2px solid #ccc;
+// }
+// ```
+//
+// $color                                - Required.
+// $round-border-radius = $border-radius - Optional. The size of the radius.
+//
+// @author Pat Haggerty
+//
+// Style guide: sass.mixins.border-round
+@mixin border-round($color, $round-border-radius: $border-radius) {
+  border-radius: $border-radius;
+  border: 2px solid $color;
+}

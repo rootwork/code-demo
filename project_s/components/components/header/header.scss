@@ -1,0 +1,134 @@
+@import 'init';
+
+// Branding header
+//
+// Markup: header.twig
+//
+// Style guide: components.header
+
+.header,
+%header {
+  @include clearfix;
+  position: relative;
+  width: 100%;
+  min-height: 110px;
+  padding: $content-padding-small;
+  text-align: right;
+  z-index: 999;
+
+  @include respond-to(4xl) {
+    padding: $content-padding-large $page-margin $content-padding-small;
+  }
+
+  // Wrapping link for logo.
+  &__logo {
+    float: left;
+
+    padding: 0;
+
+    @include rtl() {
+      float: right;
+      margin: 0 0 0 10px;
+    }
+  }
+
+  // Logo image.
+  &__logo-image {
+    display: block;
+    float: left;
+    width: 50px;
+    height: 50px;
+    max-height: 110px;
+    margin: 0 10px 0 0;
+    padding: 0;
+    text-align: center;
+    background-image: imagemin-url('Project_s-Pear-Circle.svg');
+    background-repeat: no-repeat;
+    background-position: 50% 1px;
+    background-size: cover;
+    vertical-align: middle;
+
+    @include respond-to(4xl) {
+      width: 130px;
+      height: 110px;
+      background-image: imagemin-url('../logo.svg');
+    }
+  }
+
+  // Wrapper for website name and slogan.
+  &__name-and-slogan {
+    float: left;
+    max-width: 250px;
+
+    @include respond-to(4xl) {
+      max-width: 100%;
+    }
+  }
+
+  // The link around the name of the website, shown only at smaller screen widths.
+  &__site-link {
+    &:link,
+    &:visited {
+      display: block;
+      float: left;
+      width: calc(100% - 100px);
+      height: 50px;
+      color: color(text);
+      text-decoration: none;
+    }
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+
+    &::before { // Vertical centering of the site name.
+      content: '';
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+      margin-right: -0.25em;
+    }
+
+    @include respond-to(4xl) {
+      @include visually-hidden();
+    }
+  }
+
+  // The name of the website, shown only at smaller screen widths.
+  &__site-name {
+    @include type-layout(m, 1);
+    display: inline-block;
+    margin: 0;
+    padding: 0 0.25em;
+    color: color(red);
+    background-color: transparent;
+    border: 0;
+    vertical-align: middle;
+  }
+
+  // The slogan (or tagline) of a website.
+  &__site-slogan {
+    margin: 0;
+  }
+
+  // The secondary menu (login, etc.)
+  &__secondary-menu {
+    float: right;
+
+    @include rtl() {
+      float: left;
+    }
+  }
+
+  // Wrapper for any blocks placed in the header region.
+  &__region {
+    // Clear the logo.
+    clear: both;
+  }
+}
+
+.header-wrapper {
+  position: relative;
+  z-index: 99;
+}

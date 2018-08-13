@@ -1,0 +1,17 @@
+@import 'init';
+
+// User pages
+//
+// User profiles and edit pages, registration form, login and password reset.
+//
+// Also see "Account menu" within the Navigation section for styles of the user
+// account menu (including login and my account).
+//
+// Weight: 6
+//
+// Style guide: user
+
+@import 'user-login/user-login';
+@import 'user-profile/user-profile';
+@import 'user-register/user-register';
+@import 'user-sidebar/user-sidebar';

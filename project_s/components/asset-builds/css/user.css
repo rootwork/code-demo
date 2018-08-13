@@ -1,0 +1,595 @@
+@charset "UTF-8";
+.user--login .button,
+.user--login button,
+.user--login [type='button'],
+.user--login [type='reset'],
+.user--login [type='submit'] {
+  font-family: 'Segoe UI', Candara, 'Bitstream Vera Sans', 'DejaVu Sans', 'Bitstream Vera Sans', 'Trebuchet MS', Verdana, 'Verdana Ref', sans-serif;
+}
+
+.font-cabin-loaded .user--login .button, .user--login .font-cabin-loaded .button, .font-cabin-loaded
+.user--login button,
+.user--login .font-cabin-loaded button, .font-cabin-loaded
+.user--login [type='button'],
+.user--login .font-cabin-loaded [type='button'], .font-cabin-loaded
+.user--login [type='reset'],
+.user--login .font-cabin-loaded [type='reset'], .font-cabin-loaded
+.user--login [type='submit'],
+.user--login .font-cabin-loaded [type='submit'],
+.cke_editable .user--login .button, .user--login
+.cke_editable .button,
+.cke_editable
+.user--login button,
+.user--login
+.cke_editable button,
+.cke_editable
+.user--login [type='button'],
+.user--login
+.cke_editable [type='button'],
+.cke_editable
+.user--login [type='reset'],
+.user--login
+.cke_editable [type='reset'],
+.cke_editable
+.user--login [type='submit'],
+.user--login
+.cke_editable [type='submit'] {
+  font-family: 'Cabin';
+}
+
+.pdf-page .user--login .button, .user--login .pdf-page .button, .pdf-page
+.user--login button,
+.user--login .pdf-page button, .pdf-page
+.user--login [type='button'],
+.user--login .pdf-page [type='button'], .pdf-page
+.user--login [type='reset'],
+.user--login .pdf-page [type='reset'], .pdf-page
+.user--login [type='submit'],
+.user--login .pdf-page [type='submit'] {
+  font-family: 'Cabin';
+}
+
+h1, .profile .field--name-field-name, h2, h3 {
+  font-family: Frutiger, 'Frutiger Linotype', Univers, Calibri, 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', Myriad, 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.font-nexa-loaded h1, .font-nexa-loaded .profile .field--name-field-name, .profile .font-nexa-loaded .field--name-field-name, .font-nexa-loaded h2, .font-nexa-loaded h3,
+.cke_editable h1,
+.cke_editable .profile .field--name-field-name, .profile
+.cke_editable .field--name-field-name,
+.cke_editable h2,
+.cke_editable h3 {
+  font-family: 'NexaRustSansBlack';
+}
+
+.pdf-page h1, .pdf-page .profile .field--name-field-name, .profile .pdf-page .field--name-field-name, .pdf-page h2, .pdf-page h3 {
+  font-family: 'NexaRustSansBlack';
+}
+
+/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
+.user--login .button,
+.user--login button,
+.user--login html [type='button'],
+.user--login [type='reset'],
+.user--login [type='submit'] {
+  -moz-appearance: button;
+  -webkit-appearance: button;
+}
+
+.user--login .button,
+.user--login button,
+.user--login [type='button'],
+.user--login [type='reset'],
+.user--login [type='submit'] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  font-smoothing: antialiased;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  line-height: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  color: #a32a29;
+  border-radius: 16px;
+  border: 2px solid #fff;
+  background-color: #ffb819;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: background-color 0.25s ease;
+  transition: background-color 0.25s ease;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.user--login .button::-moz-focus-inner,
+.user--login button::-moz-focus-inner,
+.user--login [type='button']::-moz-focus-inner,
+.user--login [type='reset']::-moz-focus-inner,
+.user--login [type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.user--login .button:-moz-focusring,
+.user--login button:-moz-focusring,
+.user--login [type='button']:-moz-focusring,
+.user--login [type='reset']:-moz-focusring,
+.user--login [type='submit']:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+.user--login .button:hover, .user--login .button:focus, .user--login .button:active,
+.user--login button:hover,
+.user--login button:focus,
+.user--login button:active,
+.user--login [type='button']:hover,
+.user--login [type='button']:focus,
+.user--login [type='button']:active,
+.user--login [type='reset']:hover,
+.user--login [type='reset']:focus,
+.user--login [type='reset']:active,
+.user--login [type='submit']:hover,
+.user--login [type='submit']:focus,
+.user--login [type='submit']:active {
+  text-decoration: none;
+  color: #fff;
+  background-color: #a32a29;
+}
+
+.contextual .user--login .button:hover, .contextual .user--login .button:focus, .contextual .user--login .button:active, .contextual
+.user--login button:hover, .contextual
+.user--login button:focus, .contextual
+.user--login button:active, .contextual
+.user--login [type='button']:hover, .contextual
+.user--login [type='button']:focus, .contextual
+.user--login [type='button']:active, .contextual
+.user--login [type='reset']:hover, .contextual
+.user--login [type='reset']:focus, .contextual
+.user--login [type='reset']:active, .contextual
+.user--login [type='submit']:hover, .contextual
+.user--login [type='submit']:focus, .contextual
+.user--login [type='submit']:active {
+  background-color: #fff;
+}
+
+.user--login .button--small, .user--login .user-actions-password, .user--login .user-actions-register {
+  font-size: 0.875rem;
+  text-transform: none;
+}
+
+.user--login .button--go, .user--login .user-actions-password, .user--login .user-actions-register {
+  color: #fff;
+  background-color: #73984a;
+}
+
+.user--login .button--go:hover, .user--login .button--go:focus, .user--login .button--go:active, .user--login .user-actions-password:hover, .user--login .user-actions-register:hover, .user--login .user-actions-password:focus, .user--login .user-actions-register:focus, .user--login .user-actions-password:active, .user--login .user-actions-register:active {
+  color: #a32a29;
+  background-color: #ffb819;
+}
+
+.user--login .button--warning {
+  color: #fff;
+  background-color: #a32a29;
+}
+
+.user--login .button--warning:hover, .user--login .button--warning:focus, .user--login .button--warning:active {
+  color: #a32a29;
+  background-color: #ffb819;
+}
+
+.user--login [disabled].button, .user--login button[disabled], .user--login [disabled][type='button'], .user--login [disabled][type='reset'], .user--login [disabled][type='submit'] {
+  cursor: default;
+  cursor: not-allowed;
+  color: #a32a29;
+  opacity: 0.5;
+}
+
+.user--login [disabled].button:hover, .user--login button[disabled]:hover, .user--login [disabled][type='button']:hover, .user--login [disabled][type='reset']:hover, .user--login [disabled][type='submit']:hover, .user--login [disabled].button:focus, .user--login button[disabled]:focus, .user--login [disabled][type='button']:focus, .user--login [disabled][type='reset']:focus, .user--login [disabled][type='submit']:focus, .user--login [disabled].button:active, .user--login button[disabled]:active, .user--login [disabled][type='button']:active, .user--login [disabled][type='reset']:active, .user--login [disabled][type='submit']:active {
+  color: #fff;
+  background-color: #a32a29;
+}
+
+.user--login .user-actions-register {
+  float: right;
+}
+
+h1,
+.profile .field--name-field-name {
+  font-size: 1.5rem;
+  line-height: 1.875rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  border-radius: 16px;
+  border: 2px solid #a32a29;
+  padding: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #73984a;
+}
+
+p + h1,
+ul + h1,
+ol + h1,
+dl + h1,
+address + h1,
+audio + h1,
+blockquote + h1,
+pre + h1,
+hr + h1,
+fieldset + h1,
+video + h1,
+.profile p + .field--name-field-name,
+.profile
+ul + .field--name-field-name,
+.profile
+ol + .field--name-field-name,
+.profile
+dl + .field--name-field-name,
+.profile
+address + .field--name-field-name,
+.profile
+audio + .field--name-field-name,
+.profile
+blockquote + .field--name-field-name,
+.profile
+pre + .field--name-field-name,
+.profile
+hr + .field--name-field-name,
+.profile
+fieldset + .field--name-field-name,
+.profile
+video + .field--name-field-name {
+  margin-top: 1.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #a32a29;
+}
+
+p + h2,
+ul + h2,
+ol + h2,
+dl + h2,
+address + h2,
+audio + h2,
+blockquote + h2,
+pre + h2,
+hr + h2,
+fieldset + h2,
+video + h2 {
+  margin-top: 1.5rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  color: #a32a29;
+  text-transform: uppercase;
+}
+
+p + h3,
+ul + h3,
+ol + h3,
+dl + h3,
+address + h3,
+audio + h3,
+blockquote + h3,
+pre + h3,
+hr + h3,
+fieldset + h3,
+video + h3 {
+  margin-top: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+  line-height: 1.8rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  color: #73984a;
+}
+
+p + h4,
+ul + h4,
+ol + h4,
+dl + h4,
+address + h4,
+audio + h4,
+blockquote + h4,
+pre + h4,
+hr + h4,
+fieldset + h4,
+video + h4 {
+  margin-top: 1.5rem;
+}
+
+h5 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  color: #d4451d;
+}
+
+p + h5,
+ul + h5,
+ol + h5,
+dl + h5,
+address + h5,
+audio + h5,
+blockquote + h5,
+pre + h5,
+hr + h5,
+fieldset + h5,
+video + h5 {
+  margin-top: 1.5rem;
+}
+
+h6 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  color: #1a1a1a;
+}
+
+p + h6,
+ul + h6,
+ol + h6,
+dl + h6,
+address + h6,
+audio + h6,
+blockquote + h6,
+pre + h6,
+hr + h6,
+fieldset + h6,
+video + h6 {
+  margin-top: 1.5rem;
+}
+
+.profile .field--name-field-tap-verified {
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.profile__verified {
+  font-weight: bold;
+  color: #73984a;
+}
+
+.profile__verified::before {
+  display: inline-block;
+  content: '✔';
+  padding-right: 0.5rem;
+  color: #73984a;
+}
+
+.user-links {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.user-form .name-given-wrapper,
+.user-form .name-family-wrapper {
+  width: 48%;
+  float: left;
+}
+
+.user-form .name-family-wrapper {
+  margin-left: 4%;
+}
+
+.user-form .field--name-field-school .field-multiple-table {
+  width: auto;
+}
+
+.user-form .field--name-field-school .field-multiple-table .odd {
+  background-color: #fff;
+}
+
+.user-form .field--name-field-school .field-multiple-table tr:first-child td {
+  border-top: 0;
+}
+
+.user-form .field--name-field-school .field-multiple-table tbody {
+  border-top: 0;
+}
+
+.user-form .field--name-field-school .field-multiple-table tbody td {
+  border-top: 0;
+}
+
+.user-form .field--name-field-school .field-multiple-table tbody tr {
+  border-bottom: 0;
+}
+
+.user-form .field--name-field-school .tabledrag-toggle-weight-wrapper,
+.user-form .field--name-field-school .field-multiple-drag,
+.user-form .field--name-field-school .delta-order {
+  display: none;
+}
+
+.user-form .field--name-field-school tbody,
+.user-form .field--name-field-school tr,
+.user-form .field--name-field-school td {
+  display: block;
+  padding: 0.5em 0;
+}
+
+@media (min-width: 640px) {
+  .user-form .field--name-field-school tbody {
+    display: table-row-group;
+    padding: 0;
+  }
+  .user-form .field--name-field-school tr {
+    display: table-row;
+    padding: 0.1em 0.6em;
+  }
+  .user-form .field--name-field-school td {
+    display: table-cell;
+    padding: 0.75em;
+  }
+}
+
+.user-form .field--name-field-school td {
+  width: 100%;
+}
+
+.user-form .field--name-field-school .field-multiple-table > thead {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  word-wrap: normal;
+}
+
+.user-form .field--name-field-school .form-type-entity-autocomplete .ui-autocomplete-input {
+  margin-bottom: 0;
+}
+
+.user-form .field--name-field-school .delta-remove {
+  padding-right: 0;
+}
+
+.user-form .field--name-field-school .field-add-more-submit {
+  float: right;
+}
+
+.user--register .form-item-terms-of-use-checkbox label > a {
+  text-transform: lowercase;
+  text-decoration: underline;
+}
+
+.block-views-blockuser-sidebar-user-sidebar > h2 {
+  margin-bottom: 0.5rem;
+  text-align: center;
+  border-bottom: 2px #a32a29 solid;
+}
+
+@media (min-width: 777px) {
+  .block-views-blockuser-sidebar-user-sidebar > h2 {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    word-wrap: normal;
+  }
+}
+
+.view-user-sidebar .menu {
+  margin: 0;
+}
+
+.view-user-sidebar .menu-item {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+@media (min-width: 777px) {
+  .view-user-sidebar .menu-item {
+    text-align: left;
+  }
+}
+
+.view-user-sidebar .menu-link {
+  display: block;
+  font-weight: bold;
+  padding: 0.25rem;
+  border-radius: 16px;
+}
+
+.view-user-sidebar .menu-link::before {
+  display: inline-block;
+  content: '';
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.5rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  vertical-align: middle;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+
+@media (min-width: 1111px) {
+  .view-user-sidebar .menu-link::before {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .view-user-sidebar .menu-link::before {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .view-user-sidebar .menu-link::before {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+.view-user-sidebar .menu-link:hover, .view-user-sidebar .menu-link:active, .view-user-sidebar .menu-link:focus {
+  background-color: #eeeeee;
+}
+
+.view-user-sidebar .menu-link:hover::before, .view-user-sidebar .menu-link:active::before, .view-user-sidebar .menu-link:focus::before {
+  -webkit-transform: rotate(30deg) scale(1.2);
+      -ms-transform: rotate(30deg) scale(1.2);
+          transform: rotate(30deg) scale(1.2);
+}
+
+.view-user-sidebar .menu-link--account::before {
+  background-image: url("../../../images/apple.svg");
+}
+
+.view-user-sidebar .menu-link--schools::before {
+  background-image: url("../../../images/banana.svg");
+}
+
+.view-user-sidebar .menu-link--scorecards::before {
+  background-image: url("../../../images/carrot.svg");
+}
+
+.view-user-sidebar .menu-link--trainings::before {
+  background-image: url("../../../images/pear.svg");
+}
+
+.view-user-sidebar .menu-link--faqs::before {
+  background-image: url("../../../images/strawberry.svg");
+}
+
+/*# sourceMappingURL=user.css.map */

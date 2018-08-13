@@ -1,0 +1,45 @@
+/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
+.menu--footer-logo {
+  bottom: calc(90px + 32px);
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  position: absolute;
+  width: 325px;
+  height: 45px;
+}
+
+@media (min-width: 1200px) {
+  .menu--footer-logo {
+    bottom: 32px;
+    margin: 0;
+    left: auto;
+    right: 32px;
+  }
+}
+
+.menu--footer-logo .menu {
+  margin: 0;
+  display: inline-block;
+}
+
+.menu--footer-logo .menu-item {
+  padding: 0;
+}
+
+.menu--footer-logo .menu-link {
+  display: block;
+  background: no-repeat center/cover url("../../../images/project_s-national-logo.png");
+  color: transparent !important;
+  overflow: hidden;
+  width: 325px;
+  height: 45px;
+  opacity: 0.9;
+}
+
+.menu--footer-logo .menu-link:hover, .menu--footer-logo .menu-link:active, .menu--footer-logo .menu-link:focus {
+  color: transparent;
+  opacity: 1;
+}
+
+/*# sourceMappingURL=footer-logo.css.map */

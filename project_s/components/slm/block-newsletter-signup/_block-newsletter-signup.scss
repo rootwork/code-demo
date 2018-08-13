@@ -1,0 +1,65 @@
+// Newsletter signup block
+
+#block-newslettersignup {
+  color: color(yellow);
+
+  h3 {
+    color: color(yellow);
+    font-size: 1.2em;
+  }
+
+  [type='email'] {
+    opacity: 0.8;
+  }
+
+  @media only screen and (max-width: 650px) {
+    .form-submit {
+      margin: 0 auto;
+        width: 130px;
+        display: block;
+    }
+    .form-submit-desktop { display: none; }
+    .form-submit-mobile { display: inherit; }
+
+    h3 {
+      span {
+        text-align: center;
+        display: block;
+        line-height: 1em;
+      }
+
+      .block-newslettersignup__title-line1 {
+        font-size: 86%;
+      }
+
+      .block-newslettersignup__title-line2 {
+        font-size: 130%;
+      }
+
+      .block-newslettersignup__title-line3 {
+        font-size: 160%;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 651px) {
+    // sneak the submit button onto the same line as email input, fill the rest of the space with input
+    // see: http://stackoverflow.com/a/6815625/216761
+    .form-type-email {
+        display: block;
+        overflow: hidden;
+        padding-right: 10px;
+    }
+
+    input[type='email'] {
+        width: 100%;
+    }
+
+    input[type='submit'] {
+        float: right;
+    }
+
+    .form-submit-desktop { display: inherit; }
+    .form-submit-mobile { display: none; }
+  }
+}

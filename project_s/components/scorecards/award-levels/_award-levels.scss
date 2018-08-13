@@ -1,0 +1,108 @@
+// Scorecard award levels block
+//
+// Markup: block--award-levels.twig
+//
+// Style guide: scorecards.award-levels
+
+@import 'base/forms/forms';
+
+// Award level block wrapper
+.award-levels {
+
+  // Block when it appears in the main section of the scorecard.
+  //
+  // Displays only the level reached, and only displays if score > 14.
+  &--scorecard.scorecard__fieldset {
+    @extend %fieldset;
+    position: relative;
+    margin: 1rem 0;
+    padding-left: 8rem;
+
+    @include pdf {
+      width: 50%;
+      float: right;
+      margin: 0 0 0 1pc;
+      padding-left: 0.5pc;
+    }
+  }
+}
+
+.award-levels__title {
+  margin-bottom: 0;
+  border-bottom: 2px solid color(border--highlight);
+}
+
+.award-levels__list {
+  margin-top: 0.5rem;
+
+  .scorecard__fieldset--award-level & {
+    margin-bottom: 0.5rem;
+  }
+}
+
+@import 'base/headings/headings';
+
+.award-levels__level {
+  @extend %h4;
+  margin-bottom: 0;
+
+  &::after {
+    display: inline-block;
+    content: '';
+    width: 3rem;
+    height: 3rem;
+    margin-left: 0.5rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    vertical-align: middle;
+
+    .award-levels--scorecard & {
+      position: absolute;
+      top: 1rem;
+      left: 0;
+      width: 7rem;
+      height: 7rem;
+
+      @include pdf {
+        position: static;
+        width: 3rem;
+        height: 3rem;
+      }
+    }
+  }
+
+  &--bronze {
+    &::after {
+      background-image: imagemin-url('milk.svg');
+    }
+  }
+
+  &--silver {
+    &::after {
+      background-image: imagemin-url('watermelon.svg');
+    }
+  }
+
+  &--gold {
+    &::after {
+      background-image: imagemin-url('pear.svg');
+    }
+  }
+}
+
+.award-levels__description {
+  @include margin-bottom(0.5);
+  margin-left: 0;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.award-levels__certificate {
+  display: block;
+  font-weight: bold;
+
+  @include pdf-hide;
+}

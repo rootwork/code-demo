@@ -1,0 +1,143 @@
+{#
+/**
+ * @file
+ * Theme override to display a single page.
+ *
+ * The doctype, html, head and body tags are not in this template. Instead they
+ * can be found in the html.html.twig template in this directory.
+ *
+ * Available variables:
+ *
+ * General utility variables:
+ * - base_path: The base URL path of the Drupal installation. Will usually be
+ *   "/" unless you have installed Drupal in a sub-directory.
+ * - is_front: A flag indicating if the current page is the front page.
+ * - logged_in: A flag indicating if the user is registered and signed in.
+ * - is_admin: A flag indicating if the user has permission to access
+ *   administration pages.
+ *
+ * Site identity:
+ * - front_page: The URL of the front page. Use this instead of base_path when
+ *   linking to the front page. This includes the language domain or prefix.
+ *
+ * Page content (in order of occurrence in the default page.html.twig):
+ * - node: Fully loaded node, if there is an automatically-loaded node
+ *   associated with the page and the node ID is the second argument in the
+ *   page's path (e.g. node/12345 and node/12345/revisions, but not
+ *   comment/reply/12345).
+ *
+ * @see template_preprocess_page()
+ * @see html.html.twig
+ */
+#}
+
+{{ attach_library('project_s/layouts') }}
+<div class="layout-center">
+  <div class="layout-3col">
+    <header class="header navigation" role="banner">
+      <div class="header-wrapper">
+        {{ page.header }}
+      </div>
+    </header>
+
+    {% if page.featured %}
+      <section class="featured">
+        {{ page.featured }}
+      </section>
+    {% endif %}
+
+    {% block breadcrumbs %}
+      {% if page.breadcrumb %}
+        {{ page.breadcrumb }}
+      {% endif %}
+    {% endblock %}
+
+    {# Decide on layout classes by checking if sidebars have content. #}
+    {% if page.sidebar_first and page.sidebar_second %}
+      {% set content_class        = 'layout-3col__right-content' %}
+      {% set sidebar_first_class  = 'layout-3col__first-left-sidebar' %}
+      {% set sidebar_second_class = 'layout-3col__second-left-sidebar' %}
+    {% elseif (page.sidebar_second) %}
+      {% set content_class        = 'layout-3col__left-content' %}
+      {% set sidebar_first_class  = '' %}
+      {% set sidebar_second_class = 'layout-3col__right-sidebar' %}
+    {% elseif (page.sidebar_first) %}
+      {% set content_class        = 'layout-3col__right-content' %}
+      {% set sidebar_first_class  = 'layout-3col__left-sidebar' %}
+      {% set sidebar_second_class = '' %}
+    {% else %}
+      {% set content_class        = 'layout-3col__full' %}
+      {% set sidebar_first_class  = '' %}
+      {% set sidebar_second_class = '' %}
+    {% endif %}
+
+    <main class="{{ content_class }}{% if page_class %} {{ page_class }}{% endif %}" role="main">
+
+      <a href="#skip-link" class="visually-hidden visually-hidden--focusable" id="main-content">Back to top</a>{# link target is in html.html.twig #}
+
+      {{ page.title }}
+      {{ page.help }}
+      {{ page.content }}
+
+      {% if is_front and (page.front_first or page.front_second or page.front_third) %}
+        <footer role="banner" class="front-regions">
+          {% if page.front_first %}
+            <aside role="complementary" class="region-front region-front-first">
+              {{ page.front_first }}
+            </aside>
+          {% endif %}
+          {% if page.front_second %}
+            <aside role="complementary" class="region-front region-front-second">
+              {{ page.front_second }}
+            </aside>
+          {% endif %}
+          {% if page.front_third %}
+            <aside role="complementary" class="region-front region-front-third">
+              {{ page.front_third }}
+            </aside>
+          {% endif %}
+        </footer>
+      {% endif %}
+
+    </main>
+
+    {% if page.sidebar_first and not is_front %}
+      <aside class="{{ sidebar_first_class }}" role="complementary">
+        {{ page.sidebar_first }}
+      </aside>
+    {% endif %}
+
+    {% if page.sidebar_second and not is_front %}
+      <aside class="{{ sidebar_second_class }}" role="complementary">
+        {{ page.sidebar_second }}
+      </aside>
+    {% endif %}
+
+  {% if page.footer_first or page.footer_second or page.footer_third %}
+    <footer class="site-footer" role="contentinfo">
+
+      {% if page.footer_first %}
+        <section class="footer-first">
+          {{ page.footer_first }}
+        </section>
+      {% endif %}
+
+      {% if page.footer_second %}
+        <section class="footer-second">
+          {{ page.footer_second }}
+        </section>
+      {% endif %}
+
+      {% if page.footer_third %}
+        <section class="footer-third">
+          {{ page.footer_third }}
+        </section>
+      {% endif %}
+
+    </footer>
+  {% endif %}
+
+  </div>{# /.layout-3col #}
+</div>{# /.layout-center #}
+
+{{ page.bottom }}

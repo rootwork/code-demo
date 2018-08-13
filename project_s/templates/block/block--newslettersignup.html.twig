@@ -1,0 +1,66 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a block.
+ *
+ * Available variables:
+ * - plugin_id: The ID of the block implementation.
+ * - label: The configured label of the block if visible.
+ * - configuration: A list of the block's configuration values.
+ *   - label: The configured label for the block.
+ *   - label_display: The display settings for the label.
+ *   - provider: The module or other provider that provided this block plugin.
+ *   - Block plugin specific settings will also be stored here.
+ * - content: The content of this block.
+ * - attributes: array of HTML attributes populated by modules, intended to
+ *   be added to the main container tag of this template.
+ *   - id: A valid HTML ID and guaranteed unique.
+ * - title_attributes: Same as attributes, except applied to the main title
+ *   tag that appears in the template.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ *
+ * @see template_preprocess_block()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes }}>
+    <div class="block-newslettersignup__inner-wrapper">
+        {{ title_prefix }}
+        {% if label %}
+            <h3{{ title_attributes }}>
+                <span class="block-newslettersignup__title-line1">Keep In Touch! Sign Up </span>
+                <span class="block-newslettersignup__title-line2">To Receive Our </span>
+                <span class="block-newslettersignup__title-line3">Newsletter.</span>
+            </h3>
+        {% endif %}
+        {{ title_suffix }}
+        {% block content %}
+            {# a little messy but some markup is from mailchimp, and I wanted the form we submit to match what they're expecting #}
+            <form action="//project_s.us9.list-manage.com/subscribe/post?u=bfe1ae5eb5c101df1c3076059&amp;id=28aa380ce3" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+
+                {# need a mobile and desktop versions of the button to easily accomplish what we're after #}
+                {# (order matters: http://stackoverflow.com/a/6815625/216761 ) #}
+                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="form-submit form-submit-desktop">
+
+                <div class="js-form-item form-item js-form-type-email form-type-email js-form-item-name form-item-name form-no-label">
+                    <input autocorrect="none" autocapitalize="none" spellcheck="false" placeholder="Enter Email Address" type="email" id="mce-EMAIL" name="EMAIL" value="" class="form-email required" required="required" aria-required="true">
+                </div>
+
+                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="form-submit form-submit-mobile">
+
+                {# container mailchimp looks for for messaging... also sounds like it serves as a spam honeypot #}
+                <div id="mce-responses" class="clear">
+                    <div class="response" id="mce-error-response" style="display:none"></div>
+                    <div class="response" id="mce-success-response" style="display:none"></div>
+                </div>
+            </form>
+            <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+
+            {{ content }}
+        {% endblock %}
+    </div>
+</div>

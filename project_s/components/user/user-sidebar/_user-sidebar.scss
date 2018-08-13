@@ -1,0 +1,103 @@
+// User sidebar, a view block that is styled as a menu.
+
+.block-views-blockuser-sidebar-user-sidebar > h2 {
+  margin-bottom: 0.5rem;
+  text-align: center;
+  border-bottom: 2px color(red) solid;
+
+  @include respond-to(m) {
+    @include visually-hidden;
+  }
+}
+
+.view-user-sidebar {
+
+  .menu {
+    margin: 0;
+  }
+
+  .menu-item {
+    margin-bottom: 1rem;
+    text-align: center;
+
+    @include respond-to(m) {
+      text-align: left;
+    }
+  }
+
+  .menu-link {
+    display: block;
+    font-weight: bold;
+    padding: 0.25rem;
+    border-radius: $border-radius;
+
+    &::before {
+      display: inline-block;
+      content: '';
+      width: 2rem;
+      height: 2rem;
+      margin-right: 0.5rem;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      vertical-align: middle;
+      transform: scale(1);
+      transition: transform 0.5s ease;
+
+      @include respond-to(xxl) {
+        width: 1rem;
+        height: 1rem;
+      }
+
+      @include respond-to(xxxl) {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+
+      @include respond-to(4xl) {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: color('grey-extra-light');
+
+      &::before {
+        transform: rotate(30deg) scale(1.2);
+      }
+    }
+
+    &--account {
+      &::before {
+        background-image: imagemin-url('apple.svg');
+      }
+    }
+
+    &--schools {
+      &::before {
+        background-image: imagemin-url('banana.svg');
+      }
+    }
+
+    &--scorecards {
+      &::before {
+        background-image: imagemin-url('carrot.svg');
+      }
+    }
+
+    &--trainings {
+      &::before {
+        background-image: imagemin-url('pear.svg');
+      }
+    }
+
+    &--faqs {
+      &::before {
+        background-image: imagemin-url('strawberry.svg');
+      }
+    }
+  }
+}

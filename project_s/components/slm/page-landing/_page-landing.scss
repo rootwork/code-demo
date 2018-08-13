@@ -1,0 +1,11 @@
+// Landing page node types.
+//
+// Layout-related styles go in the `page-landing` directory within `layouts`.
+//
+// No style guide entry.
+
+.is-page-node-type-landing {
+  .field--name-field-page-link {
+    @extend %heading-font;
+  }
+}

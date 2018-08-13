@@ -1,0 +1,26 @@
+{% extends "page.html.twig" %}
+
+  {# We hard-code the breadcrumb because of the special nature of the contact page. #}
+  {% block breadcrumbs %}
+    {{ attach_library('project_s/breadcrumb') }}
+    <div id="block-project_s-breadcrumbs" class="block block-system block-system-breadcrumb-block">
+      <section class="breadcrumb-container">
+        <nav class="breadcrumb " role="navigation" aria-labelledby="system-breadcrumb">
+          <h2 id="system-breadcrumb" class="visually-hidden">Breadcrumb</h2>
+          <ol class="breadcrumb__list">
+            <li class="breadcrumb__item">
+              <a href="/" class="breadcrumb__link">Home</a>
+              <span class="breadcrumb__divider">〉</span>
+            </li>
+            <li class="breadcrumb__item">
+              <a href="/about" class="breadcrumb__link">About</a>
+              <span class="breadcrumb__divider">〉</span>
+            </li>
+            <li class="breadcrumb__item">
+              <a href="#" class="breadcrumb__link breadcrumb-active">Contact Us</a>
+            </li>
+          </ol>
+        </nav>
+      </section>
+    </div>
+  {% endblock %}

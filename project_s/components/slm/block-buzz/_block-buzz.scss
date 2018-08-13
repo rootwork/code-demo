@@ -1,0 +1,59 @@
+// "Recent lunchroom buzz" blocks
+
+.lunchroom-buzz {
+  .views-row {
+    margin: $spacing 0;
+  }
+}
+
+.block-views-blocklunchroom-buzz-lunchroom-buzz-featured {
+  h2 {
+    margin-top: 0;
+  }
+}
+
+.slm-buzz-featured {
+  img {
+    @include border-round(color(red))
+    margin-right: 1em;
+    min-width: 110px;
+  }
+
+  .views-field-title,
+  .views-field-field-image-featured {
+    display: table-cell;
+  }
+
+  .views-field-title {
+    vertical-align: middle;
+    display: table-cell;
+  }
+
+  .views-field-field-image-featured {
+  }
+}
+
+.block-views-blocklunchroom-buzz-lunchroom-buzz-recent {
+  h2 {
+    @extend %base-font;
+    @include type-layout(l, 1.5);
+    @include margin-top(1, l);
+    @include margin-bottom(1, l);
+    font-weight: 700;
+    color: color(green);
+    text-transform: none;
+  }
+}
+
+.lunchroom-buzz-recent {
+  margin: 0 0 $spacing;
+  background-image: url('/sites/default/files/styles/thumbnail/public/images/inline/2017-02/pear_0.png');
+  background-position: top right;
+  background-repeat: no-repeat;
+  border-bottom: 1px color(yellow) solid;
+
+  .views-field {
+    margin: $spacing 0;
+    font-weight: bold;
+  }
+}

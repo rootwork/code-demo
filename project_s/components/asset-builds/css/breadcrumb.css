@@ -1,0 +1,77 @@
+.breadcrumb__divider {
+  font-family: 'Segoe UI', Candara, 'Bitstream Vera Sans', 'DejaVu Sans', 'Bitstream Vera Sans', 'Trebuchet MS', Verdana, 'Verdana Ref', sans-serif;
+}
+
+.font-cabin-loaded .breadcrumb__divider,
+.cke_editable .breadcrumb__divider {
+  font-family: 'Cabin';
+}
+
+.pdf-page .breadcrumb__divider {
+  font-family: 'Cabin';
+}
+
+.breadcrumb__link {
+  font-family: Corbel, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans', 'Bitstream Vera Sans', 'Liberation Sans', Verdana, 'Verdana Ref', sans-serif;
+}
+
+.font-mosk-loaded .breadcrumb__link,
+.cke_editable .breadcrumb__link {
+  font-family: 'Mosk';
+}
+
+.pdf-page .breadcrumb__link {
+  font-family: 'Mosk';
+}
+
+/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
+.block-system-breadcrumb-block {
+  margin-bottom: 1.5rem;
+  clear: both;
+  padding-left: 32px;
+  padding-right: 32px;
+  background-color: #fff;
+}
+
+.breadcrumb {
+  display: inline-block;
+  border: 1px solid #ffb819;
+}
+
+@media print {
+  .breadcrumb {
+    display: none;
+  }
+}
+
+.breadcrumb__list {
+  margin: 0;
+  padding: 0 0 0 1rem;
+}
+
+.breadcrumb__item {
+  display: inline-block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumb__link {
+  position: relative;
+  display: inline-block;
+  padding: 0 0.5rem 0 0;
+  background-color: #fff;
+  color: #73984a;
+}
+
+.breadcrumb__link.breadcrumb-active {
+  padding-right: 1rem;
+  color: #a32a29;
+}
+
+.breadcrumb__divider {
+  display: inline-block;
+  color: #ffb819;
+}
+
+/*# sourceMappingURL=breadcrumb.css.map */

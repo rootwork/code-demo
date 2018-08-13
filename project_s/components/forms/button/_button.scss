@@ -1,0 +1,143 @@
+// Unlike most other components, the CSS for this component is included with the
+// base.css styles as it is needed for the `button` element.
+
+// Button
+//
+// In addition to the default styling of `<button>` and
+// `<input type="submit|image|reset|button">` elements, the `.button` class and
+// its variants can apply buttons styles to various elements (like an `<a>`
+// link).
+//
+// :hover  - Hover styling.
+// :active - Depressed button styling.
+//
+// Markup: button.twig
+//
+// Style guide: forms.button
+
+// 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+//    controls in Android 4.
+// 2. Correct the inability to style clickable types in iOS and Safari.
+.button,
+%button,
+button,
+// 1
+html [type='button'],
+[type='reset'],
+[type='submit'] {
+  -moz-appearance: button;
+  -webkit-appearance: button; // 2
+}
+
+.button,
+%button,
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  // Silent class for disabled buttons is inserted here, but the code is at the very end of this file. The silent class itself ensures it is only applied when the button is actually disabled.
+  @extend %button--disabled;
+  // Remove webkit/blink button chrome.
+  appearance: none;
+  font-smoothing: antialiased;
+  user-select: none;
+  // Some styles don't apply to <a> links since they are inline elements by default.
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  // Address Firefox 4+ setting `line-height` on `input` using `!important` in
+  // the UA stylesheet. And prevent its "line-height: normal" rule below from
+  // breaking the "appearance: button" styling on the input elements.
+  line-height: inherit;
+  text-decoration: none;
+  // Improve usability and consistency of cursor style between image-type `input` and others.
+  cursor: pointer;
+  color: color(button);
+  // Project S-specific styling
+  @extend %base-font;
+  @include border-round(color(white));
+  background-color: color(button-bg);
+  font-size: $base-font-size;
+  font-weight: bold;
+  line-height: 1;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color $duration $timing;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  // Remove the inner border and padding in Firefox.
+  &::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+  }
+
+  // Restore the focus styles unset by the previous rule.
+  &:-moz-focusring {
+    outline: 1px dotted ButtonText;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    // Override any link underlines and color changes.
+    text-decoration: none;
+    color: color(button--active);
+    background-color: color(button-bg--active);
+
+    // Reset background color on contextual links.
+    .contextual & {
+      background-color: color('page-bg');
+    }
+  }
+}
+
+// Button variations
+.button,
+%button {
+  &--small {
+    @include font-size(s);
+    text-transform: none;
+  }
+
+  &--go {
+    color: color(button--go);
+    background-color: color(button-bg--go);
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: color(button);
+      background-color: color(button-bg);
+    }
+  }
+
+  &--warning {
+    color: color(button--warning);
+    background-color: color(button-bg--warning);
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: color(button);
+      background-color: color(button-bg);
+    }
+  }
+}
+
+// The disabled variation should always go last, so that it overrides any
+// other variations.
+%button--disabled[disabled] {
+  cursor: default;
+  cursor: not-allowed;
+  color: color(button);
+  opacity: 0.5;
+
+  &:hover,
+  &:focus,
+  &:active {
+    // Override any link underlines and color changes.
+    color: color(button--active);
+    background-color: color(button-bg--active);
+  }
+}

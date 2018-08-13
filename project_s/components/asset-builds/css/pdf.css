@@ -1,0 +1,50 @@
+/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
+.pdf-page {
+  background-color: #fff;
+  font-family: 'Cabin';
+}
+
+.pdf-page .page-title {
+  position: relative;
+  margin-top: 1pc;
+  padding: 0.5pc 0.5pc 0.5pc 14pc;
+  font-size: 34pt;
+  line-height: 1;
+  height: 6.66666pc;
+}
+
+.pdf-page .page-title__first, .pdf-page .page-title__second {
+  display: block;
+}
+
+.pdf-page .page-title::before {
+  content: '';
+  position: absolute;
+  top: -2pc;
+  left: 3pc;
+  display: block;
+  width: 10pc;
+  height: 10pc;
+  border-radius: 100%;
+  background-color: #fff;
+  z-index: 500;
+}
+
+.pdf-page .page-title::after {
+  content: '';
+  position: absolute;
+  top: -1.5pc;
+  left: 3.5pc;
+  display: block;
+  width: 9pc;
+  height: 9pc;
+  background: transparent url("../../../images/logo.svg") no-repeat;
+  background-size: contain;
+  z-index: 1000;
+}
+
+.pdf-page .page-title__first {
+  color: #ffb819;
+}
+
+/*# sourceMappingURL=pdf.css.map */

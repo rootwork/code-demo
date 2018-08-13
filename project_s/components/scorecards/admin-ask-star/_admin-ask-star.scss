@@ -1,0 +1,14 @@
+// 'Ask' stars
+//
+// Items about which respondents may need to ask others before answering.
+//
+// Markup: admin-ask-star.twig
+//
+// Style guide: scorecards.admin-ask-star
+.admin-ask-star {
+  color: color('yellow-dark');
+
+  @include pdf {
+    color: color('black');
+  }
+}

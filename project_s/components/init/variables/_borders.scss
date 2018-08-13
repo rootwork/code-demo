@@ -1,0 +1,12 @@
+// Borders
+//
+// `$border-radius`: `$base-font-size`
+//
+// `$border-radius-large`: `$border-radius` * 1.25
+//
+// `$border`: 1px solid `color(border)`
+//
+// Style guide: sass.variables.borders
+$border-radius: $base-font-size;
+$border-radius-large: $border-radius * 1.25;
+$border: 1px solid color(border)

@@ -1,0 +1,39 @@
+// "My scorecards" view
+//
+// No style guide entry.
+
+.my-scorecards {
+
+  .views-table {
+    table-layout: initial;
+    margin: 0;
+
+    @include respond-to(l) {
+      @include margin(1 0);
+    }
+  }
+
+  // School name
+  .views-field-field-school {
+    font-weight: bold;
+  }
+
+  // Actions column
+  .views-field-edit-node,
+  .views-field-view-node {
+    min-width: 8rem; // one button
+
+    @include respond-to(4xl) {
+      min-width: 15.5rem; // both buttons
+    }
+
+    > a {
+      @extend %button;
+      @include margin-bottom(0.5);
+    }
+  }
+}
+
+.my-scorecards__buttons {
+  text-align: center;
+}

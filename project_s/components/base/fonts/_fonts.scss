@@ -1,0 +1,82 @@
+// Font faces
+//
+// Instead of relying on the fonts that are available on a user's computer, you
+// can use web fonts which, like images, are resources downloaded to the user's
+// browser. Because of the bandwidth and rendering resources required, web fonts
+// should be used with care.
+//
+// Numerous resources for web fonts can be found on Google. Here are a few
+// websites where you can find Open Source fonts to download:
+// - http://www.fontsquirrel.com/fontface
+// - http://www.theleagueofmoveabletype.com
+//
+// In order to use these fonts, you will need to convert them into formats
+// suitable for web fonts. We recommend the free-to-use Font Squirrel's
+// Font-Face Generator:
+//   http://www.fontsquirrel.com/fontface/generator
+//
+// Place the fonts in this directory for ease of use. Note that the files
+// need to be referenced relative to the <theme>/components/asset-builds/css
+// directory.
+//
+// The following is an example @font-face declaration. This font can then be
+// used in any ruleset using a property like this:  font-family: Example, serif;
+
+// @font-face {
+//   font-family: 'Example';
+//   src: url('../../base/fonts/example.eot');
+//   src: url('../../base/fonts/example.eot?iefix') format('eot'),
+//     url('../../base/fonts/example.woff') format('woff'),
+//     url('../../base/fonts/example.ttf') format('truetype'),
+//     url('../../base/fonts/example.svg#webfontOkOndcij') format('svg');
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+@font-face {
+  font-family: 'NexaRustSansBlack';
+  src: url('../../base/fonts/nexarustsans-black-webfont.woff2') format('woff2'),
+       url('../../base/fonts/nexarustsans-black-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mosk';
+  src: url('../../base/fonts/mosk-medium500-webfont.woff2') format('woff2'),
+       url('../../base/fonts/mosk-medium500-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cabin';
+  src: url('../../base/fonts/cabin-regular-ttf-webfont.woff2') format('woff2'),
+       url('../../base/fonts/cabin-regular-ttf-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cabin';
+  src: url('../../base/fonts/cabin-bold-ttf-webfont.woff2') format('woff2'),
+       url('../../base/fonts/cabin-bold-ttf-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cabin';
+  src: url('../../base/fonts/cabin-italic-ttf-webfont.woff2') format('woff2'),
+       url('../../base/fonts/cabin-italic-ttf-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Cabin';
+  src: url('../../base/fonts/cabin-bolditalic-ttf-webfont.woff2') format('woff2'),
+       url('../../base/fonts/cabin-bolditalic-ttf-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+}

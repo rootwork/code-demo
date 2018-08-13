@@ -1,0 +1,107 @@
+/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
+.block-local-tasks-block {
+  margin: 1rem 0;
+}
+
+.tabs {
+  margin: 1.125rem 0 0;
+  line-height: 1.875rem;
+  padding: 0 2px 0 0;
+  list-style: none;
+  white-space: nowrap;
+}
+
+@media print {
+  .tabs {
+    display: none;
+  }
+}
+
+.tabs__tab {
+  float: left;
+  margin: 0 3px;
+  overflow: hidden;
+}
+
+.tabs__tab:first-of-type {
+  margin-left: 0;
+}
+
+[dir="rtl"] .tabs__tab {
+  float: right;
+}
+
+[dir="rtl"] .tabs__tab:first-of-type {
+  margin-right: 0;
+}
+
+.tabs__tab-link {
+  padding: 0 1.5rem;
+  display: block;
+  text-decoration: none;
+  -webkit-transition: color 0.3s, background-color 0.3s, border 0.3s;
+  transition: color 0.3s, background-color 0.3s, border 0.3s;
+  color: #a32a29;
+  background-color: #eeeeee;
+  letter-spacing: 1px;
+}
+
+.tabs__tab-link:focus, .tabs__tab-link:hover {
+  color: #7a201f;
+  background-color: #cccccc;
+}
+
+.tabs__tab-link:active, .tabs__tab-link.is-active, .tabs__tab-link--is-active {
+  color: #7a201f;
+  background-color: #cccccc;
+}
+
+.tabs__tab-link:active:focus, .tabs__tab-link:active:hover, .tabs__tab-link.is-active:focus, .tabs__tab-link.is-active:hover, .tabs__tab-link--is-active:focus, .tabs__tab-link--is-active:hover {
+  background-color: #cccccc;
+}
+
+.tabs--secondary {
+  margin-top: 1.5rem;
+  font-size: 0.875rem;
+  background-color: #fff;
+}
+
+.tabs + .tabs--secondary,
+.tabs + h2 + .tabs--secondary {
+  margin-top: 0;
+  background-image: -webkit-linear-gradient(bottom, #cccccc 1px, transparent 1px);
+  background-image: linear-gradient(to top, #cccccc 1px, transparent 1px);
+}
+
+.tabs--secondary .tabs__tab {
+  margin: 0.5625rem 0.1875rem;
+  border: 0;
+  background: transparent;
+}
+
+[dir="rtl"] .tabs--secondary .tabs__tab {
+  float: right;
+}
+
+.tabs--secondary .tabs__tab.is-active {
+  border-bottom-color: transparent;
+}
+
+.tabs--secondary .tabs__tab-link {
+  border-radius: 24px;
+  color: #a32a29;
+  background: #e0e0e0;
+  letter-spacing: normal;
+}
+
+.tabs--secondary .tabs__tab-link:focus, .tabs--secondary .tabs__tab-link:hover {
+  color: #521515;
+  background: #cccccc;
+}
+
+.tabs--secondary .tabs__tab-link:active, .tabs--secondary .tabs__tab-link.is-active, .tabs--secondary .tabs__tab-link--is-active {
+  color: #a32a29;
+  background: #cccccc;
+}
+
+/*# sourceMappingURL=tabs.css.map */

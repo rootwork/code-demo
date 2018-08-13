@@ -1,0 +1,45 @@
+/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
+.site-footer {
+  clear: both;
+  padding-top: 32px;
+}
+
+.footer-first {
+  padding: 0.25rem 32px;
+  background: #a32a29;
+}
+
+.footer-first footer {
+  margin-top: 1.5rem;
+}
+
+.footer-second {
+  position: relative;
+  padding: 32px;
+  background: #d4451d;
+}
+
+@media (min-width: 1200px) {
+  .footer-second {
+    padding-bottom: 0;
+  }
+}
+
+.footer-second p {
+  margin: auto;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.9em;
+  line-height: 1.5em;
+}
+
+.footer-third {
+  position: relative;
+  padding: 32px;
+  background: #d4451d;
+}
+
+.footer-third .user-account-menu {
+  visibility: hidden;
+}
+
+/*# sourceMappingURL=footer.css.map */

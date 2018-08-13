@@ -1,0 +1,127 @@
+@import 'init';
+
+// User account menu
+
+.account-menu {
+  @extend %heading-font;
+  @include clearfix;
+  margin: 0 auto;
+  display: table;
+
+  @include respond-to(xxxl) {
+    width: unset;
+    display: block;
+  }
+
+  .menu-item {
+    @include padding-right(1);
+    text-align: right;
+
+    @include respond-to(xxxl) {
+      @include padding-right(2);
+      float: left;
+    }
+  }
+
+// Header menu
+//
+// Markup: block--account-menu-header.twig
+//
+// Style guide: navigation.account-menu.header
+  &--header {
+    display: block;
+    margin: 0;
+    padding-top: 1rem;
+    clear: both;
+
+    @include respond-to(xs) {
+      display: inline-block;
+      margin: 0 2rem 0 0;
+      padding-top: 0;
+      clear: none;
+    }
+
+    @include respond-to(xxxl) {
+      margin: 0 auto;
+    }
+
+    .menu {
+      margin: 0;
+
+      @include respond-to(xxxl) {
+        text-align: left;
+      }
+    }
+
+    .menu-item {
+      @import 'navigation/social-media/social-media';
+      padding: 0;
+
+      @include respond-to(xs) {
+        @include padding-right(1);
+        height: $social-icon-size;
+        line-height: $social-icon-size;
+      }
+    }
+
+    .menu-link {
+      color: color(yellow-dark);
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: color(link);
+      }
+
+      &.is-active {
+        color: color('green');
+      }
+    }
+  }
+
+// Footer menu
+//
+// Markup: block--account-menu-footer.twig
+//
+// Style guide: navigation.account-menu.footer
+  &--footer {
+    padding-bottom: 150px;
+
+    @include respond-to(xxxl) {
+      padding-bottom: 0;
+    }
+
+    .menu {
+      text-align: center;
+      margin: 1em 0;
+
+      @include respond-to(xxxl) {
+        text-align: left;
+      }
+    }
+
+    .menu-item {
+      padding: 0;
+      text-align: center;
+
+      @include respond-to(xxxl) {
+        @include padding-right(2);
+        text-align: left;
+      }
+    }
+
+    .menu-link {
+      color: color(yellow);
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: color(white);
+      }
+
+      &.is-active {
+        color: color('white');
+      }
+    }
+  }
+}

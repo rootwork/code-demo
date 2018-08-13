@@ -1,0 +1,13 @@
+@import 'init';
+
+// Search
+//
+// Search blocks, forms, and results.
+//
+// Weight: 5
+//
+// Style guide: search
+
+@import 'search-block/search-block';
+@import 'search-results/search-results';
+@import 'search-page-form/search-page-form';
