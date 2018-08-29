@@ -1,5 +1,0 @@
-# Schema for the configuration files of the PROJECT_A V2 theme.
-
-project_a_v2.settings:
-  type: theme_settings
-  label: 'PROJECT_A V2 settings'

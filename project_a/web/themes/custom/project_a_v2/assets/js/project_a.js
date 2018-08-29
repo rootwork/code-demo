@@ -1,1 +1,0 @@
-!function(u,n){"use strict";u(document).ready(function(){})}(jQuery,Drupal);

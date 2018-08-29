@@ -1,7 +1,0 @@
-name: Micro Content
-type: module
-description: Enables the creation of custom micro content entities.
-core: 8.x
-package: PROJECT_A
-dependencies:
-  - views
