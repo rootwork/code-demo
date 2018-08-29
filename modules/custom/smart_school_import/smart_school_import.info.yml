@@ -1,0 +1,13 @@
+name: SMART School Import
+type: module
+description: SMART School Import
+core: 8.x
+package: Smarter Lunchrooms
+dependencies:
+  - migrate_source_csv
+  - migrate_plus
+  - migrate_tools
+#config_devel:
+# install:
+#	- modules/custom/smart_school_import/config/install/migrate_plus.migration.smart_school_import.yml
+#	- migrate_plus.migration.smart_school_import.yml

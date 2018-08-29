@@ -1,0 +1,7 @@
+name: SMART All Choices
+type: module
+description: Field formatter to display all choices in a multivalue field, selected and unselected.
+core: 8.x
+package: Smarter Lunchrooms
+dependencies:
+  - field

@@ -1,0 +1,29 @@
+<?php
+
+use Drupal\Core\Render\Element;
+
+/**
+ * Implements hook_form_form_alter().
+ */
+function smart_admin_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  if ($form_id ==
+    'node_page_form' || 'node_page_edit_form' ||
+    'node_article_form' || 'node_article_edit_form' ||
+    'node_landing_form' || 'node_landing_edit_form' ||
+    'node_scorecard_form' || 'node_scorecard_edit_form'
+  ) {
+    $form['#pre_render'][] = 'smart_admin_form_pre_render';
+  }
+}
+
+function smart_admin_form_pre_render(array $element) {
+  foreach (Element::children($element) as $key) {
+    if ($key == 'field_summary') {
+      foreach (Element::children($element[$key]['widget']) as $widget) {
+        $element[$key]['widget'][$widget]['format']['#access'] = FALSE;
+      }
+    }
+  }
+
+  return $element;
+}

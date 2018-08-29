@@ -1,0 +1,88 @@
+<?php
+define('SMART_MESSAGING_DEBUG_MESSAGES', 0);
+define('SMART_MESSAGING_DEBUG_SEND_TO_TEST_ONLY', 0);
+define('SMART_MESSAGING_DEBUG_TEST_EMAIL', '');
+
+function smart_messaging_entity_presave(Drupal\Core\Entity\EntityInterface $entity) {
+  if ($entity->getEntityTypeId() == 'user') {
+    $config = \Drupal::config('smart_messaging.settings');
+    $user_mail = $entity->get('mail')->value;
+
+    $new_tap_val = $entity->get('field_certified_tap')->value;
+    $old_tap_val = isset($entity->original) ? $entity->original->get('field_certified_tap')->value : NULL;
+
+    $old_personas = isset($entity->original) ? $entity->original->get('personas')->getValue() : NULL;
+    $new_personas = $entity->get('personas')->getValue();
+
+    // if TAP is being approved
+    if (!empty($new_personas) && $new_personas[0]['tap'] === 'tap') {
+      if (!is_array($old_personas) || !$old_personas[0]['tap']) { // if TAP was previously false
+        smart_messaging_send_mail($user_mail, $config->get('approved_subject'), $config->get('approved_body'));
+      }
+    }
+    // if TAP is being denied
+    elseif (!empty($new_personas) && $new_personas[0]['tap_denied'] === 'tap_denied') {
+      // if TAP denied was previously false and they don't mistakenly have the actual TAP persona
+      if (!is_array($old_personas) || !$old_personas[0]['tap_denied'] && $new_personas[0]['tap'] !== 'tap') {
+        smart_messaging_send_mail($user_mail, $config->get('denied_subject'), $config->get('denied_body'));
+      }
+    }
+    // New TAP cert verification requested, value changed.
+    elseif (!$old_tap_val && $new_tap_val) {
+      smart_messaging_notify_admin_of_tap_request($entity);
+      smart_messaging_send_mail($user_mail, $config->get('pending_subject'), $config->get('pending_body'));
+    }
+  }
+}
+
+/**
+ * Notify the administrator that the user passed to this function has requested
+ * TAP status.
+ *
+ * @param \Drupal\Core\Entity\EntityInterface $entity
+ */
+function smart_messaging_notify_admin_of_tap_request(Drupal\Core\Entity\EntityInterface $entity) {
+  $system_site_config = \Drupal::config('system.site');
+  $name = $entity->get('field_name')->getValue()[0];
+  $user_mail = $entity->get('mail')->value;
+  $body = <<<EOT
+<p>{$name['given']} {$name['family']} ({$user_mail}) has requested TAP certification with the following information:</p>
+<p>
+Date: {$entity->get('field_tap_training_date')->value}<br />
+Location: {$entity->get('field_tap_training_location')->value}<br />
+Agency: {$entity->get('field_tap_training_sponsor')->value}
+</p>
+<p>To moderate, visit the list of pending TAP requests:<br />
+https://www.smarterlunchrooms.org/admin/taps</p>
+
+EOT;
+  $subject = "New TAP certification request";
+  smart_messaging_send_mail($system_site_config->get('mail'), $subject, $body);
+}
+
+function smart_messaging_send_mail($to, $subject, $body, $from = NULL) {
+  if (!$from) {
+    $system_site_config = \Drupal::config('system.site');
+    $from = $system_site_config->get('mail');
+  }
+  if (SMART_MESSAGING_DEBUG_MESSAGES) {
+    drupal_set_message("to: {$to}\nbody: {$body}\nfrom: {$from}");
+  }
+  if (SMART_MESSAGING_DEBUG_SEND_TO_TEST_ONLY) {
+    $to = SMART_MESSAGING_DEBUG_TEST_EMAIL;
+  }
+
+  $mailManager = \Drupal::service('plugin.manager.mail');
+  $params = array(
+    'subject' => $subject,
+    'body' => $body,
+  );
+  $mailManager->mail('smart_messaging', 'smart_messaging', $to, 'en', $params, $from);
+}
+
+function smart_messaging_mail($key, &$message, $params) {
+  if ($key == 'smart_messaging') {
+    $message['body'][] = $params['body'];
+    $message['subject'] = $params['subject'];
+  }
+}

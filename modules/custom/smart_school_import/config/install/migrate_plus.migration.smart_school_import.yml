@@ -1,0 +1,93 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    # List here the name of the module that provided this migration if you want
+    # this config to be removed when that module is uninstalled.
+    module:
+      - smart_school_import
+# The source data is in CSV files, so we use the 'csv' source plugin.
+id: migrate_csv
+label: smart school import
+migration_tags:
+  - CSV
+source:
+  plugin: csv
+  # Full path to the file.
+  path: /csv/data.csv
+  # The number of rows at the beginning which are not data.
+  header_row_count: 1
+  # These are the field names from the source file representing the key
+  # uniquely identifying each school - they will be stored in the migration
+  # map table as columns sourceid1, sourceid2, and sourceid3.
+  keys:
+    - school_id
+  # Here we identify the columns of interest in the source file. Each numeric
+  # key is the 0-based index of the column. For each column, the key below
+  # (e.g., "school_name") is the field name assigned to the data on import, to
+  # be used in field mappings below. The value is a user-friendly string for
+  # display by the migration UI.
+  column_names:
+    # So, here we're saying that the first field (index 0) on each line will
+    # be stored in the school_id field in the Row object during migration, and
+    # that name can be used to map the value below. "Unique School ID" will appear
+    # in the UI to describe this field.
+    0:
+      school_id: Unique School ID
+    1:
+      school_name: School Name
+    2:
+      address_1: Address line 1
+    3:
+      address_2: Address line 2
+    4:
+      address_3: Address line 3
+    5:
+      city: City
+    6:
+      state: State
+    7:
+      zip: Zip
+    8:
+      status: Status
+process:
+  # The content (node) type we are creating is 'school'.
+  type:
+    plugin: default_value
+    default_value: school
+  # Most fields can be mapped directly - we just specify the destination (D8)
+  # field and the corresponding field name from above, and the values will be
+  # copied in.
+  title: school_name
+  field_school_id: school_id
+  # we need to specify country_code and langcode for address to work
+  # see: https://drupal.stackexchange.com/a/208913
+  'field_school_address/country_code':
+    plugin: default_value
+    default_value: US
+  'field_school_address/langcode':
+    plugin: default_value
+    default_value: en
+  'field_school_address/address_line1': address_1
+  'field_school_address/address_line2':
+    plugin: concat
+    source:
+      - address_2
+      - address_3
+    delimiter: ' '
+  'field_school_address/locality': city
+  'field_school_address/administrative_area': state
+  'field_school_address/postal_code': zip
+  field_school_status: status
+destination:
+  # Here we're saying that each row of data (line from the CSV file) will be
+  # used to create a node entity.
+  plugin: entity:node
+# List any optional or required migration dependencies.
+# Requried means that 100% of the content must be migrated
+# Optional means that that the other dependency should be run first but if there
+# are items from the dependant migration that were not successful, it will still
+# run the migration.
+migration_dependencies:
+  required: {}
+  optional: {}

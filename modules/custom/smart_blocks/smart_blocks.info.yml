@@ -1,0 +1,5 @@
+name: Smarter Lunchrooms Custom Blocks Module
+type: module
+description: 'Module for custom blocks defined in code.'
+package: Smarter Lunchrooms
+core: 8.x

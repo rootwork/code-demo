@@ -1,0 +1,31 @@
+<?php
+
+/**
+ * @file
+ * Contains smart_school_import.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function smart_school_import_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the smart_school_import module.
+    case 'help.page.smart_school_import':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('SMART School Import') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_migration_plugins_alter().
+ */
+function smart_school_import_migration_plugins_alter(&$definitions) {
+  $definitions['migrate_csv']['source']['path'] = drupal_get_path('module', 'smart_school_import') . $definitions['migrate_csv']['source']['path'];
+}

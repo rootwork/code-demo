@@ -1,0 +1,5 @@
+name: Smarter Lunchrooms Messaging
+type: module
+description: 'Email messages triggered on system events.'
+package: Smarter Lunchrooms
+core: 8.x

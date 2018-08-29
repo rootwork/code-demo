@@ -1,0 +1,5 @@
+name: Smarter Lunchrooms User Forms Customizations
+type: module
+description: 'Customizing user login, registration, password reset and profile forms.'
+package: Smarter Lunchrooms
+core: 8.x

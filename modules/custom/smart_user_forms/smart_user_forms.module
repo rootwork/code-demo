@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * Implements hook_form_form_alter().
+ */
+function smart_user_forms_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  if ($form_id == 'user_login_form') {
+
+    $form['register'] = array(
+      '#type' => 'markup',
+      '#markup' => '<div class="form-actions form-wrapper user-actions"><a class="button user-actions-password" href="/members/password">Request new password</a> <a class="button user-actions-register" href="/members/register">Create new account</a></div>',
+      '#weight' => 9999,
+    );
+  }
+}

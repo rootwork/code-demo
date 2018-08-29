@@ -1,0 +1,16 @@
+smart_messaging.settings:
+  type: config_object
+  label: Variables for Smart Messaging
+  mapping:
+    pending_body:
+      type: string
+    pending_subject:
+      type: string
+    approved_body:
+      type: string
+    approved_subject:
+      type: string
+    denied_body:
+      type: string
+    denied_subject:
+      type: string

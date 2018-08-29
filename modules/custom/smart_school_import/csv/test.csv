@@ -1,0 +1,30 @@
+school_id,school_name,address_1,address_2,address_3,city,state,zip,status
+10000201876,Alabama Youth Services,Central Office Bldg,address 2 test,address 3 test,Mt Meigs,AL,36057,1
+10000201670,Det Ctr,2109 Bashi Rd Bldg 509,,,Thomasville,AL,36784,1
+720003002076,Abelardo Diaz Alfaro (Int. Pinas),Carr. 828 Au. Ramal Bo. Pinas,,,Toa Alta,PR,953,1
+780000200037,John H. Woodson Junior High School,Rural Route 1 Kingshill,,,Saint Croix,VI,850,1
+660000200075,George Washington High School,298 G. Washington Dr.,,,Mangilao,GU,96921,1
+630002500139,Vicenza Elementary School,Unit 31401 Box 11,,,Apo,AE,9630,1
+10000201705,Wallace Sch - Mt Meigs Campus,1000 Industrial School Road,address 2 test,address 3 test,Mount Meigs,AL,36057,3
+10000201706,McNeel Sch - Vacca Campus,8950 Roebuck Blvd,address 2 test,address 3 test,Birmingham,AL,35206,4
+10000200277,Sequoyah Sch - Chalkville Campus,1000 Industrial School Road,address 2 test,address 3 test,Birmingham,AL,35220,5
+10000201667,Camps,1601 County Rd. 57,address 2 test,address 3 test,Prattville,AL,36067,6
+10000500871,Albertville High Sch,402 E McCord Ave,address 2 test,address 3 test,Albertville,AL,35950,7
+10000502150,Albertville Primary Sch,1100 Horton Road,address 2 test,address 3 test,Albertville,AL,35950,8
+10000500879,Evans Elem Sch,901 W McKinney Ave,address 2 test,address 3 test,Albertville,AL,35950,4
+10000500889,Albertville Elem Sch,1100 Horton Rd,address 2 test,address 3 test,Albertville,AL,35950,5
+10000501616,Big Spring Lake Kinderg Sch,257 Country Club Rd,address 2 test,address 3 test,Albertville,AL,35951,6
+10000500870,Ala Avenue Middle Sch,600 E Alabama Ave,address 2 test,address 3 test,Albertville,AL,35950,7
+10000602209,Asbury Elem Sch,1966 Asbury Road,address 2 test,address 3 test,Albertville,AL,35951,1
+10000601585,Brindlee Mt High Sch,994 Scant City Road,address 2 test,address 3 test,Guntersville,AL,35976,2
+10000601812,Douglas Middle Sch,Highway 75,address 2 test,address 3 test,Douglas,AL,35964,3
+10000600887,Union Grove Elem Sch,3685 Union Grove Rd,address 2 test,address 3 test,Union Grove,AL,35175,4
+10000600987,Marshall Tech Sch,12312 US Highway 431 S,address 2 test,address 3 test,Guntersville,AL,35976,1
+10000600872,Asbury Sch,1990 Asbury Rd,address 2 test,address 3 test,Albertville,AL,35951,1
+10000600193,Kate Duncan Smith DAR Middle,6077 Main St,address 2 test,address 3 test,Grant,AL,35747,6
+10000600876,Claysville Jr High Sch,140 Claysville School Rd,address 2 test,address 3 test,Guntersville,AL,35976,1
+10000601413,Robert D Sloman Primary,200 Bethlehem Rd,address 2 test,address 3 test,Douglas,AL,35964,8
+10000600986,Marshall Alt Sch,140 Claysville School Rd,address 2 test,address 3 test,Guntersville,AL,35976,1
+10000600878,Douglas High Sch,225 Eagle Drive,address 2 test,address 3 test,Douglas,AL,35964,7
+10000600883,Kate D Smith DAR High Sch,6077 Main St,address 2 test,address 3 test,Grant,AL,35747,1
+10000600880,Grassy Elem Sch,2233 Shoal Creek Rd,address 2 test,address 3 test,Arab,AL,35016,4
