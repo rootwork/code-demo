@@ -1,0 +1,7 @@
+uuid: 0653817e-5c45-49e6-a82a-8c91639ededf
+langcode: en
+status: true
+dependencies: {  }
+id: page_card
+label: 'Page card'
+behavior_plugins: {  }

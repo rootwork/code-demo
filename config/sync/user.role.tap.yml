@@ -1,0 +1,11 @@
+uuid: 485c5184-a134-4646-b106-e4ead60091c6
+langcode: en
+status: true
+dependencies: {  }
+id: tap
+label: 'TAP certified'
+weight: 7
+is_admin: null
+permissions:
+  - 'view any training content'
+  - 'view own training content'

@@ -1,0 +1,36 @@
+uuid: dcbcd5d5-3fd0-4bb8-908b-618926d593d1
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_milk
+field_name: field_milk
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: milk_01
+      label: 'Milk cases/coolers are kept full throughout meal service.'
+    -
+      value: milk_02
+      label: 'White milk is offered in all beverage coolers.'
+    -
+      value: milk_03
+      label: 'White milk is organized and represents at least ⅓ of all milk in <em>each</em> designated milk cooler.'
+    -
+      value: milk_04
+      label: 'White milk is displayed in front of other beverages in <em>all</em> coolers.'
+    -
+      value: milk_05
+      label: '1% or non-fat white milk is identified as the featured milk and is labeled with a creative, descriptive name.'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

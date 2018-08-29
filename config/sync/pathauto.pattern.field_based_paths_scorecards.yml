@@ -1,0 +1,22 @@
+uuid: 7794be68-967e-441d-ba07-a61854c05d45
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: field_based_paths_scorecards
+label: 'Field-based paths: Scorecards'
+type: 'canonical_entities:node'
+pattern: 'scorecards/[node:field_school:entity:field_school_address:administrative_area]/[node:field_school:entity:title]/[node:nid]'
+selection_criteria:
+  be045774-8343-44c1-a799-5f5b8cc95efe:
+    id: node_type
+    bundles:
+      scorecard: scorecard
+    negate: false
+    context_mapping:
+      node: node
+    uuid: be045774-8343-44c1-a799-5f5b8cc95efe
+selection_logic: and
+weight: -5
+relationships: {  }

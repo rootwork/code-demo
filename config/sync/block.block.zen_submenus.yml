@@ -1,0 +1,24 @@
+uuid: b2aa1ca2-5c55-4e2e-9872-c9c0c2aa2976
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - zen
+id: zen_submenus
+theme: zen
+region: sidebar_first
+weight: -7
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Section sub-pages'
+  provider: system
+  label_display: visible
+  level: 2
+  depth: 0
+visibility: {  }

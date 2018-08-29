@@ -1,0 +1,10 @@
+uuid: 37654f21-77c8-4c20-a2fa-debec9dac75c
+langcode: en
+status: true
+dependencies: {  }
+machine: d_live
+description: null
+name: Live
+url: 'http://smarterlunchrooms.org'
+fg_color: '#ffffff'
+bg_color: '#1b558e'

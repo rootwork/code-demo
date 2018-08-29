@@ -1,0 +1,63 @@
+uuid: 9ba97e67-1b29-4904-97c6-aba0709ce53d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_grades
+field_name: field_grades
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 00-prek
+      label: Pre-K
+    -
+      value: 0-k
+      label: K
+    -
+      value: '1'
+      label: 1st
+    -
+      value: '2'
+      label: 2nd
+    -
+      value: '3'
+      label: 3rd
+    -
+      value: '4'
+      label: 4th
+    -
+      value: '5'
+      label: 5th
+    -
+      value: '6'
+      label: 6th
+    -
+      value: '7'
+      label: 7th
+    -
+      value: '8'
+      label: 8th
+    -
+      value: '9'
+      label: 9th
+    -
+      value: '10'
+      label: 10th
+    -
+      value: '11'
+      label: 11th
+    -
+      value: '12'
+      label: 12th
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

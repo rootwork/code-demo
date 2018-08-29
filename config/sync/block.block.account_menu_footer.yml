@@ -1,0 +1,24 @@
+uuid: c6c08c76-60a2-48ca-9003-011b9cdcbb3b
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - smart
+id: account_menu_footer
+theme: smart
+region: footer_third
+weight: -11
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'Account menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }

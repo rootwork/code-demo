@@ -1,0 +1,26 @@
+uuid: 775ba819-0953-44e7-9e71-15e490f7a0c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_community
+    - node.type.scorecard
+  module:
+    - custom_add_another
+    - options
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.scorecard.field_community
+field_name: field_community
+entity_type: node
+bundle: scorecard
+label: 'Check list: School community involvement'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

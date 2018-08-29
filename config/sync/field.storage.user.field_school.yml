@@ -1,0 +1,20 @@
+uuid: c89875bc-1a0e-4d32-88ad-a3118d6ccca9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - user
+id: user.field_school
+field_name: field_school
+entity_type: user
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

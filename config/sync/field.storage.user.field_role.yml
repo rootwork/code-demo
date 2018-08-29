@@ -1,0 +1,57 @@
+uuid: 77747089-c5f4-45ad-ae64-1ce0a7b7f574
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - user
+id: user.field_role
+field_name: field_role
+entity_type: user
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: food_service_manager-director
+      label: 'Food Service Manager/Director'
+    -
+      value: food_service_staff
+      label: 'Food Service Staff'
+    -
+      value: state_department_of_education_employee
+      label: 'State Department of Education Employee'
+    -
+      value: state_department_of_health_employee
+      label: 'State Department of Health Employee'
+    -
+      value: state_department_of_agriculture_employee
+      label: 'State Department of Agriculture Employee'
+    -
+      value: university_extension_agent-educator
+      label: 'University Extension Agent/Educator'
+    -
+      value: dairy_council_employee
+      label: 'Dairy Council Employee'
+    -
+      value: wellness_committee_member
+      label: 'Wellness Committee Member'
+    -
+      value: school_faculty-staff
+      label: 'School Faculty/Staff'
+    -
+      value: snap-ed_implementing_agency_employee
+      label: 'SNAP-Ed Implementing Agency Employee'
+    -
+      value: academic_researcher_faculty_or_student
+      label: 'Academic (Researcher, Faculty, or Student)'
+    -
+      value: other
+      label: Other
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

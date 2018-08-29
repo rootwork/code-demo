@@ -1,0 +1,32 @@
+uuid: 59e3207c-86de-4d18-b034-bf82ce113662
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.training.field_training_files
+    - node.type.training
+  module:
+    - file
+    - user
+id: node.training.default
+targetEntityType: node
+bundle: training
+mode: default
+content:
+  field_training_files:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: file_table
+    region: content
+  links:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  shariff_field: true

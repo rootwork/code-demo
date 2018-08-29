@@ -1,0 +1,19 @@
+uuid: 613dc18f-0a36-4a3f-968f-9ea0dba71591
+langcode: en
+status: true
+dependencies:
+  module:
+    - markup
+    - node
+id: node.field_link_fruit
+field_name: field_link_fruit
+entity_type: node
+type: markup
+settings: {  }
+module: markup
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

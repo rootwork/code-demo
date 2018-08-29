@@ -1,0 +1,26 @@
+uuid: 826bfd07-7959-48ae-8fe6-44a1a863e492
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_kitchen_type
+    - node.type.scorecard
+  module:
+    - custom_add_another
+    - options
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.scorecard.field_kitchen_type
+field_name: field_kitchen_type
+entity_type: node
+bundle: scorecard
+label: 'Kitchen type'
+description: '<a href="/scorecards/faq" target="_blank">Read more about kitchen types in the FAQs.</a>'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,22 @@
+uuid: d85dae27-103a-41c2-a5f1-6ec3c7605661
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_force
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+  menu_force:
+    menu_force: 1
+    menu_force_parent: 0
+name: 'Landing page'
+type: landing
+description: 'Categories and other listings that include card teasers for other pages.'
+help: '<strong>Be sure to choose a menu parent item, if any, in the menu settings at right.</strong>'
+new_revision: true
+preview_mode: 1
+display_submitted: false

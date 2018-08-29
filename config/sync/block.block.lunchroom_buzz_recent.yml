@@ -1,0 +1,30 @@
+uuid: 2f3660da-a944-46f6-aa8e-a70da220ec30
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.lunchroom_buzz
+  module:
+    - system
+    - views
+  theme:
+    - smart
+id: lunchroom_buzz_recent
+theme: smart
+region: content
+weight: -8
+provider: null
+plugin: 'views_block:lunchroom_buzz-lunchroom_buzz_recent'
+settings:
+  id: 'views_block:lunchroom_buzz-lunchroom_buzz_recent'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /smarter-lunchroom-buzz
+    negate: false
+    context_mapping: {  }

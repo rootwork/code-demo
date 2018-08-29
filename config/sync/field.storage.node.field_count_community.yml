@@ -1,0 +1,21 @@
+uuid: c231ea0b-2c4a-4d1b-ad5c-40a2f8b41e2c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - viewfield
+    - views
+id: node.field_count_community
+field_name: field_count_community
+entity_type: node
+type: viewfield
+settings:
+  target_type: view
+module: viewfield
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

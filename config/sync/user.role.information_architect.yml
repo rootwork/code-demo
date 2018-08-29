@@ -1,0 +1,48 @@
+uuid: 75488f2e-19cd-4380-a825-aaa308f85268
+langcode: en
+status: true
+dependencies: {  }
+id: information_architect
+label: 'Information architect'
+weight: 4
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access coffee'
+  - 'access contextual links'
+  - 'access environment indicator'
+  - 'access shortcuts'
+  - 'access site in maintenance mode'
+  - 'access site reports'
+  - 'access toolbar'
+  - 'administer menu'
+  - 'administer pathauto'
+  - 'administer redirects'
+  - 'administer taxonomy'
+  - 'administer url aliases'
+  - 'change own username'
+  - 'create scorecard content'
+  - 'create training content'
+  - 'create url aliases'
+  - 'delete any training content'
+  - 'delete own training content'
+  - 'delete terms in tags'
+  - 'delete training revisions'
+  - 'edit any training content'
+  - 'edit own training content'
+  - 'edit own unpublished certificate'
+  - 'edit own unpublished training'
+  - 'edit terms in tags'
+  - 'override article revision log entry'
+  - 'override landing revision log entry'
+  - 'override page revision log entry'
+  - 'override scorecard published option'
+  - 'override scorecard revision log entry'
+  - 'override training revision log entry'
+  - 'revert training revisions'
+  - 'use text format full_html'
+  - 'view any training content'
+  - 'view own training content'
+  - 'view scorecard revisions'
+  - 'view the administration theme'
+  - 'view training revisions'

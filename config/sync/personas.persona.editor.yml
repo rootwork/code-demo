@@ -1,0 +1,12 @@
+uuid: e15837fc-e0bb-4655-a170-a3b79c9d3f83
+langcode: en
+status: true
+dependencies: {  }
+id: editor
+label: Editor
+roles:
+  content_editor: content_editor
+  information_architect: information_architect
+  email_list_manager: email_list_manager
+  user_manager: user_manager
+  administrator: '0'

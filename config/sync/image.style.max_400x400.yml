@@ -1,0 +1,15 @@
+uuid: d3f08441-bf5b-4f24-b55d-5c3004ef3156
+langcode: en
+status: true
+dependencies: {  }
+name: max_400x400
+label: 'Max 400x400'
+effects:
+  c8b25f57-bfd1-442d-8649-f112cc2361bf:
+    uuid: c8b25f57-bfd1-442d-8649-f112cc2361bf
+    id: image_scale
+    weight: 1
+    data:
+      width: 400
+      height: 400
+      upscale: false

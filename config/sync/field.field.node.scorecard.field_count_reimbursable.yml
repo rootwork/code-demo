@@ -1,0 +1,65 @@
+uuid: f58a95f2-e1cd-4ce4-a47f-dc56010731a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_count_reimbursable
+    - node.type.scorecard
+    - views.view.count_reimbursable
+  module:
+    - custom_add_another
+    - viewfield
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.scorecard.field_count_reimbursable
+field_name: field_count_reimbursable
+entity_type: node
+bundle: scorecard
+label: 'Count: Boost reimbursable meals'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    token_help: ''
+    display_id: count_reimbursable
+    arguments: ''
+    target_uuid: 40243b74-8197-47c3-819d-596d12a64792
+default_value_callback: ''
+settings:
+  force_default: 1
+  allowed_views:
+    associated_schools: 0
+    content: 0
+    count_reimbursable: 0
+    count_fruit: 0
+    count_salads: 0
+    count_atmosphere: 0
+    count_milk: 0
+    count_community: 0
+    count_students: 0
+    count_vegetables: 0
+    block_content: 0
+    entity_browser: 0
+    files: 0
+    frontpage: 0
+    media: 0
+    user_admin_people: 0
+    content_recent: 0
+    redirect: 0
+    lunchroom_buzz: 0
+    taxonomy_term: 0
+    who_s_new: 0
+    who_s_online: 0
+  allowed_display_types:
+    block: block
+    entity_browser: 0
+    entity_reference: 0
+    feed: 0
+    default: 0
+    page: 0
+  handler: 'default:view'
+  handler_settings: {  }
+field_type: viewfield

@@ -1,0 +1,30 @@
+uuid: 5192bbdf-29c4-4ec8-a399-a7d4e4cc14a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link_students
+    - node.type.scorecard
+  module:
+    - custom_add_another
+    - markup
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.scorecard.field_link_students
+field_name: field_link_students
+entity_type: node
+bundle: scorecard
+label: 'Link: Student involvement'
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<p><a target=\"_blank\" href=\"/scorecard-tools/smarter-lunchrooms-strategies#Student%20Involvement\">Find strategies to increase student involvement.</a></p>\r\n"
+    format: full_html
+field_type: markup

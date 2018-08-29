@@ -1,0 +1,21 @@
+uuid: 460135e2-f3a7-46f1-a293-a71035b30d67
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.field_tap_training_sponsor
+field_name: field_tap_training_sponsor
+entity_type: user
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

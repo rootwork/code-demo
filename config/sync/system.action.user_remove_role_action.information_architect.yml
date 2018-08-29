@@ -1,0 +1,14 @@
+uuid: ccb69379-1571-4578-b6da-78896da1f3cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.information_architect
+  module:
+    - user
+id: user_remove_role_action.information_architect
+label: 'Remove the Information architect role from the selected users'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: information_architect

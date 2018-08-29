@@ -1,0 +1,33 @@
+uuid: d1228286-d812-4f39-a97b-d887b82a6f3b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.training.field_training_files
+    - node.type.training
+  module:
+    - file
+    - user
+id: node.training.teaser
+targetEntityType: node
+bundle: training
+mode: teaser
+content:
+  field_training_files:
+    type: file_table
+    weight: 0
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  links:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  shariff_field: true

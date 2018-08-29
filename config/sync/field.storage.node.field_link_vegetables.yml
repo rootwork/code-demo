@@ -1,0 +1,19 @@
+uuid: 0e258814-381b-4628-a2dd-d6bf81fe12d1
+langcode: en
+status: true
+dependencies:
+  module:
+    - markup
+    - node
+id: node.field_link_vegetables
+field_name: field_link_vegetables
+entity_type: node
+type: markup
+settings: {  }
+module: markup
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

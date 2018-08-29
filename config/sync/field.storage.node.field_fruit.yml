@@ -1,0 +1,39 @@
+uuid: 54eebc06-ac17-471f-8b36-89df99a7affd
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_fruit
+field_name: field_fruit
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: fruit_01
+      label: 'At <em>least</em> two kinds of fruit are offered.'
+    -
+      value: fruit_02
+      label: 'Sliced or cut fruit is offered.'
+    -
+      value: fruit_03
+      label: 'A variety of mixed whole fruits are displayed in attractive bowls or baskets (instead of stainless steel pans).'
+    -
+      value: fruit_04
+      label: 'Fruit is offered in at least two locations on all service lines, one of which is right before each point of sale.'
+    -
+      value: fruit_05
+      label: 'At <em>least</em> one fruit is identified as the featured fruit-of- the-day and is labeled with a creative, descriptive name at the point of selection.'
+    -
+      value: fruit_06
+      label: 'A fruit taste test is offered at least once a year.<sup class="admin-ask-star">★</sup>'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

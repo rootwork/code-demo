@@ -1,0 +1,26 @@
+uuid: 4ee1e9ae-e533-4904-ae69-82efca78216b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_role
+  module:
+    - custom_add_another
+    - options
+    - user
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: user.user.field_role
+field_name: field_role
+entity_type: user
+bundle: user
+label: Role
+description: 'Check all that apply.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

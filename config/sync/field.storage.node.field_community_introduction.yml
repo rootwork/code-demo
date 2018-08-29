@@ -1,0 +1,19 @@
+uuid: 62550cfb-ef1b-4e6c-8a59-e2794af24668
+langcode: en
+status: true
+dependencies:
+  module:
+    - markup
+    - node
+id: node.field_community_introduction
+field_name: field_community_introduction
+entity_type: node
+type: markup
+settings: {  }
+module: markup
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

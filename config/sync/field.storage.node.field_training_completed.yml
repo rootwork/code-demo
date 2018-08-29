@@ -1,0 +1,30 @@
+uuid: 59d49f7d-d7eb-4723-aaa5-b6a114070add
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_training_completed
+field_name: field_training_completed
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'yes'
+      label: 'Yes'
+    -
+      value: 'no'
+      label: 'No'
+    -
+      value: unknown
+      label: 'I don’t know'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

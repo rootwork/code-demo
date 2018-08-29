@@ -1,0 +1,91 @@
+uuid: 2a53533f-fe40-4c87-b332-156506ae8034
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.user.user.field_certified_tap
+    - field.field.user.user.field_employer
+    - field.field.user.user.field_job_title
+    - field.field.user.user.field_last_password_reset
+    - field.field.user.user.field_name
+    - field.field.user.user.field_password_expiration
+    - field.field.user.user.field_role
+    - field.field.user.user.field_role_other
+    - field.field.user.user.field_school
+    - field.field.user.user.field_state
+    - field.field.user.user.field_tap_training_date
+    - field.field.user.user.field_tap_training_location
+    - field.field.user.user.field_tap_training_sponsor
+    - field.field.user.user.field_tap_verified
+    - field.field.user.user.field_year_mealprograms_start
+    - field.field.user.user.field_year_position_start
+  module:
+    - name
+    - user
+    - viewfield
+third_party_settings:
+  field_group:
+    group_schools:
+      children:
+        - field_school
+      parent_name: ''
+      weight: 7
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: 'Add a school to your account to complete a Smarter Lunchrooms Scorecard for a cafeteria in that school. Please note that in order to complete a Scorecard, you must be able to visit the cafeteria and in some cases speak with staff and school administration.'
+      label: Schools
+_core:
+  default_config_hash: L2mtwGWH_7wDRCMIR4r_Iu_jmvQ10DV1L8ht8iNZ5qY
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  field_name:
+    type: name_default
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      format: default
+      output: default
+      multiple: default
+      multiple_delimiter: ', '
+      multiple_and: text
+      multiple_delimiter_precedes_last: never
+      multiple_el_al_min: '3'
+      multiple_el_al_first: '1'
+      markup: false
+    third_party_settings: {  }
+  field_tap_verified:
+    weight: 1
+    label: hidden
+    settings:
+      view_title: hidden
+      always_build_output: 0
+      empty_view_title: hidden
+    third_party_settings: {  }
+    type: viewfield_default
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_certified_tap: true
+  field_employer: true
+  field_job_title: true
+  field_last_password_reset: true
+  field_password_expiration: true
+  field_role: true
+  field_role_other: true
+  field_school: true
+  field_state: true
+  field_tap_training_date: true
+  field_tap_training_location: true
+  field_tap_training_sponsor: true
+  field_year_mealprograms_start: true
+  field_year_position_start: true
+  member_for: true
+  personas: true

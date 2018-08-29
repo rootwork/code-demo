@@ -1,0 +1,145 @@
+uuid: df5b7727-4c69-4c1f-ac8d-715902a735a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.scorecard.field_atmosphere
+    - field.field.node.scorecard.field_atmosphere_images
+    - field.field.node.scorecard.field_atmosphere_introduction
+    - field.field.node.scorecard.field_community
+    - field.field.node.scorecard.field_community_images
+    - field.field.node.scorecard.field_community_introduction
+    - field.field.node.scorecard.field_completion_date
+    - field.field.node.scorecard.field_count_atmosphere
+    - field.field.node.scorecard.field_count_community
+    - field.field.node.scorecard.field_count_fruit
+    - field.field.node.scorecard.field_count_milk
+    - field.field.node.scorecard.field_count_reimbursable
+    - field.field.node.scorecard.field_count_salads
+    - field.field.node.scorecard.field_count_students
+    - field.field.node.scorecard.field_count_total
+    - field.field.node.scorecard.field_count_vegetables
+    - field.field.node.scorecard.field_fruit
+    - field.field.node.scorecard.field_fruit_images
+    - field.field.node.scorecard.field_fruit_introduction
+    - field.field.node.scorecard.field_grades
+    - field.field.node.scorecard.field_kitchen_type
+    - field.field.node.scorecard.field_link_atmosphere
+    - field.field.node.scorecard.field_link_community
+    - field.field.node.scorecard.field_link_fruit
+    - field.field.node.scorecard.field_link_milk
+    - field.field.node.scorecard.field_link_reimbursable
+    - field.field.node.scorecard.field_link_salads
+    - field.field.node.scorecard.field_link_students
+    - field.field.node.scorecard.field_link_vegetables
+    - field.field.node.scorecard.field_milk
+    - field.field.node.scorecard.field_milk_images
+    - field.field.node.scorecard.field_milk_introduction
+    - field.field.node.scorecard.field_reimbursable
+    - field.field.node.scorecard.field_reimbursable_images
+    - field.field.node.scorecard.field_reimbursable_introduction
+    - field.field.node.scorecard.field_salads
+    - field.field.node.scorecard.field_salads_images
+    - field.field.node.scorecard.field_salads_introduction
+    - field.field.node.scorecard.field_school
+    - field.field.node.scorecard.field_scorecard_completion_info
+    - field.field.node.scorecard.field_students
+    - field.field.node.scorecard.field_students_images
+    - field.field.node.scorecard.field_students_introduction
+    - field.field.node.scorecard.field_submission_warning
+    - field.field.node.scorecard.field_training_completed
+    - field.field.node.scorecard.field_training_date
+    - field.field.node.scorecard.field_training_location
+    - field.field.node.scorecard.field_training_sponsor
+    - field.field.node.scorecard.field_vegetables
+    - field.field.node.scorecard.field_vegetables_images
+    - field.field.node.scorecard.field_vegetables_introduction
+    - node.type.scorecard
+  module:
+    - user
+    - viewfield
+id: node.scorecard.teaser
+targetEntityType: node
+bundle: scorecard
+mode: teaser
+content:
+  field_count_total:
+    type: viewfield_default
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      view_title: hidden
+      always_build_output: 0
+      empty_view_title: hidden
+    third_party_settings: {  }
+  field_scorecard_completion_info:
+    type: viewfield_default
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      view_title: hidden
+      always_build_output: 0
+      empty_view_title: hidden
+    third_party_settings: {  }
+  links:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_atmosphere: true
+  field_atmosphere_images: true
+  field_atmosphere_introduction: true
+  field_community: true
+  field_community_images: true
+  field_community_introduction: true
+  field_completion_date: true
+  field_count_atmosphere: true
+  field_count_community: true
+  field_count_fruit: true
+  field_count_milk: true
+  field_count_reimbursable: true
+  field_count_salads: true
+  field_count_students: true
+  field_count_vegetables: true
+  field_fruit: true
+  field_fruit_images: true
+  field_fruit_introduction: true
+  field_grades: true
+  field_kitchen_type: true
+  field_link_atmosphere: true
+  field_link_community: true
+  field_link_fruit: true
+  field_link_milk: true
+  field_link_reimbursable: true
+  field_link_salads: true
+  field_link_students: true
+  field_link_vegetables: true
+  field_milk: true
+  field_milk_images: true
+  field_milk_introduction: true
+  field_reimbursable: true
+  field_reimbursable_images: true
+  field_reimbursable_introduction: true
+  field_salads: true
+  field_salads_images: true
+  field_salads_introduction: true
+  field_school: true
+  field_students: true
+  field_students_images: true
+  field_students_introduction: true
+  field_submission_warning: true
+  field_training_completed: true
+  field_training_date: true
+  field_training_location: true
+  field_training_sponsor: true
+  field_vegetables: true
+  field_vegetables_images: true
+  field_vegetables_introduction: true
+  shariff_field: true

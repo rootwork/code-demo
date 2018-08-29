@@ -1,0 +1,10 @@
+uuid: cd43b103-7958-444e-9226-27009395f755
+langcode: en
+status: true
+dependencies: {  }
+machine: a_local
+description: null
+name: Local
+url: 'http://smart.dev'
+fg_color: '#ffffff'
+bg_color: '#2b2b2b'

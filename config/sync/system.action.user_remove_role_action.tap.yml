@@ -1,0 +1,14 @@
+uuid: 5b8125b6-1f1c-46c5-9c19-9f9b909d70ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.tap
+  module:
+    - user
+id: user_remove_role_action.tap
+label: 'Remove the TAP certified role from the selected users'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: tap

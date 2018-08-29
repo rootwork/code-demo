@@ -1,0 +1,46 @@
+uuid: 4e8ec49c-3af4-48aa-bcf3-82b8c8cec779
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.article.field_body
+    - field.field.node.article.field_image_featured
+    - field.field.node.article.field_summary
+    - image.style.max_325x325
+    - node.type.article
+  module:
+    - image
+    - text
+    - user
+_core:
+  default_config_hash: U8ghxJXn8JE2p6Q2wLpPWAxpz4r_8crL1LxtapSrHAE
+id: node.article.teaser
+targetEntityType: node
+bundle: article
+mode: teaser
+content:
+  field_image_featured:
+    type: image
+    weight: 0
+    label: hidden
+    settings:
+      image_style: max_325x325
+      image_link: content
+    third_party_settings: {  }
+    region: content
+  field_summary:
+    type: text_default
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_body: true
+  shariff_field: true

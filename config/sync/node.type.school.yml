@@ -1,0 +1,21 @@
+uuid: 60d537cf-88a4-43fa-8bdc-fa2d2c88c956
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_force
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+  menu_force:
+    menu_force: 0
+    menu_force_parent: 0
+name: School
+type: school
+description: 'School records linked to scorecards and user accounts.'
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

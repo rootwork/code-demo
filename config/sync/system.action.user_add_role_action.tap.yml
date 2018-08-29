@@ -1,0 +1,14 @@
+uuid: 1c8d9147-051f-4eb3-a65e-b0574011dbda
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.tap
+  module:
+    - user
+id: user_add_role_action.tap
+label: 'Add the TAP certified role to the selected users'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: tap

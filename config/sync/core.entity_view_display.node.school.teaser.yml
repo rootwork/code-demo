@@ -1,0 +1,57 @@
+uuid: 10345b27-a525-4923-bcb3-472462a10de6
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.school.field_abbreviated_location
+    - field.field.node.school.field_school_address
+    - field.field.node.school.field_school_id
+    - field.field.node.school.field_school_status
+    - node.type.school
+  module:
+    - field_token_value
+    - options
+    - user
+id: node.school.teaser
+targetEntityType: node
+bundle: school
+mode: teaser
+content:
+  field_abbreviated_location:
+    type: field_token_value_text
+    weight: 2
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_school_id:
+    type: number_decimal
+    weight: 1
+    region: content
+    label: inline
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 0
+      prefix_suffix: true
+    third_party_settings: {  }
+  field_school_status:
+    type: list_default
+    weight: 0
+    region: content
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+  links:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  entity_print_view: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_school_address: true
+  shariff_field: true

@@ -1,0 +1,10 @@
+uuid: f35354ec-7826-4826-9f60-d680f5aabc56
+langcode: en
+status: true
+dependencies: {  }
+machine: c_staging
+description: null
+name: Staging
+url: 'http://lunchrooms.colab.coop'
+fg_color: '#2b2b2b'
+bg_color: '#ffe953'

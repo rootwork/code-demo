@@ -1,0 +1,29 @@
+uuid: e3a82dca-4464-4d5f-85d7-e1a459e2a06a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_tap_training_date
+  module:
+    - custom_add_another
+    - datetime
+    - user
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: user.user.field_tap_training_date
+field_name: field_tap_training_date
+entity_type: user
+bundle: user
+label: 'Date of training'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime

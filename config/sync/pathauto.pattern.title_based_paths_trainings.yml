@@ -1,0 +1,22 @@
+uuid: 40ba856c-e726-4bb6-b197-cf454b2bf0b6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: title_based_paths_trainings
+label: 'Title-based paths: Trainings'
+type: 'canonical_entities:node'
+pattern: 'trainings/taps/[node:title]'
+selection_criteria:
+  570959b0-7ad5-42fc-b5e1-bb8ba553cfa0:
+    id: node_type
+    bundles:
+      training: training
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 570959b0-7ad5-42fc-b5e1-bb8ba553cfa0
+selection_logic: and
+weight: -5
+relationships: {  }

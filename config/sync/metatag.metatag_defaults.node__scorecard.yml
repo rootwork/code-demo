@@ -1,0 +1,8 @@
+uuid: 85b001fc-240b-4fae-9496-8e521f390f97
+langcode: en
+status: true
+dependencies: {  }
+id: node__scorecard
+label: 'Content: Scorecard'
+tags:
+  description: '[node:field_summary]'

@@ -1,0 +1,25 @@
+uuid: 37605d22-3049-48b6-865d-383920d94261
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - smart
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: smart_branding
+theme: smart
+region: header
+weight: -16
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

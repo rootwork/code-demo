@@ -1,0 +1,669 @@
+uuid: 6390953b-ba3a-42e5-8bd4-f4bc84a09bfd
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.pdf
+    - field.field.node.scorecard.field_atmosphere
+    - field.field.node.scorecard.field_atmosphere_images
+    - field.field.node.scorecard.field_atmosphere_introduction
+    - field.field.node.scorecard.field_award_level
+    - field.field.node.scorecard.field_community
+    - field.field.node.scorecard.field_community_images
+    - field.field.node.scorecard.field_community_introduction
+    - field.field.node.scorecard.field_completion_date
+    - field.field.node.scorecard.field_count_atmosphere
+    - field.field.node.scorecard.field_count_community
+    - field.field.node.scorecard.field_count_fruit
+    - field.field.node.scorecard.field_count_milk
+    - field.field.node.scorecard.field_count_reimbursable
+    - field.field.node.scorecard.field_count_salads
+    - field.field.node.scorecard.field_count_students
+    - field.field.node.scorecard.field_count_total
+    - field.field.node.scorecard.field_count_vegetables
+    - field.field.node.scorecard.field_fruit
+    - field.field.node.scorecard.field_fruit_images
+    - field.field.node.scorecard.field_fruit_introduction
+    - field.field.node.scorecard.field_grades
+    - field.field.node.scorecard.field_kitchen_type
+    - field.field.node.scorecard.field_link_atmosphere
+    - field.field.node.scorecard.field_link_community
+    - field.field.node.scorecard.field_link_fruit
+    - field.field.node.scorecard.field_link_milk
+    - field.field.node.scorecard.field_link_reimbursable
+    - field.field.node.scorecard.field_link_salads
+    - field.field.node.scorecard.field_link_students
+    - field.field.node.scorecard.field_link_vegetables
+    - field.field.node.scorecard.field_milk
+    - field.field.node.scorecard.field_milk_images
+    - field.field.node.scorecard.field_milk_introduction
+    - field.field.node.scorecard.field_reimbursable
+    - field.field.node.scorecard.field_reimbursable_images
+    - field.field.node.scorecard.field_reimbursable_introduction
+    - field.field.node.scorecard.field_salads
+    - field.field.node.scorecard.field_salads_images
+    - field.field.node.scorecard.field_salads_introduction
+    - field.field.node.scorecard.field_school
+    - field.field.node.scorecard.field_scorecard_completion_info
+    - field.field.node.scorecard.field_scorecard_copyright_1
+    - field.field.node.scorecard.field_scorecard_copyright_2
+    - field.field.node.scorecard.field_scorecard_end_matter
+    - field.field.node.scorecard.field_scorecard_introduction
+    - field.field.node.scorecard.field_scorecard_notes
+    - field.field.node.scorecard.field_students
+    - field.field.node.scorecard.field_students_images
+    - field.field.node.scorecard.field_students_introduction
+    - field.field.node.scorecard.field_submission_warning
+    - field.field.node.scorecard.field_training_completed
+    - field.field.node.scorecard.field_training_date
+    - field.field.node.scorecard.field_training_location
+    - field.field.node.scorecard.field_training_sponsor
+    - field.field.node.scorecard.field_vegetables
+    - field.field.node.scorecard.field_vegetables_images
+    - field.field.node.scorecard.field_vegetables_introduction
+    - image.style.max_400x400
+    - node.type.scorecard
+  module:
+    - field_group
+    - image
+    - markup
+    - smart_all_choices
+    - user
+    - viewfield
+third_party_settings:
+  field_group:
+    group_fruit:
+      children:
+        - field_fruit
+        - field_count_fruit
+      parent_name: group_scorecard_checklists
+      weight: 5
+      format_type: fieldset
+      format_settings:
+        label: 'Focus on fruit'
+        description: ''
+        id: ''
+        classes: 'scorecard__fieldset scorecard__fieldset--fruit'
+      label: 'Focus on fruit'
+    group_vegetables:
+      children:
+        - field_vegetables
+        - field_count_vegetables
+      parent_name: group_scorecard_checklists
+      weight: 6
+      format_type: fieldset
+      format_settings:
+        label: 'Vary the vegetables'
+        description: ''
+        id: ''
+        classes: 'scorecard__fieldset scorecard__fieldset--vegetables'
+      label: 'Vary the vegetables'
+    group_salads:
+      children:
+        - field_salads
+        - field_count_salads
+      parent_name: group_scorecard_checklists
+      weight: 7
+      format_type: fieldset
+      format_settings:
+        label: 'Highlight the salad'
+        description: ''
+        id: ''
+        classes: 'scorecard__fieldset scorecard__fieldset--salads'
+      label: 'Highlight the salad'
+    group_milk:
+      children:
+        - field_milk
+        - field_count_milk
+      parent_name: group_scorecard_checklists
+      weight: 8
+      format_type: fieldset
+      format_settings:
+        label: 'Move more white milk'
+        description: ''
+        id: ''
+        classes: 'scorecard__fieldset scorecard__fieldset--milk'
+      label: 'Move more white milk'
+    group_reimbursable:
+      children:
+        - field_reimbursable
+        - field_count_reimbursable
+      parent_name: group_scorecard_checklists
+      weight: 9
+      format_type: fieldset
+      format_settings:
+        label: 'Boost reimbursable meals'
+        description: ''
+        id: ''
+        classes: 'scorecard__fieldset scorecard__fieldset--reimbursable'
+      label: 'Boost reimbursable meals'
+    group_atmosphere:
+      children:
+        - field_atmosphere
+        - field_count_atmosphere
+      parent_name: group_scorecard_checklists
+      weight: 11
+      format_type: fieldset
+      format_settings:
+        label: 'Lunchroom atmosphere'
+        description: ''
+        id: ''
+        classes: 'scorecard__fieldset scorecard__fieldset--atmosphere'
+      label: 'Lunchroom atmosphere'
+    group_students:
+      children:
+        - field_students
+        - field_count_students
+      parent_name: group_scorecard_checklists
+      weight: 12
+      format_type: fieldset
+      format_settings:
+        label: 'Student involvement'
+        description: ''
+        id: ''
+        classes: 'scorecard__fieldset scorecard__fieldset--students'
+      label: 'Student involvement'
+    group_community:
+      children:
+        - field_community
+        - field_count_community
+      parent_name: group_scorecard_checklists
+      weight: 13
+      format_type: fieldset
+      format_settings:
+        label: 'School community involvement'
+        description: ''
+        id: ''
+        classes: 'scorecard__fieldset scorecard__fieldset--community'
+      label: 'School community involvement'
+    group_uploaded_images:
+      children:
+        - group_images_fruit
+        - group_images_vegetables
+        - group_images_salads
+        - group_images_milk
+        - group_images_reimbursable
+        - group_images_atmosphere
+        - group_images_students
+        - group_images_community
+      parent_name: ''
+      weight: 8
+      format_type: fieldset
+      format_settings:
+        label: 'Uploaded images'
+        description: ''
+        id: ''
+        classes: 'scorecard__fieldset scorecard__fieldset--images'
+      label: 'Uploaded images'
+    group_images_fruit:
+      children:
+        - field_fruit_images
+      parent_name: group_uploaded_images
+      weight: 20
+      format_type: html_element
+      format_settings:
+        label: 'Focus on fruit'
+        element: div
+        show_label: true
+        label_element: h4
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: ''
+      label: 'Focus on fruit'
+    group_images_vegetables:
+      children:
+        - field_vegetables_images
+      parent_name: group_uploaded_images
+      weight: 21
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: true
+        label_element: h4
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Vary the vegetables'
+    group_images_salads:
+      children:
+        - field_salads_images
+      parent_name: group_uploaded_images
+      weight: 22
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: true
+        label_element: h4
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Highlight the salad'
+    group_images_milk:
+      children:
+        - field_milk_images
+      parent_name: group_uploaded_images
+      weight: 24
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: true
+        label_element: h4
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Move more white milk'
+    group_images_reimbursable:
+      children:
+        - field_reimbursable_images
+      parent_name: group_uploaded_images
+      weight: 25
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: true
+        label_element: h4
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Boost reimbursable meals'
+    group_images_atmosphere:
+      children:
+        - field_atmosphere_images
+      parent_name: group_uploaded_images
+      weight: 26
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: true
+        label_element: h4
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Lunchroom atmosphere'
+    group_images_students:
+      children:
+        - field_students_images
+      parent_name: group_uploaded_images
+      weight: 27
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: true
+        label_element: h4
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Student involvement'
+    group_images_community:
+      children:
+        - field_community_images
+      parent_name: group_uploaded_images
+      weight: 28
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: true
+        label_element: h4
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'School community involvement'
+    group_scorecard_checklists:
+      children:
+        - group_fruit
+        - group_vegetables
+        - group_salads
+        - group_milk
+        - group_reimbursable
+        - field_scorecard_copyright_1
+        - group_atmosphere
+        - group_students
+        - group_community
+      parent_name: ''
+      weight: 4
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: scorecard__checklists
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Checklists
+    group_scorecard_notes:
+      children:
+        - field_scorecard_notes
+      parent_name: ''
+      weight: 5
+      format_type: fieldset
+      format_settings:
+        label: Notes
+        description: ''
+        id: ''
+        classes: 'scorecard__fieldset scorecard__fieldset--notes'
+      label: Notes
+id: node.scorecard.pdf
+targetEntityType: node
+bundle: scorecard
+mode: pdf
+content:
+  field_atmosphere:
+    type: all_choices
+    weight: 41
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_atmosphere_images:
+    type: image
+    weight: 42
+    region: content
+    label: hidden
+    settings:
+      image_style: max_400x400
+      image_link: ''
+    third_party_settings: {  }
+  field_award_level:
+    type: viewfield_default
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      view_title: hidden
+      empty_view_title: hidden
+      always_build_output: 0
+    third_party_settings: {  }
+  field_community:
+    type: all_choices
+    weight: 41
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_community_images:
+    type: image
+    weight: 42
+    region: content
+    label: hidden
+    settings:
+      image_style: max_400x400
+      image_link: ''
+    third_party_settings: {  }
+  field_count_atmosphere:
+    weight: 42
+    label: hidden
+    settings:
+      view_title: hidden
+      always_build_output: 0
+      empty_view_title: hidden
+    third_party_settings: {  }
+    type: viewfield_default
+    region: content
+  field_count_community:
+    weight: 42
+    label: hidden
+    settings:
+      view_title: hidden
+      always_build_output: 0
+      empty_view_title: hidden
+    third_party_settings: {  }
+    type: viewfield_default
+    region: content
+  field_count_fruit:
+    weight: 42
+    label: hidden
+    settings:
+      view_title: hidden
+      always_build_output: 0
+      empty_view_title: hidden
+    third_party_settings: {  }
+    type: viewfield_default
+    region: content
+  field_count_milk:
+    weight: 42
+    label: hidden
+    settings:
+      view_title: hidden
+      always_build_output: 0
+      empty_view_title: hidden
+    third_party_settings: {  }
+    type: viewfield_default
+    region: content
+  field_count_reimbursable:
+    weight: 42
+    label: hidden
+    settings:
+      view_title: hidden
+      always_build_output: 0
+      empty_view_title: hidden
+    third_party_settings: {  }
+    type: viewfield_default
+    region: content
+  field_count_salads:
+    weight: 42
+    label: hidden
+    settings:
+      view_title: hidden
+      always_build_output: 0
+      empty_view_title: hidden
+    third_party_settings: {  }
+    type: viewfield_default
+    region: content
+  field_count_students:
+    weight: 42
+    label: hidden
+    settings:
+      view_title: hidden
+      always_build_output: 0
+      empty_view_title: hidden
+    third_party_settings: {  }
+    type: viewfield_default
+    region: content
+  field_count_vegetables:
+    weight: 42
+    label: hidden
+    settings:
+      view_title: hidden
+      always_build_output: 0
+      empty_view_title: hidden
+    third_party_settings: {  }
+    type: viewfield_default
+    region: content
+  field_fruit:
+    weight: 41
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+    type: all_choices
+  field_fruit_images:
+    weight: 21
+    label: hidden
+    settings:
+      image_style: max_400x400
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_milk:
+    type: all_choices
+    weight: 41
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_milk_images:
+    type: image
+    weight: 42
+    region: content
+    label: hidden
+    settings:
+      image_style: max_400x400
+      image_link: ''
+    third_party_settings: {  }
+  field_reimbursable:
+    type: all_choices
+    weight: 41
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_reimbursable_images:
+    type: image
+    weight: 42
+    region: content
+    label: hidden
+    settings:
+      image_style: max_400x400
+      image_link: ''
+    third_party_settings: {  }
+  field_salads:
+    type: all_choices
+    weight: 41
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_salads_images:
+    type: image
+    weight: 42
+    region: content
+    label: hidden
+    settings:
+      image_style: max_400x400
+      image_link: ''
+    third_party_settings: {  }
+  field_school:
+    type: entity_reference_label
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+  field_scorecard_completion_info:
+    weight: 1
+    label: hidden
+    settings:
+      view_title: hidden
+      always_build_output: 0
+      empty_view_title: hidden
+    third_party_settings: {  }
+    type: viewfield_default
+    region: content
+  field_scorecard_copyright_1:
+    type: markup
+    weight: 10
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_scorecard_copyright_2:
+    type: markup
+    weight: 7
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_scorecard_end_matter:
+    type: markup
+    weight: 6
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_scorecard_introduction:
+    type: markup
+    weight: 3
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_scorecard_notes:
+    type: markup
+    weight: 0
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_students:
+    type: all_choices
+    weight: 41
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_students_images:
+    type: image
+    weight: 42
+    region: content
+    label: hidden
+    settings:
+      image_style: max_400x400
+      image_link: ''
+    third_party_settings: {  }
+  field_vegetables:
+    type: all_choices
+    weight: 41
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_vegetables_images:
+    type: image
+    weight: 42
+    region: content
+    label: hidden
+    settings:
+      image_style: max_400x400
+      image_link: ''
+    third_party_settings: {  }
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_atmosphere_introduction: true
+  field_community_introduction: true
+  field_completion_date: true
+  field_count_total: true
+  field_fruit_introduction: true
+  field_grades: true
+  field_kitchen_type: true
+  field_link_atmosphere: true
+  field_link_community: true
+  field_link_fruit: true
+  field_link_milk: true
+  field_link_reimbursable: true
+  field_link_salads: true
+  field_link_students: true
+  field_link_vegetables: true
+  field_milk_introduction: true
+  field_reimbursable_introduction: true
+  field_salads_introduction: true
+  field_students_introduction: true
+  field_submission_warning: true
+  field_training_completed: true
+  field_training_date: true
+  field_training_location: true
+  field_training_sponsor: true
+  field_vegetables_introduction: true
+  links: true
+  shariff_field: true

@@ -1,0 +1,41 @@
+uuid: f7a512c7-5b22-4134-b923-852ff383278c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_school_address
+    - node.type.school
+  module:
+    - address
+    - custom_add_another
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.school.field_school_address
+field_name: field_school_address
+entity_type: node
+bundle: school
+label: 'School address'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_countries:
+    US: US
+  fields:
+    administrativeArea: administrativeArea
+    locality: locality
+    dependentLocality: dependentLocality
+    postalCode: postalCode
+    addressLine1: addressLine1
+    addressLine2: addressLine2
+    sortingCode: '0'
+    organization: '0'
+    givenName: '0'
+    additionalName: '0'
+    familyName: '0'
+  langcode_override: ''
+field_type: address

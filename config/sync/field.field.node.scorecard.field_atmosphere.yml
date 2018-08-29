@@ -1,0 +1,26 @@
+uuid: c86950d5-399c-4255-98bb-b52fb9a41ea7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_atmosphere
+    - node.type.scorecard
+  module:
+    - custom_add_another
+    - options
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.scorecard.field_atmosphere
+field_name: field_atmosphere
+entity_type: node
+bundle: scorecard
+label: 'Check list: Lunchroom atmosphere'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

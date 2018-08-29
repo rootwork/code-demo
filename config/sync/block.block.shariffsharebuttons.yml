@@ -1,0 +1,45 @@
+uuid: 59de5884-0e9a-4ef9-9dd0-aeee3b644517
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - node
+    - shariff
+    - system
+  theme:
+    - smart
+id: shariffsharebuttons
+theme: smart
+region: content
+weight: -13
+provider: null
+plugin: shariff_block
+settings:
+  id: shariff_block
+  label: 'Shariff share buttons'
+  provider: shariff
+  label_display: '0'
+  shariff_default_settings: 1
+visibility:
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/search\r\n/search/*\r\n/contact\r\n/contact/*\r\n/node/add/*\r\n/node/*/edit\r\n/scorecards\r\n/scorecards/*"
+    negate: true
+    context_mapping: {  }
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      school: school
+    negate: true
+    context_mapping:
+      node: '@node.node_route_context:node'
+  node_type:
+    id: node_type
+    bundles:
+      article: article
+      landing: landing
+      page: page
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

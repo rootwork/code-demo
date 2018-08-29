@@ -1,0 +1,74 @@
+uuid: 7cfefb8a-00d6-4120-a6c8-4796cf41a8ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_tap_verified
+    - views.view.tap_verification
+  module:
+    - custom_add_another
+    - user
+    - viewfield
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: user.user.field_tap_verified
+field_name: field_tap_verified
+entity_type: user
+bundle: user
+label: 'TAP verified?'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    token_help: ''
+    display_id: tap_verification
+    arguments: ''
+    target_uuid: 5a48cc00-5d05-4593-ab1e-124fe645402b
+default_value_callback: ''
+settings:
+  force_default: 1
+  allowed_views:
+    tap_verification: tap_verification
+    associated_schools: 0
+    content: 0
+    count_reimbursable: 0
+    count_fruit: 0
+    count_salads: 0
+    count_atmosphere: 0
+    count_milk: 0
+    count_community: 0
+    count_students: 0
+    count_total: 0
+    count_vegetables: 0
+    block_content: 0
+    entity_browser: 0
+    files: 0
+    frontpage: 0
+    lunchroom_buzz: 0
+    media: 0
+    my_schools: 0
+    my_scorecards: 0
+    user_admin_people: 0
+    content_recent: 0
+    redirect: 0
+    state_schools: 0
+    scorecard_completion_info: 0
+    taps: 0
+    taxonomy_term: 0
+    user_links: 0
+    user_sidebar: 0
+    who_s_new: 0
+    who_s_online: 0
+  allowed_display_types:
+    block: block
+    entity_browser: 0
+    entity_reference: 0
+    feed: 0
+    default: 0
+    page: 0
+  handler: 'default:view'
+  handler_settings: {  }
+field_type: viewfield

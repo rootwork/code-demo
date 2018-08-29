@@ -1,0 +1,16 @@
+uuid: fe4edd69-5121-4d40-9e4d-4791e026c49e
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_entity_image
+id: image
+label: Image
+description: 'Used for images.'
+type: image
+queue_thumbnail_downloads: false
+new_revision: false
+type_configuration:
+  source_field: field_image
+  gather_exif: false
+field_map: {  }

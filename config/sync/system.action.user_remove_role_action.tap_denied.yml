@@ -1,0 +1,14 @@
+uuid: a3e6dfe5-cd0c-49e1-98f4-a5a1222cca9b
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.tap_denied
+  module:
+    - user
+id: user_remove_role_action.tap_denied
+label: 'Remove the TAP denied role from the selected users'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: tap_denied

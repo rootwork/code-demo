@@ -1,0 +1,14 @@
+uuid: dfaf5b58-6b66-42a3-b734-a2cf392be497
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.email_list_manager
+  module:
+    - user
+id: user_remove_role_action.email_list_manager
+label: 'Remove the Email list manager role from the selected users'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: email_list_manager

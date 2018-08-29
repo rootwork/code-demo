@@ -1,0 +1,235 @@
+uuid: e70c36b1-5d56-4ada-9493-e1e1835a352f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.user.register
+    - field.field.user.user.field_certified_tap
+    - field.field.user.user.field_employer
+    - field.field.user.user.field_job_title
+    - field.field.user.user.field_last_password_reset
+    - field.field.user.user.field_name
+    - field.field.user.user.field_password_expiration
+    - field.field.user.user.field_role
+    - field.field.user.user.field_role_other
+    - field.field.user.user.field_school
+    - field.field.user.user.field_state
+    - field.field.user.user.field_tap_training_date
+    - field.field.user.user.field_tap_training_location
+    - field.field.user.user.field_tap_training_sponsor
+    - field.field.user.user.field_tap_verified
+    - field.field.user.user.field_year_mealprograms_start
+    - field.field.user.user.field_year_position_start
+  module:
+    - conditional_fields
+    - datetime
+    - name
+    - user
+_core:
+  default_config_hash: LLAieeozVsoZDb-2PbFxRJpQqnKmpR7-4OoRJnduz-U
+id: user.user.register
+targetEntityType: user
+bundle: user
+mode: register
+content:
+  account:
+    weight: -19
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_certified_tap:
+    weight: -11
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_employer:
+    weight: -17
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_job_title:
+    weight: -18
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_name:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    type: name_default
+    region: content
+  field_role:
+    weight: -15
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_role_other:
+    weight: -14
+    settings:
+      size: 30
+      placeholder: 'Please describe...'
+    third_party_settings:
+      conditional_fields: {  }
+    type: string_textfield
+    region: content
+  field_state:
+    weight: -16
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_tap_training_date:
+    weight: -10
+    settings: {  }
+    third_party_settings:
+      conditional_fields:
+        5f9e6ed6-bae2-4bba-a8b3-34ff56e4697e:
+          dependee: field_certified_tap
+          settings:
+            state: visible
+            condition: checked
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              value: false
+            effect: slide
+            effect_options:
+              fade:
+                speed: '400'
+              slide:
+                speed: '400'
+            element_view:
+              1: '1'
+              2: '2'
+              5: '0'
+              3: '0'
+              4: '0'
+            element_view_per_role: false
+            element_view_roles: {  }
+            element_edit:
+              1: '1'
+              3: '0'
+            element_edit_per_role: false
+            element_edit_roles: {  }
+            selector: ''
+          entity_type: user
+          bundle: user
+    type: datetime_default
+    region: content
+  field_tap_training_location:
+    weight: -9
+    settings:
+      size: 60
+      placeholder: 'City, state'
+    third_party_settings:
+      conditional_fields:
+        a19cf2b0-6f1c-478c-a3dc-494ce31348a7:
+          dependee: field_certified_tap
+          settings:
+            state: visible
+            condition: checked
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              value: false
+            effect: slide
+            effect_options:
+              fade:
+                speed: '400'
+              slide:
+                speed: '400'
+            element_view:
+              1: '1'
+              2: '2'
+              5: '0'
+              3: '0'
+              4: '0'
+            element_view_per_role: false
+            element_view_roles: {  }
+            element_edit:
+              1: '1'
+              3: '0'
+            element_edit_per_role: false
+            element_edit_roles: {  }
+            selector: ''
+          entity_type: user
+          bundle: user
+    type: string_textfield
+    region: content
+  field_tap_training_sponsor:
+    weight: -8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        f0ebc52e-0069-42e3-875e-b4f93fff3a64:
+          dependee: field_certified_tap
+          settings:
+            state: visible
+            condition: checked
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              value: false
+            effect: slide
+            effect_options:
+              fade:
+                speed: '400'
+              slide:
+                speed: '400'
+            element_view:
+              1: '1'
+              2: '2'
+              5: '0'
+              3: '0'
+              4: '0'
+            element_view_per_role: false
+            element_view_roles: {  }
+            element_edit:
+              1: '1'
+              3: '0'
+            element_edit_per_role: false
+            element_edit_roles: {  }
+            selector: ''
+          entity_type: user
+          bundle: user
+    type: string_textfield
+    region: content
+  field_year_mealprograms_start:
+    type: options_select
+    weight: -12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_year_position_start:
+    type: options_select
+    weight: -13
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  contact: true
+  field_last_password_reset: true
+  field_password_expiration: true
+  field_school: true
+  field_tap_verified: true
+  google_analytics: true
+  language: true
+  path: true
+  timezone: true

@@ -1,0 +1,22 @@
+uuid: 264b274d-776f-478c-af96-ed3b5d24656c
+langcode: en
+status: true
+dependencies:
+  config:
+    - media_entity.bundle.image
+  module:
+    - entity_embed
+    - media_entity
+label: Image
+id: image
+type_id: entity
+type_settings:
+  entity_type: media
+  bundles:
+    - image
+  display_plugins:
+    - 'entity_reference:media_thumbnail'
+  entity_browser: assets_browser
+  entity_browser_settings:
+    display_review: false
+icon_uuid: null

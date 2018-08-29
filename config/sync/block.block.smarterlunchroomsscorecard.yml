@@ -1,0 +1,25 @@
+uuid: d9cbf2a9-773e-4c6e-97ce-e0ca5c7c8de7
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:1bd46f40-947b-431b-b0db-c8069934231d'
+  module:
+    - block_content
+  theme:
+    - smart
+id: smarterlunchroomsscorecard
+theme: smart
+region: front_first
+weight: 0
+provider: null
+plugin: 'block_content:1bd46f40-947b-431b-b0db-c8069934231d'
+settings:
+  id: 'block_content:1bd46f40-947b-431b-b0db-c8069934231d'
+  label: 'Smarter Lunchrooms Scorecard'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

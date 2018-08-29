@@ -1,0 +1,50 @@
+uuid: 63c0d225-36e2-4ff1-96ca-5700f10aa4f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_training_files
+    - node.type.training
+  module:
+    - custom_add_another
+    - file
+    - filefield_paths
+third_party_settings:
+  filefield_paths:
+    enabled: true
+    file_path:
+      value: 'trainings/[node:title]'
+      options:
+        slashes: false
+        pathauto: true
+        transliterate: true
+    redirect: true
+    retroactive_update: false
+    active_updating: false
+    file_name:
+      value: '[file:ffp-name-only-original].[file:ffp-extension-original]'
+      options:
+        slashes: false
+        pathauto: true
+        transliterate: true
+  custom_add_another:
+    custom_add_another: 'Add a new file'
+    custom_remove: 'Remove this file'
+id: node.training.field_training_files
+field_name: field_training_files
+entity_type: node
+bundle: training
+label: 'Training files'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'ppt pptx pdf doc docx'
+  max_filesize: '12 MB'
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

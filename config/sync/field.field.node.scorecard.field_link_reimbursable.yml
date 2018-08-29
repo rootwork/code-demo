@@ -1,0 +1,30 @@
+uuid: d1ef8d21-4058-4e66-9251-594b798c7180
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link_reimbursable
+    - node.type.scorecard
+  module:
+    - custom_add_another
+    - markup
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.scorecard.field_link_reimbursable
+field_name: field_link_reimbursable
+entity_type: node
+bundle: scorecard
+label: 'Link: Boost reimbursable meals'
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<p><a href=\"/scorecard-tools/smarter-lunchrooms-strategies#Reimbursable%20Meals\" target=\"_blank\">Find strategies to boost your reimbursable meals.</a></p>\r\n"
+    format: full_html
+field_type: markup

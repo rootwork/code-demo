@@ -1,0 +1,28 @@
+uuid: 3a0dd617-fe03-45f7-b742-9bb8af5e515f
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - smart_blocks
+  theme:
+    - smart
+id: definitions
+theme: smart
+region: sidebar_first
+weight: -11
+provider: null
+plugin: smart_blocks_scorecard_definitions
+settings:
+  id: smart_blocks_scorecard_definitions
+  label: Definitions
+  provider: smart_blocks
+  label_display: visible
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      scorecard: scorecard
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

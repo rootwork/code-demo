@@ -1,0 +1,33 @@
+uuid: a58ff820-53ed-4138-b42f-185ce2bbbf8c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_salads
+field_name: field_salads
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: salads_01
+      label: 'Pre-packaged salads or a salad bar is available to all students.'
+    -
+      value: salads_02
+      label: 'Pre-packaged salads or a salad bar is in a high-traffic area.'
+    -
+      value: salads_03
+      label: 'Self-serve salad bar tongs, scoops, and containers are larger for vegetables and smaller for croutons, dressing, and other non-produce items.'
+    -
+      value: salads_04
+      label: 'Pre-packaged salads or salad bar choices are labeled with creative, descriptive names and displayed next to each choice.'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

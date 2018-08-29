@@ -1,0 +1,30 @@
+uuid: 4ff43658-e16d-475a-94e8-8de4e6ac443b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_scorecard_end_matter
+    - node.type.scorecard
+  module:
+    - custom_add_another
+    - markup
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.scorecard.field_scorecard_end_matter
+field_name: field_scorecard_end_matter
+entity_type: node
+bundle: scorecard
+label: 'Scorecard end matter'
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<div class=\"form-item\">\r\n<p>For scorecard FAQs, visit: <a href=\"https://www.smarterlunchrooms.org\" class=\"scorecard-end-matter__link\">SmarterLunchrooms.org</a></p>\r\n\r\n<p>The stars <sup class=\"admin-ask-star\">★</sup> indicate an item that may need input from other school nutrition staff, teachers, or administration.</p>\r\n\r\n<p>Smarter Lunchrooms Scorecard 2.0</p>\r\n</div>\r\n"
+    format: full_html
+field_type: markup

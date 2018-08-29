@@ -1,0 +1,28 @@
+uuid: c46e4130-c0a0-406a-9c34-a710df7dd9c7
+langcode: en
+status: true
+dependencies: {  }
+id: user_manager
+label: 'User manager'
+weight: 6
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access environment indicator'
+  - 'access shortcuts'
+  - 'access site in maintenance mode'
+  - 'access toolbar'
+  - 'access user profiles'
+  - 'administer account settings'
+  - 'administer users'
+  - 'assign personas'
+  - 'cancel account'
+  - 'change own username'
+  - 'create scorecard content'
+  - 'override scorecard published option'
+  - 'select account cancellation method'
+  - 'use text format full_html'
+  - 'use views bulk edit'
+  - 'view scorecard revisions'
+  - 'view the administration theme'
+  - 'view user personas'

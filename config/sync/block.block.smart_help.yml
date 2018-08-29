@@ -1,0 +1,22 @@
+uuid: 90862c9e-b154-4b59-8658-e8d9dcbce4d8
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - smart
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: smart_help
+theme: smart
+region: help
+weight: -4
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

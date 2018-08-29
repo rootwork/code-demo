@@ -1,0 +1,29 @@
+uuid: 1d730a3f-cd03-44bc-8e9d-a153c2c18918
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - smart
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: smart_local_tasks
+theme: smart
+region: content
+weight: -14
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility:
+  request_path:
+    id: request_path
+    pages: "/user/*\r\n/members/*"
+    negate: true
+    context_mapping: {  }

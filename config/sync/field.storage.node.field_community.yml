@@ -1,0 +1,51 @@
+uuid: ad557388-9973-498f-913d-f080c8f7ef2a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_community
+field_name: field_community
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: community_01
+      label: 'A monthly menu is posted in the main office.'
+    -
+      value: community_02
+      label: 'A menu board with creative, descriptive names for today’s featured meal options is located in the main office.'
+    -
+      value: community_03
+      label: 'A monthly menu is provided to students, families, teachers, and administrators.<sup class="admin-ask-star">★</sup>'
+    -
+      value: community_04
+      label: 'Information about the benefits of school meals is provided to teachers and administration at least annually.<sup class="admin-ask-star">★</sup>'
+    -
+      value: community_05
+      label: 'Nutrition education is incorporated into the school day.<sup class="admin-ask-star">★</sup>'
+    -
+      value: community_06
+      label: 'Students are engaged in growing food (for example, gardening, seed planting, farm tours, etc.).<sup class="admin-ask-star">★</sup>'
+    -
+      value: community_07
+      label: 'Elementary schools provide recess before lunch.<sup class="admin-ask-star">★</sup>'
+    -
+      value: community_08
+      label: 'The school participates in other food promotion programs such as: Farm to School, Chefs Move to Schools, Fuel Up to Play 60, Share our Strength, etc.<sup class="admin-ask-star">★</sup>'
+    -
+      value: community_09
+      label: 'The school has applied for the HealthierUS School Challenge.<sup class="admin-ask-star">★</sup>'
+    -
+      value: community_10
+      label: 'Smarter Lunchrooms strategies are included in the Local School Wellness Policy.<sup class="admin-ask-star">★</sup>'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,12 @@
+uuid: 5537b5e5-5ece-4918-b7e5-54710842c3de
+langcode: en
+status: true
+dependencies: {  }
+id: phpwkhtmltopdf
+settings:
+  orientation: portrait
+  default_paper_size: letter
+  username: ''
+  password: ''
+  binary_location: /app/wkhtmltox/bin/wkhtmltopdf
+  zoom: '1'

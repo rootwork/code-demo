@@ -1,0 +1,14 @@
+uuid: 18522424-62e1-4dc2-8c37-305ddd3fe640
+langcode: en
+status: true
+dependencies: {  }
+id: tap
+label: 'TAP certified'
+roles:
+  tap: tap
+  administrator: '0'
+  content_editor: '0'
+  information_architect: '0'
+  email_list_manager: '0'
+  user_manager: '0'
+  tap_denied: '0'

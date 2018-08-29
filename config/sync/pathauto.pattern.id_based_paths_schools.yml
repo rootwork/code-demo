@@ -1,0 +1,22 @@
+uuid: 308f5fe6-e893-4439-955d-980115e41f1c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: id_based_paths_schools
+label: 'ID-based paths: Schools'
+type: 'canonical_entities:node'
+pattern: 'school/[node:field_school_id]'
+selection_criteria:
+  ea54056b-bddc-4467-9b4c-1d237356d5fb:
+    id: node_type
+    bundles:
+      school: school
+    negate: false
+    context_mapping:
+      node: node
+    uuid: ea54056b-bddc-4467-9b4c-1d237356d5fb
+selection_logic: and
+weight: -5
+relationships: {  }

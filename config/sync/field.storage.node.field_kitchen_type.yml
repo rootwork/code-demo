@@ -1,0 +1,36 @@
+uuid: 4eea94cd-14d1-4a47-9c7e-5da763548253
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_kitchen_type
+field_name: field_kitchen_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: heat-and-serve
+      label: 'Heat and serve kitchen'
+    -
+      value: full-cooking
+      label: 'Full cooking kitchen'
+    -
+      value: prep
+      label: 'Prep kitchen'
+    -
+      value: none
+      label: 'No kitchen'
+    -
+      value: other
+      label: Other
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,38 @@
+uuid: 70ba98ae-5b3e-4789-991f-d8724c40e318
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_page_card
+    - node.type.landing
+    - paragraphs.paragraphs_type.page_card
+  module:
+    - custom_add_another
+    - entity_reference_revisions
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.landing.field_page_card
+field_name: field_page_card
+entity_type: node
+bundle: landing
+label: 'Page cards'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      page_card: page_card
+    target_bundles_drag_drop:
+      text:
+        weight: 3
+        enabled: false
+      page_card:
+        enabled: true
+        weight: 4
+field_type: entity_reference_revisions

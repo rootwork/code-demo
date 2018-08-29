@@ -1,0 +1,25 @@
+uuid: 2658a2c3-5a02-4e5f-9feb-c289bd05cf9a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_tap_training_sponsor
+  module:
+    - custom_add_another
+    - user
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: user.user.field_tap_training_sponsor
+field_name: field_tap_training_sponsor
+entity_type: user
+bundle: user
+label: 'Sponsoring agency'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

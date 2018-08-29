@@ -1,0 +1,26 @@
+uuid: 94332536-7687-46e9-83ed-6ff7e575d547
+langcode: en
+status: true
+dependencies:
+  module:
+    - smart_blocks
+    - system
+  theme:
+    - smart
+id: scorecardformintroduction
+theme: smart
+region: help
+weight: 0
+provider: null
+plugin: smart_blocks_scorecard_form_intro
+settings:
+  id: smart_blocks_scorecard_form_intro
+  label: 'Scorecard form introduction'
+  provider: smart_blocks
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: /node/add/scorecard
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,14 @@
+uuid: 732f2efb-3ed2-474c-ab97-1227b4f28c0c
+langcode: en
+status: true
+dependencies: {  }
+id: tap_denied
+label: 'TAP denied'
+roles:
+  tap_denied: tap_denied
+  administrator: '0'
+  content_editor: '0'
+  information_architect: '0'
+  email_list_manager: '0'
+  user_manager: '0'
+  tap: '0'

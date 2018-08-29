@@ -1,0 +1,26 @@
+uuid: 8e61e053-f569-453b-bb8d-9b40fcd03afe
+langcode: en
+status: true
+dependencies:
+  module:
+    - smart_blocks
+    - system
+  theme:
+    - smart
+id: contactpageaddresslisting
+theme: smart
+region: content
+weight: -9
+provider: null
+plugin: smart_blocks_contact
+settings:
+  id: smart_blocks_contact
+  label: 'Contact page address listing'
+  provider: smart_blocks
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: "/contact\r\n/contact/*"
+    negate: false
+    context_mapping: {  }

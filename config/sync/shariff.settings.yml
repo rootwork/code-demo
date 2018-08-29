@@ -1,0 +1,38 @@
+shariff_css: naked
+shariff_theme: white
+shariff_orientation: horizontal
+shariff_services:
+  twitter: twitter
+  facebook: facebook
+  mail: mail
+  googleplus: 0
+  linkedin: 0
+  pinterest: 0
+  xing: 0
+  whatsapp: 0
+  addthis: 0
+  tumblr: 0
+  flattr: 0
+  diaspora: 0
+  reddit: 0
+  stumbleupon: 0
+  weibo: 0
+  tencent-weibo: 0
+  qzone: 0
+  threema: 0
+  info: 0
+_core:
+  default_config_hash: 9KCLeaYP64BuA6I0xq5nzO0OipvgEH-YtTIFrCaLkH0
+shariff_twitter_via: smartlunchrooms
+shariff_mail_url: 'mailto:'
+shariff_mail_subject: ''
+shariff_mail_body: ''
+shariff_referrer_track: ''
+shariff_backend_url: ''
+shariff_flattr_category: ''
+shariff_flattr_user: ''
+shariff_media_url: ''
+actions: null
+form_build_id: form-czX2XHaTtRlfw3zPo93vnMd8mNbqE8dzrgUXUYPjo-0
+form_token: vtPzLY3stcjTsSpv9D3RyH2ROmDeM9ib0ddmQdm1Rdg
+form_id: shariff_settings_form

@@ -1,0 +1,45 @@
+uuid: 002bf0b4-2645-40cf-93de-a512cee97a45
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_vegetables
+field_name: field_vegetables
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: vegetables_01
+      label: 'At <em>least</em> two kinds of vegetables are offered.'
+    -
+      value: vegetables_02
+      label: 'Vegetables are offered on <em>all</em> service lines.'
+    -
+      value: vegetables_03
+      label: 'Both hot <em>and</em> cold vegetables are offered.'
+    -
+      value: vegetables_04
+      label: 'When cut, raw vegetables, are offered, they are paired with a low-fat dip such as ranch, hummus, or salsa.<sup class="admin-ask-star">★</sup>'
+    -
+      value: vegetables_05
+      label: 'A serving of vegetables is incorporated into an entrée item at least once a month (e.g. beef and broccoli bowl, spaghetti, black bean burrito).<sup class="admin-ask-star">★</sup>'
+    -
+      value: vegetables_06
+      label: 'Self-serve spices and seasonings are available for students to add flavor to vegetables.'
+    -
+      value: vegetables_07
+      label: 'At <em>least</em> one vegetable is identified as the featured vegetable-of- the-day and is labeled with a creative, descriptive name at the point of selection.'
+    -
+      value: vegetables_08
+      label: 'A vegetable taste test is offered at <em>least</em> once a year.<sup class="admin-ask-star">★</sup>'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,21 @@
+uuid: 9db86539-9a89-419e-9560-97aa7509b3f9
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_force
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+  menu_force:
+    menu_force: 0
+    menu_force_parent: 0
+name: Training
+type: training
+description: 'Presentations designed for, and only accessible to, Technical Assistance Providers.'
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

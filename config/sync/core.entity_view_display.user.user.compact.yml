@@ -1,0 +1,37 @@
+uuid: ed9b558c-ae30-4b74-a42b-94f3295823c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.user.compact
+    - field.field.user.user.field_name
+  module:
+    - user
+_core:
+  default_config_hash: C3k_McOy8bL8rTnIjspy5OfFdgqV1z6OdGZaI-tO5eM
+id: user.user.compact
+targetEntityType: user
+bundle: user
+mode: compact
+content: {  }
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_certified_tap: true
+  field_employer: true
+  field_job_title: true
+  field_last_password_reset: true
+  field_name: true
+  field_password_expiration: true
+  field_role: true
+  field_role_other: true
+  field_school: true
+  field_state: true
+  field_tap_training_date: true
+  field_tap_training_location: true
+  field_tap_training_sponsor: true
+  field_year_mealprograms_start: true
+  field_year_position_start: true
+  member_for: true
+  personas: true

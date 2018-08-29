@@ -1,0 +1,8 @@
+pending_subject: 'Smarter Lunchrooms: TAP certification pending'
+pending_body: '<p>Thank you for registering with us and indicating your status as a certified Technical Assistance Provider. Please allow us 72 hours to confirm your TAP status.</p><p>Sincerely,<br />The Smarter Lunchrooms National Office Team<br />https://www.smarterlunchrooms.org</p>'
+approved_subject: 'Smarter Lunchrooms: TAP certification approved'
+approved_body: '<p>Your certified Technical Assistance Provider status has been confirmed. When you log into your account, you now have access to the TAP only Smarter Lunchroom training slides. The slides are in PowerPoint format, include usage instructions, and can be found, after you log in to your account, in the left-hand sidebar.</p><p>Sincerely,<br />The Smarter Lunchrooms National Office Team<br />https://www.smarterlunchrooms.org</p>'
+denied_subject: 'Smarter Lunchrooms: TAP certification denied'
+denied_body: '<p>Your request to become a Technical Access Provider has not been approved. If you feel there is an error, email us at smarterlunchrooms@cornell.edu.</p><p>Sincerely,<br />The Smarter Lunchrooms National Office Team<br />https://www.smarterlunchrooms.org</p>'
+_core:
+  default_config_hash: LlSMftADKHueJsYlCFr67GkdyynLFU_V5wgl8X9GBgw

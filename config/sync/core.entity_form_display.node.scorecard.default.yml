@@ -1,0 +1,603 @@
+uuid: 2471d625-c01a-4046-b6b3-dce4df76c11c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.scorecard.field_atmosphere
+    - field.field.node.scorecard.field_atmosphere_images
+    - field.field.node.scorecard.field_atmosphere_introduction
+    - field.field.node.scorecard.field_award_level
+    - field.field.node.scorecard.field_community
+    - field.field.node.scorecard.field_community_images
+    - field.field.node.scorecard.field_community_introduction
+    - field.field.node.scorecard.field_completion_date
+    - field.field.node.scorecard.field_count_atmosphere
+    - field.field.node.scorecard.field_count_community
+    - field.field.node.scorecard.field_count_fruit
+    - field.field.node.scorecard.field_count_milk
+    - field.field.node.scorecard.field_count_reimbursable
+    - field.field.node.scorecard.field_count_salads
+    - field.field.node.scorecard.field_count_students
+    - field.field.node.scorecard.field_count_total
+    - field.field.node.scorecard.field_count_vegetables
+    - field.field.node.scorecard.field_fruit
+    - field.field.node.scorecard.field_fruit_images
+    - field.field.node.scorecard.field_fruit_introduction
+    - field.field.node.scorecard.field_grades
+    - field.field.node.scorecard.field_kitchen_type
+    - field.field.node.scorecard.field_link_atmosphere
+    - field.field.node.scorecard.field_link_community
+    - field.field.node.scorecard.field_link_fruit
+    - field.field.node.scorecard.field_link_milk
+    - field.field.node.scorecard.field_link_reimbursable
+    - field.field.node.scorecard.field_link_salads
+    - field.field.node.scorecard.field_link_students
+    - field.field.node.scorecard.field_link_vegetables
+    - field.field.node.scorecard.field_milk
+    - field.field.node.scorecard.field_milk_images
+    - field.field.node.scorecard.field_milk_introduction
+    - field.field.node.scorecard.field_reimbursable
+    - field.field.node.scorecard.field_reimbursable_images
+    - field.field.node.scorecard.field_reimbursable_introduction
+    - field.field.node.scorecard.field_salads
+    - field.field.node.scorecard.field_salads_images
+    - field.field.node.scorecard.field_salads_introduction
+    - field.field.node.scorecard.field_school
+    - field.field.node.scorecard.field_scorecard_completion_info
+    - field.field.node.scorecard.field_scorecard_copyright_1
+    - field.field.node.scorecard.field_scorecard_copyright_2
+    - field.field.node.scorecard.field_scorecard_end_matter
+    - field.field.node.scorecard.field_scorecard_introduction
+    - field.field.node.scorecard.field_scorecard_notes
+    - field.field.node.scorecard.field_students
+    - field.field.node.scorecard.field_students_images
+    - field.field.node.scorecard.field_students_introduction
+    - field.field.node.scorecard.field_submission_warning
+    - field.field.node.scorecard.field_training_completed
+    - field.field.node.scorecard.field_training_date
+    - field.field.node.scorecard.field_training_location
+    - field.field.node.scorecard.field_training_sponsor
+    - field.field.node.scorecard.field_vegetables
+    - field.field.node.scorecard.field_vegetables_images
+    - field.field.node.scorecard.field_vegetables_introduction
+    - image.style.thumbnail
+    - node.type.scorecard
+  module:
+    - conditional_fields
+    - datetime
+    - field_group
+    - image
+    - markup
+third_party_settings:
+  field_group:
+    group_fruit:
+      children:
+        - field_fruit_introduction
+        - field_fruit
+        - field_fruit_images
+      parent_name: group_main
+      weight: 10
+      format_type: fieldset
+      format_settings:
+        label: 'Focus on fruit'
+        description: ''
+        id: ''
+        classes: ''
+        required_fields: false
+      label: 'Focus on fruit'
+    group_vegetables:
+      children:
+        - field_vegetables_introduction
+        - field_vegetables
+        - field_vegetables_images
+      parent_name: group_main
+      weight: 11
+      format_type: fieldset
+      format_settings:
+        label: 'Vary the vegetables'
+        description: ''
+        id: ''
+        classes: ''
+        required_fields: false
+      label: 'Vary the vegetables'
+    group_salads:
+      children:
+        - field_salads_introduction
+        - field_salads
+        - field_salads_images
+      parent_name: group_main
+      weight: 12
+      format_type: fieldset
+      format_settings:
+        label: 'Highlight the salad'
+        description: ''
+        id: ''
+        classes: ''
+        required_fields: false
+      label: 'Highlight the salad'
+    group_milk:
+      children:
+        - field_milk_introduction
+        - field_milk
+        - field_milk_images
+      parent_name: group_main
+      weight: 13
+      format_type: fieldset
+      format_settings:
+        label: 'Move more white milk'
+        description: ''
+        id: ''
+        classes: ''
+        required_fields: false
+      label: 'Move more white milk'
+    group_reimbursable:
+      children:
+        - field_reimbursable_introduction
+        - field_reimbursable
+        - field_reimbursable_images
+      parent_name: group_main
+      weight: 14
+      format_type: fieldset
+      format_settings:
+        label: 'Boost reimbursable meals'
+        description: ''
+        id: ''
+        classes: ''
+        required_fields: false
+      label: 'Boost reimbursable meals'
+    group_atmosphere:
+      children:
+        - field_atmosphere_introduction
+        - field_atmosphere
+        - field_atmosphere_images
+      parent_name: group_main
+      weight: 15
+      format_type: fieldset
+      format_settings:
+        label: 'Lunchroom atmosphere'
+        description: ''
+        id: ''
+        classes: ''
+        required_fields: false
+      label: 'Lunchroom atmosphere'
+    group_students:
+      children:
+        - field_students_introduction
+        - field_students
+        - field_students_images
+      parent_name: group_main
+      weight: 16
+      format_type: fieldset
+      format_settings:
+        label: 'Student involvement'
+        description: ''
+        id: ''
+        classes: ''
+        required_fields: false
+      label: 'Student involvement'
+    group_community:
+      children:
+        - field_community_introduction
+        - field_community
+        - field_community_images
+      parent_name: group_main
+      weight: 17
+      format_type: fieldset
+      format_settings:
+        label: 'School community involvement'
+        description: ''
+        id: ''
+        classes: ''
+        required_fields: false
+      label: 'School community involvement'
+    group_main:
+      children:
+        - field_grades
+        - field_kitchen_type
+        - field_completion_date
+        - field_training_completed
+        - field_training_date
+        - field_training_location
+        - field_training_sponsor
+        - group_fruit
+        - group_vegetables
+        - group_salads
+        - group_milk
+        - group_reimbursable
+        - group_atmosphere
+        - group_students
+        - group_community
+        - field_submission_warning
+      parent_name: ''
+      weight: 2
+      format_type: html_element
+      format_settings:
+        label: Main
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: scorecard-group-main
+        classes: ''
+        required_fields: false
+      label: Main
+id: node.scorecard.default
+targetEntityType: node
+bundle: scorecard
+mode: default
+content:
+  field_atmosphere:
+    weight: 27
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_atmosphere_images:
+    weight: 30
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_atmosphere_introduction:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_community:
+    weight: 27
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_community_images:
+    weight: 31
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_community_introduction:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_completion_date:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_fruit:
+    weight: 27
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_fruit_images:
+    weight: 28
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_fruit_introduction:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_grades:
+    weight: 3
+    settings: {  }
+    third_party_settings:
+      conditional_fields: {  }
+    type: options_buttons
+    region: content
+  field_kitchen_type:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_milk:
+    weight: 27
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_milk_images:
+    weight: 33
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_milk_introduction:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_reimbursable:
+    weight: 27
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_reimbursable_images:
+    weight: 34
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_reimbursable_introduction:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_salads:
+    weight: 27
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_salads_images:
+    weight: 35
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_salads_introduction:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_school:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_scorecard_notes:
+    weight: 38
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_students:
+    weight: 27
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_students_images:
+    weight: 36
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_students_introduction:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_submission_warning:
+    weight: 18
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  field_training_completed:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_training_date:
+    weight: 7
+    settings: {  }
+    third_party_settings:
+      conditional_fields:
+        67e6980d-d886-41f1-8b50-f14df3df4709:
+          dependee: field_training_completed
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: 'yes'
+            effect: slide
+            effect_options:
+              fade:
+                speed: '400'
+              slide:
+                speed: '400'
+            element_view:
+              1: '1'
+              2: '2'
+              5: '0'
+              3: '0'
+              4: '0'
+            element_view_per_role: false
+            element_view_roles: {  }
+            element_edit:
+              1: '1'
+              3: '0'
+            element_edit_per_role: false
+            element_edit_roles: {  }
+            selector: ''
+            simple_sitemap_index_content: '1'
+            simple_sitemap_priority: '0.5'
+          entity_type: node
+          bundle: scorecard
+    type: datetime_default
+    region: content
+  field_training_location:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: 'City, state'
+    third_party_settings:
+      conditional_fields:
+        0ee20d5b-c77b-4fdb-bd7a-6001db1c4a9b:
+          dependee: field_training_completed
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: 'yes'
+            effect: slide
+            effect_options:
+              fade:
+                speed: '400'
+              slide:
+                speed: '400'
+            element_view:
+              1: '1'
+              2: '2'
+              5: '0'
+              3: '0'
+              4: '0'
+            element_view_per_role: false
+            element_view_roles: {  }
+            element_edit:
+              1: '1'
+              3: '0'
+            element_edit_per_role: false
+            element_edit_roles: {  }
+            selector: ''
+            simple_sitemap_index_content: '1'
+            simple_sitemap_priority: '0.5'
+          entity_type: node
+          bundle: scorecard
+    type: string_textfield
+    region: content
+  field_training_sponsor:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        199ddc57-e84a-4527-9921-346d8fb7e42c:
+          dependee: field_training_completed
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: 'yes'
+            effect: slide
+            effect_options:
+              fade:
+                speed: '400'
+              slide:
+                speed: '400'
+            element_view:
+              1: '1'
+              2: '2'
+              5: '0'
+              3: '0'
+              4: '0'
+            element_view_per_role: false
+            element_view_roles: {  }
+            element_edit:
+              1: '1'
+              3: '0'
+            element_edit_per_role: false
+            element_edit_roles: {  }
+            selector: ''
+            simple_sitemap_index_content: '1'
+            simple_sitemap_priority: '0.5'
+          entity_type: node
+          bundle: scorecard
+    type: string_textfield
+    region: content
+  field_vegetables:
+    weight: 27
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_vegetables_images:
+    weight: 37
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_vegetables_introduction:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  field_award_level: true
+  field_count_atmosphere: true
+  field_count_community: true
+  field_count_fruit: true
+  field_count_milk: true
+  field_count_reimbursable: true
+  field_count_salads: true
+  field_count_students: true
+  field_count_total: true
+  field_count_vegetables: true
+  field_link_atmosphere: true
+  field_link_community: true
+  field_link_fruit: true
+  field_link_milk: true
+  field_link_reimbursable: true
+  field_link_salads: true
+  field_link_students: true
+  field_link_vegetables: true
+  field_scorecard_completion_info: true
+  field_scorecard_copyright_1: true
+  field_scorecard_copyright_2: true
+  field_scorecard_end_matter: true
+  field_scorecard_introduction: true
+  path: true
+  promote: true
+  sticky: true
+  uid: true

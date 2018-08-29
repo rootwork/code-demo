@@ -1,0 +1,24 @@
+uuid: 29e36b94-f697-4b62-9797-cd25b8b4b7bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.social-media-links
+  module:
+    - system
+  theme:
+    - smart
+id: socialmedialinks
+theme: smart
+region: header
+weight: -14
+provider: null
+plugin: 'system_menu_block:social-media-links'
+settings:
+  id: 'system_menu_block:social-media-links'
+  label: 'Social Media Links'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }

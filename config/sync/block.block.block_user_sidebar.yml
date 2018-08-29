@@ -1,0 +1,39 @@
+uuid: 3412d6b5-7617-4411-a587-d358a9895a7c
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.user_sidebar
+  module:
+    - system
+    - user
+    - views
+  theme:
+    - smart
+id: block_user_sidebar
+theme: smart
+region: sidebar_first
+weight: -13
+provider: null
+plugin: 'views_block:user_sidebar-user_sidebar'
+settings:
+  id: 'views_block:user_sidebar-user_sidebar'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: "/node/add/scorecard\r\n/node/*/edit\r\n/members/*\r\n/members/*/edit\r\n/user/*\r\n/user/*/edit\r\n/scorecards\r\n/scorecards/*\r\n/trainings/taps\r\n/trainings/taps/*"
+    negate: false
+    context_mapping: {  }
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

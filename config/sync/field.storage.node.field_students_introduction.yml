@@ -1,0 +1,19 @@
+uuid: 76960ee5-5de0-4bd5-861a-9dcadb80f7fb
+langcode: en
+status: true
+dependencies:
+  module:
+    - markup
+    - node
+id: node.field_students_introduction
+field_name: field_students_introduction
+entity_type: node
+type: markup
+settings: {  }
+module: markup
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

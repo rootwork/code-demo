@@ -1,0 +1,31 @@
+uuid: 81d5aeff-11ee-4b14-9709-0e56c056d94b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_certificate_sig_image_adj
+    - node.type.certificate
+  module:
+    - custom_add_another
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.certificate.field_certificate_sig_image_adj
+field_name: field_certificate_sig_image_adj
+entity_type: node
+bundle: certificate
+label: 'Image adjustment'
+description: 'Positive decimal value adjusting the image closer to the signature line, allowing for overlapping descenders. A value of 0 means no overlap; increasing this value brings the image and the signature line closer together. Measurements are in pica (pc) but some testing may be required.'
+required: true
+translatable: false
+default_value:
+  -
+    value: !!float 0
+default_value_callback: ''
+settings:
+  min: !!float 0
+  max: !!float 10
+  prefix: ''
+  suffix: ''
+field_type: decimal

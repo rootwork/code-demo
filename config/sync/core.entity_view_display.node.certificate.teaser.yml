@@ -1,0 +1,28 @@
+uuid: ae790f49-9632-46af-bd7f-e281e4f8e055
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.certificate.field_certificate_sig_image
+    - field.field.node.certificate.field_certificate_sig_name
+    - field.field.node.certificate.field_certificate_sig_title
+    - node.type.certificate
+  module:
+    - user
+id: node.certificate.teaser
+targetEntityType: node
+bundle: certificate
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_certificate_sig_image: true
+  field_certificate_sig_name: true
+  field_certificate_sig_title: true
+  shariff_field: true

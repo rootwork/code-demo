@@ -1,0 +1,19 @@
+uuid: f27b6d1a-629b-42af-b732-95cd4820b97d
+langcode: en
+status: true
+dependencies:
+  module:
+    - markup
+    - node
+id: node.field_link_students
+field_name: field_link_students
+entity_type: node
+type: markup
+settings: {  }
+module: markup
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

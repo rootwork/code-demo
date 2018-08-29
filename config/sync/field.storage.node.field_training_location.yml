@@ -1,0 +1,21 @@
+uuid: 0e46cda0-9cd4-476f-a6e7-05ee9f8edb02
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_training_location
+field_name: field_training_location
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

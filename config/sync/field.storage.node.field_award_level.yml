@@ -1,0 +1,21 @@
+uuid: e9fc1496-a3d3-4801-bf5d-7f90e02de11e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - viewfield
+    - views
+id: node.field_award_level
+field_name: field_award_level
+entity_type: node
+type: viewfield
+settings:
+  target_type: view
+module: viewfield
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

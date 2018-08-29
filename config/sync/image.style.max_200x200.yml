@@ -1,0 +1,15 @@
+uuid: 7b1fda8d-2113-47ea-b556-55762949da05
+langcode: en
+status: true
+dependencies: {  }
+name: max_200x200
+label: 'Max 200x200'
+effects:
+  7452435b-743b-46bb-ab6e-043b20ab7665:
+    uuid: 7452435b-743b-46bb-ab6e-043b20ab7665
+    id: image_scale
+    weight: 1
+    data:
+      width: 200
+      height: 200
+      upscale: false

@@ -1,0 +1,12 @@
+uuid: d521094f-2e0f-4182-94f2-2688469cd9b6
+langcode: en
+status: true
+dependencies: {  }
+id: contact_us
+label: 'Contact us'
+recipients:
+  - smarterlunchrooms@cornell.edu
+reply: ''
+weight: 0
+message: 'Thank you! Your message has been sent.'
+redirect: ''

@@ -1,0 +1,31 @@
+uuid: c38fecb5-55fd-4f59-ab7a-c6b033c5cc20
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_school
+  module:
+    - custom_add_another
+    - user
+third_party_settings:
+  custom_add_another:
+    custom_add_another: 'Add school'
+    custom_remove: ''
+id: user.user.field_school
+field_name: field_school
+entity_type: user
+bundle: user
+label: 'School name'
+description: 'Use “Save,” below, to confirm your school associations.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: state_schools
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

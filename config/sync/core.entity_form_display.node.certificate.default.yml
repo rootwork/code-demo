@@ -1,0 +1,98 @@
+uuid: 96db93c9-3404-4b7b-b911-13a3d5236703
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.certificate.field_certificate_school
+    - field.field.node.certificate.field_certificate_sig_image
+    - field.field.node.certificate.field_certificate_sig_image_adj
+    - field.field.node.certificate.field_certificate_sig_name
+    - field.field.node.certificate.field_certificate_sig_title
+    - field.field.node.certificate.field_user_name
+    - image.style.thumbnail
+    - node.type.certificate
+  module:
+    - field_group
+    - image
+third_party_settings:
+  field_group:
+    group_signature:
+      children:
+        - field_certificate_sig_name
+        - field_certificate_sig_title
+        - field_certificate_sig_image
+        - field_certificate_sig_image_adj
+      parent_name: ''
+      weight: 1
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Signature
+id: node.certificate.default
+targetEntityType: node
+bundle: certificate
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_certificate_sig_image:
+    weight: 10
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_certificate_sig_image_adj:
+    weight: 11
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_certificate_sig_name:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_certificate_sig_title:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+hidden:
+  field_certificate_school: true
+  field_user_name: true
+  path: true
+  promote: true
+  sticky: true

@@ -1,0 +1,6 @@
+hotlink: 1
+origin: 'http://www.smarterlunchrooms.org'
+origin_dir: sites/default/files
+use_imagecache_root: 0
+_core:
+  default_config_hash: E1Fj-HATa0rKb6BEPS-Xn5LAVl9DxSWz5o6-EiqwqXU

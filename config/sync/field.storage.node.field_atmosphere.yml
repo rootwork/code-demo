@@ -1,0 +1,51 @@
+uuid: 9adade4c-b707-440b-813f-b3876ffc8e6e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_atmosphere
+field_name: field_atmosphere
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: atmosphere_01
+      label: 'Cafeteria staff smile and greet students upon entering the service line and throughout meal service.'
+    -
+      value: atmosphere_02
+      label: 'Attractive, healthful food posters are displayed in dining and service areas.'
+    -
+      value: atmosphere_03
+      label: 'A menu board with today’s featured meal options with creative names is readable from 5 feet away when approaching the service area.'
+    -
+      value: atmosphere_04
+      label: 'The lunchroom is branded and decorated in a way that reflects the student body.'
+    -
+      value: atmosphere_05
+      label: 'Cleaning supplies or broken/unused equipment are not visible during meal service.'
+    -
+      value: atmosphere_06
+      label: 'All lights in the dining and meal service areas work and are turned on.'
+    -
+      value: atmosphere_07
+      label: 'Compost, recycling and trash cans are at least 5 feet away from dining students.'
+    -
+      value: atmosphere_08
+      label: 'There is a clear traffic pattern. Signs, floor decals, or rope lines are used when appropriate.'
+    -
+      value: atmosphere_09
+      label: 'Trash cans are emptied when full.'
+    -
+      value: atmosphere_10
+      label: 'A menu board with <em>tomorrow’s</em> featured meal with creative names is readable from 5 feet away in the service or dining area.'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,18 @@
+uuid: 40ca39c7-895b-40ad-86f4-17ed8042b0e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.scorecard
+id: node.scorecard.title
+field_name: title
+entity_type: node
+bundle: scorecard
+label: 'Scorecard title'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

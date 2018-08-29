@@ -1,0 +1,19 @@
+uuid: 2ec9ad1f-beaf-4710-a8eb-3b9845c7b3d3
+langcode: en
+status: true
+dependencies:
+  module:
+    - markup
+    - node
+id: node.field_reimbursable_introduction
+field_name: field_reimbursable_introduction
+entity_type: node
+type: markup
+settings: {  }
+module: markup
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

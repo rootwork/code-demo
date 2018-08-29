@@ -1,0 +1,33 @@
+uuid: 0dc07e8c-1363-4643-bfcc-262e42c9e5c6
+langcode: en
+status: true
+dependencies:
+  module:
+    - fb_likebox
+  theme:
+    - smart
+id: smart_fblikebox
+theme: smart
+region: front_third
+weight: -5
+provider: null
+plugin: fb_likebox_block
+settings:
+  id: fb_likebox_block
+  label: Facebook
+  provider: fb_likebox
+  label_display: '0'
+  url: 'https://www.facebook.com/SmarterLunchrooms/'
+  app_id: ''
+  hide_header: 0
+  stream: 1
+  show_faces: 0
+  title: 'Like us on Facebook'
+  width: '285'
+  height: '300'
+  hide_cta: 0
+  small_cta: ''
+  small_header: 0
+  adapt_container_width: 1
+  language: en_US
+visibility: {  }

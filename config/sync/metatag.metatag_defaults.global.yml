@@ -1,0 +1,11 @@
+uuid: 84b0ef86-59fa-4fe2-95b7-d1d075095f1f
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 5rOnjIF_aDyGBmfXNhJnkPXxQMlem0CmVmggV-TF3Fg
+id: global
+label: Global
+tags:
+  description: 'The Smarter Lunchrooms Movement provides schools with the knowledge and resources needed to build a lunchroom that makes healthy food choices the easy choice.'
+  title: '[current-page:title] | [site:name]'

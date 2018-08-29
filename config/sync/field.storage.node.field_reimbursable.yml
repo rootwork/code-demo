@@ -1,0 +1,54 @@
+uuid: 14ee9aeb-819c-450e-9d13-b400e6a056b2
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_reimbursable
+field_name: field_reimbursable
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: reimbursable_01
+      label: 'Cafeteria staff politely prompt students who do not have a full reimbursable meal to select a fruit or vegetable.'
+    -
+      value: reimbursable_02
+      label: 'One entrée is identified as the entrée-of-the-day, is labeled with a creative name next to the point of selection, <em>and</em> is the first entrée offered.'
+    -
+      value: reimbursable_03
+      label: 'Creative, descriptive names are used for featured items on the monthly menu.'
+    -
+      value: reimbursable_04
+      label: 'One reimbursable meal is identified as the featured combo meal <em>and</em> is labeled with a creative name.'
+    -
+      value: reimbursable_05
+      label: 'The combo meal of the day or featured entrée-of-the-day is displayed on a sample tray or photograph.'
+    -
+      value: reimbursable_06
+      label: 'A (reimbursable) combo meal is offered as a grab-and-go meal.'
+    -
+      value: reimbursable_07
+      label: 'Signs show students how to make a reimbursable meal on <em>any</em> service line (e.g., a sign that says “Add a milk, fruit and carrots to your pizza for the Power Pizza Meal Deal!”).'
+    -
+      value: reimbursable_08
+      label: 'Students can pre-order lunch in the morning or day before.<sup class="admin-ask-star">★</sup>'
+    -
+      value: reimbursable_09
+      label: 'Students must use cash to purchase á là carte snack items if available.'
+    -
+      value: reimbursable_10
+      label: 'Students have to ask a food service worker to select á là carte snack items if available.<sup class="admin-ask-star">★</sup>'
+    -
+      value: reimbursable_11
+      label: 'Students are offered a taste test of a new entrée at least once a year.<sup class="admin-ask-star">★</sup>'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

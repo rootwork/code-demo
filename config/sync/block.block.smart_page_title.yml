@@ -1,0 +1,39 @@
+uuid: 17f753dd-418e-40dd-b002-c9ea46fdebb2
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - system
+  theme:
+    - smart
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: smart_page_title
+theme: smart
+region: title
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '/node/*/edit'
+    negate: true
+    context_mapping: {  }
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      article: article
+      page: page
+      school: school
+      scorecard: scorecard
+      training: training
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

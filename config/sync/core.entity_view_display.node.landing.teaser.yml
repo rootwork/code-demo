@@ -1,0 +1,36 @@
+uuid: b02886b6-aace-4f18-8d2e-49ae2b517e6a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.landing.field_image_featured
+    - field.field.node.landing.field_introduction
+    - field.field.node.landing.field_page_card
+    - field.field.node.landing.field_summary
+    - node.type.landing
+  module:
+    - text
+    - user
+id: node.landing.teaser
+targetEntityType: node
+bundle: landing
+mode: teaser
+content:
+  field_introduction:
+    type: text_default
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_image_featured: true
+  field_page_card: true
+  field_summary: true
+  shariff_field: true

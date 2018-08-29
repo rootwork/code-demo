@@ -1,0 +1,22 @@
+uuid: 5879a9f5-d766-42f1-b553-69a4b510e3b7
+langcode: en
+status: true
+dependencies: {  }
+id: email_list_manager
+label: 'Email list manager'
+weight: 5
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access environment indicator'
+  - 'access mailchimp signup pages'
+  - 'access shortcuts'
+  - 'access toolbar'
+  - 'access user profiles'
+  - 'administer mailchimp'
+  - 'administer mailchimp signup entities'
+  - 'create scorecard content'
+  - 'override scorecard published option'
+  - 'use text format full_html'
+  - 'view scorecard revisions'
+  - 'view the administration theme'

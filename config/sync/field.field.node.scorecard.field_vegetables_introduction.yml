@@ -1,0 +1,30 @@
+uuid: d335898d-11d5-45da-afa8-3608e8e05b82
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_vegetables_introduction
+    - node.type.scorecard
+  module:
+    - custom_add_another
+    - markup
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.scorecard.field_vegetables_introduction
+field_name: field_vegetables_introduction
+entity_type: node
+bundle: scorecard
+label: Introduction
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<div class=\"form-item\">\r\n<div class=\"description\">For items with a “<sup class=\"admin-ask-star\">★</sup>” you may need to ask other school nutrition staff, teachers, or administrators.</div>\r\n</div>\r\n"
+    format: full_html
+field_type: markup

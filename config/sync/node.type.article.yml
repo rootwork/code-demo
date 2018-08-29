@@ -1,0 +1,23 @@
+uuid: 39e7837e-fd41-442e-862b-98c3abbbe6d9
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_force
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+  menu_force:
+    menu_force: 0
+    menu_force_parent: 0
+_core:
+  default_config_hash: AeW1SEDgb1OTQACAWGhzvMknMYAJlcZu0jljfeU3oso
+name: Article
+type: article
+description: 'Time-sensitive content like news, press releases or blog posts.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,26 @@
+uuid: 3bcda59d-ee7b-443e-8a15-79b134415cae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_salads
+    - node.type.scorecard
+  module:
+    - custom_add_another
+    - options
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.scorecard.field_salads
+field_name: field_salads
+entity_type: node
+bundle: scorecard
+label: 'Check list: Highlight the salad'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

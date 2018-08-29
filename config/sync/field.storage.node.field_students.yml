@@ -1,0 +1,39 @@
+uuid: 6aaaacec-2ad0-4eb2-82f7-bb5a1e66234e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_students
+field_name: field_students
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: students_01
+      label: 'Student artwork is displayed in the service area or dining space.'
+    -
+      value: students_02
+      label: 'Students, teachers, or administrators announce today’s menu in daily announcements.<sup class="admin-ask-star">★</sup>'
+    -
+      value: students_03
+      label: 'Students are involved in the development of creative and descriptive names for menu items.<sup class="admin-ask-star">★</sup>'
+    -
+      value: students_04
+      label: 'Students have the opportunity to volunteer in the lunchroom.'
+    -
+      value: students_05
+      label: 'Students are involved in the creation of artwork or marketing materials to promote menu items.<sup class="admin-ask-star">★</sup>'
+    -
+      value: students_06
+      label: 'Students provide feedback (informal — ‘raise your hand if you like…’ or formal — focus groups, surveys) to inform menu development.<sup class="admin-ask-star">★</sup>'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

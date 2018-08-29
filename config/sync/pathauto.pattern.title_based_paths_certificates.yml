@@ -1,0 +1,22 @@
+uuid: bbb07995-cd59-46c0-8a29-64f3ed1fdd62
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: title_based_paths_certificates
+label: 'Title-based paths: Certificates'
+type: 'canonical_entities:node'
+pattern: 'certificate-[node:title]'
+selection_criteria:
+  c45231d7-64e7-44ec-90ef-433f9c9d9334:
+    id: node_type
+    bundles:
+      certificate: certificate
+    negate: false
+    context_mapping:
+      node: node
+    uuid: c45231d7-64e7-44ec-90ef-433f9c9d9334
+selection_logic: and
+weight: -5
+relationships: {  }

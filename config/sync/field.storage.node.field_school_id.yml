@@ -1,0 +1,20 @@
+uuid: 03bdb063-5691-4860-a7c9-0c38675e2dcb
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_school_id
+field_name: field_school_id
+entity_type: node
+type: decimal
+settings:
+  precision: 12
+  scale: 0
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

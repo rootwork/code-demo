@@ -1,0 +1,53 @@
+uuid: e6b19268-470b-497a-aa0a-3276189ba652
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.page.field_body
+    - field.field.node.page.field_image_featured
+    - field.field.node.page.field_summary
+    - node.type.page
+    - responsive_image.styles.wide
+  module:
+    - entity_reference_revisions
+    - responsive_image
+    - user
+third_party_settings:
+  entity_print:
+    pdf_label: 'View PDF'
+_core:
+  default_config_hash: oZ-7vpIJxjxL2up9B5KrJGD0lazQ9aN0P-fIPo6OrSU
+id: node.page.default
+targetEntityType: node
+bundle: page
+mode: default
+content:
+  field_body:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_image_featured:
+    weight: 0
+    label: hidden
+    settings:
+      responsive_image_style: wide
+      image_link: ''
+    third_party_settings: {  }
+    type: responsive_image
+    region: content
+  links:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_summary: true
+  shariff_field: true

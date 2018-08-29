@@ -1,0 +1,8 @@
+node_type_scorecard_status: '1'
+node_type_scorecard_pattern: 'Scorecard: [node:field_school:entity:title], [node:field_completion_date:date:custom:F j, Y]'
+node_type_scorecard_php: 0
+submit: 'Save configuration'
+form_build_id: form-CuZfOBsY0Srw6QLXucZipHwFJCZoi_Mb0tBmowv7S5M
+form_token: T8gKB1g1a3FAZspGa82Tt56Fsl_HV8oCN4Zjrpzg8w0
+form_id: auto_entitylabel_settings_form
+op: 'Save configuration'

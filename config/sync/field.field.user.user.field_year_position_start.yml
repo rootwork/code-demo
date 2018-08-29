@@ -1,0 +1,28 @@
+uuid: 92176ead-415b-47c6-a9e0-34e520b8d0fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_year_position_start
+  module:
+    - custom_add_another
+    - options
+    - user
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: user.user.field_year_position_start
+field_name: field_year_position_start
+entity_type: user
+bundle: user
+label: 'When did you begin in your current position?'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 2017
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

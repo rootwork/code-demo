@@ -1,0 +1,24 @@
+uuid: 32d8b6ce-5f36-4948-a65c-0293b6a8730f
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer-logo
+  module:
+    - system
+  theme:
+    - smart
+id: footerlogo
+theme: smart
+region: footer_third
+weight: -8
+provider: null
+plugin: 'system_menu_block:footer-logo'
+settings:
+  id: 'system_menu_block:footer-logo'
+  label: 'Footer Logo'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }

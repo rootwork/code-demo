@@ -1,0 +1,15 @@
+uuid: 0e0edf1f-816b-487f-9a5c-ada2664e2bce
+name: 'Smarter Lunchrooms Movement'
+mail: smarterlunchrooms@cornell.edu
+slogan: ''
+page:
+  403: ''
+  404: /node/33
+  front: /node/29
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: AyT9s8OUcclfALRE_imByOMgtZ19eOlqdF6zI3p7yqo
+mail_notification: ''

@@ -1,0 +1,25 @@
+uuid: 37dc7284-dad3-4dfa-950a-2f5d66b789cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_tap_training_location
+  module:
+    - custom_add_another
+    - user
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: user.user.field_tap_training_location
+field_name: field_tap_training_location
+entity_type: user
+bundle: user
+label: 'Location of training'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

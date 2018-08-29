@@ -1,0 +1,22 @@
+uuid: 3aab0cc2-9dbb-4932-96b9-ddd30dfc41cb
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - smart
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: smart_messages
+theme: smart
+region: help
+weight: -5
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

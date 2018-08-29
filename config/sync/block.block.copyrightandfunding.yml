@@ -1,0 +1,20 @@
+uuid: 2171a542-8173-49fe-b4c8-d9caf085d42a
+langcode: en
+status: true
+dependencies:
+  module:
+    - smart_blocks
+  theme:
+    - smart
+id: copyrightandfunding
+theme: smart
+region: footer_third
+weight: -9
+provider: null
+plugin: smart_blocks_copyright
+settings:
+  id: smart_blocks_copyright
+  label: 'Copyright and funding'
+  provider: smart_blocks
+  label_display: '0'
+visibility: {  }

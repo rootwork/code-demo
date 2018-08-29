@@ -1,0 +1,24 @@
+uuid: b22408b8-a10b-4c2b-aa33-bbe17efc6c20
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.lunchroom_buzz
+  module:
+    - views
+  theme:
+    - smart
+id: lunchroom_buzz_featured
+theme: smart
+region: front_second
+weight: 0
+provider: null
+plugin: 'views_block:lunchroom_buzz-lunchroom_buzz_featured'
+settings:
+  id: 'views_block:lunchroom_buzz-lunchroom_buzz_featured'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility: {  }

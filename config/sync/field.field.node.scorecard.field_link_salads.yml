@@ -1,0 +1,30 @@
+uuid: 04e791c5-7768-4036-a2cd-7da57f21fbfe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link_salads
+    - node.type.scorecard
+  module:
+    - custom_add_another
+    - markup
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.scorecard.field_link_salads
+field_name: field_link_salads
+entity_type: node
+bundle: scorecard
+label: 'Link: Highlight the salad'
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<p><a target=\"_blank\" href=\"/scorecard-tools/smarter-lunchrooms-strategies#Salad\">Find strategies to highlight the salad.</a></p>\r\n"
+    format: full_html
+field_type: markup

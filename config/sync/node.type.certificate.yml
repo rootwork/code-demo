@@ -1,0 +1,21 @@
+uuid: 66a0fca6-8a79-4f14-8edf-06a22b8208cc
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_force
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+  menu_force:
+    menu_force: 0
+    menu_force_parent: 0
+name: 'Award certificate'
+type: certificate
+description: 'Certificates generated for users based on the level achieved on a scorecard.'
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

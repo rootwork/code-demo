@@ -1,0 +1,30 @@
+uuid: c46458d5-477d-44ec-9f60-731bd4dd1b55
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_scorecard_copyright_1
+    - node.type.scorecard
+  module:
+    - custom_add_another
+    - markup
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.scorecard.field_scorecard_copyright_1
+field_name: field_scorecard_copyright_1
+entity_type: node
+bundle: scorecard
+label: 'Scorecard copyright 1'
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: ' <div class="form-item"><p>© Smarter Lunchrooms Movement, Cornell University 2017</p></div>'
+    format: full_html
+field_type: markup

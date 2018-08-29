@@ -1,0 +1,24 @@
+uuid: 77cf7257-2bda-4468-ab5d-6e332ac110cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - smart
+id: account_menu_header
+theme: smart
+region: header
+weight: -15
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'Account menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }

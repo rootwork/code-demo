@@ -1,0 +1,30 @@
+uuid: f70c97af-66a2-408b-a1f1-ef73221bc43a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link_milk
+    - node.type.scorecard
+  module:
+    - custom_add_another
+    - markup
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.scorecard.field_link_milk
+field_name: field_link_milk
+entity_type: node
+bundle: scorecard
+label: 'Link: Move more white milk'
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<p><a target=\"_blank\" href=\"/scorecard-tools/smarter-lunchrooms-strategies#Milk\">Find strategies to move more white milk.</a></p>\r\n"
+    format: full_html
+field_type: markup

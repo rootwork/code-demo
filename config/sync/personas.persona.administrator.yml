@@ -1,0 +1,14 @@
+uuid: f4d04633-5797-4c85-a1c8-eac728fdd10a
+langcode: en
+status: true
+dependencies: {  }
+id: administrator
+label: Administrator
+roles:
+  administrator: administrator
+  content_editor: '0'
+  information_architect: '0'
+  email_list_manager: '0'
+  user_manager: '0'
+  tap: '0'
+  tap_denied: '0'

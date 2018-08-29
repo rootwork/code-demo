@@ -1,0 +1,21 @@
+uuid: 11bfc3b1-a101-4f0b-976c-35bf9be7f1bd
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_force
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+  menu_force:
+    menu_force: 0
+    menu_force_parent: 0
+name: Scorecard
+type: scorecard
+description: 'Individual lunchroom scorecards.'
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

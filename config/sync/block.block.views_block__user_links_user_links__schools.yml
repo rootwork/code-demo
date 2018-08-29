@@ -1,0 +1,39 @@
+uuid: 8102cfff-9a7b-4dfc-82ef-d1e3938eba61
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.user_links
+  module:
+    - system
+    - user
+    - views
+  theme:
+    - smart
+id: views_block__user_links_user_links__schools
+theme: smart
+region: content
+weight: -6
+provider: null
+plugin: 'views_block:user_links-user_links__schools'
+settings:
+  id: 'views_block:user_links-user_links__schools'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: "/user/*\r\n/members/*"
+    negate: false
+    context_mapping: {  }
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

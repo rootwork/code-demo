@@ -1,0 +1,30 @@
+uuid: 6b8ba758-d4ab-441e-a4fc-4e2862da7c49
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link_atmosphere
+    - node.type.scorecard
+  module:
+    - custom_add_another
+    - markup
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.scorecard.field_link_atmosphere
+field_name: field_link_atmosphere
+entity_type: node
+bundle: scorecard
+label: 'Link: Lunchroom atmosphere'
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<p><a target=\"_blank\" href=\"/scorecard-tools/smarter-lunchrooms-strategies#Atmosphere\">Find strategies to improve your lunchroom atmosphere.</a></p>\r\n"
+    format: full_html
+field_type: markup

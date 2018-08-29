@@ -1,0 +1,8 @@
+uuid: 37949b6d-66a4-47e1-a1cd-025be17a111e
+langcode: en
+status: true
+dependencies: {  }
+id: footer-logo
+label: 'Footer Logo'
+description: 'Smarter Lunchrooms National logo in footer.'
+locked: false

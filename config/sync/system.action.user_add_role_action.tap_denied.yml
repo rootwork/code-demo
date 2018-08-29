@@ -1,0 +1,14 @@
+uuid: 47dac0fb-d13e-434a-b024-a4c6c8bb7f6d
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.tap_denied
+  module:
+    - user
+id: user_add_role_action.tap_denied
+label: 'Add the TAP denied role to the selected users'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: tap_denied

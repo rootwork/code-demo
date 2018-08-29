@@ -1,0 +1,26 @@
+uuid: 4bd7ed06-803c-4789-a230-a2d84136c5d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_training_completed
+    - node.type.scorecard
+  module:
+    - custom_add_another
+    - options
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.scorecard.field_training_completed
+field_name: field_training_completed
+entity_type: node
+bundle: scorecard
+label: 'Has this school’s cafeteria staff ever completed a Smarter Lunchrooms training?'
+description: 'Please select <strong>yes</strong> if any of the staff have been trained.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,28 @@
+uuid: fc6e851d-07f2-4f9e-9fc4-bd1bc8e653b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_year_mealprograms_start
+  module:
+    - custom_add_another
+    - options
+    - user
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: user.user.field_year_mealprograms_start
+field_name: field_year_mealprograms_start
+entity_type: user
+bundle: user
+label: 'When did you first become involved in school meal programs?'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 2017
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

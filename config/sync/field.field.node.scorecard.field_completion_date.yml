@@ -1,0 +1,29 @@
+uuid: 33d606cc-4604-4f6c-8fb5-9075287d1754
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_completion_date
+    - node.type.scorecard
+  module:
+    - custom_add_another
+    - datetime
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.scorecard.field_completion_date
+field_name: field_completion_date
+entity_type: node
+bundle: scorecard
+label: 'Scorecard completed on'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime

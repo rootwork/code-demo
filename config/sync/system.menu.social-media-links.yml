@@ -1,0 +1,8 @@
+uuid: 7c53eb64-dd90-43b5-b7ca-c6e142adf4e5
+langcode: en
+status: true
+dependencies: {  }
+id: social-media-links
+label: 'Social Media Links'
+description: 'Links to Smarter Lunchroom social media presence.'
+locked: false

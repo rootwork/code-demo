@@ -1,0 +1,30 @@
+uuid: 8aa75bbc-6b71-4620-9dce-dd53486a0ebc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_submission_warning
+    - node.type.scorecard
+  module:
+    - custom_add_another
+    - markup
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.scorecard.field_submission_warning
+field_name: field_submission_warning
+entity_type: node
+bundle: scorecard
+label: 'Submission warning'
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<div class=\"form-item\">\r\n<p>Thank you for completing a Smarter Lunchrooms Scorecard!<p>\r\n<p><strong>Once you publish this scorecard you will not be able to modify it again.</strong> If you wish to double-check your submission or continue working on it, please use “save as draft” below. Once your scorecard is published, you will have access to the results any time you log in, and can download and print them at any time.</p>\r\n</div>\r\n"
+    format: full_html
+field_type: markup

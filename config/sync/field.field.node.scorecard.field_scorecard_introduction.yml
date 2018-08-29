@@ -1,0 +1,30 @@
+uuid: ee00eb94-9f3d-4e03-aca6-ede168b0f9c6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_scorecard_introduction
+    - node.type.scorecard
+  module:
+    - custom_add_another
+    - markup
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.scorecard.field_scorecard_introduction
+field_name: field_scorecard_introduction
+entity_type: node
+bundle: scorecard
+label: 'Scorecard introduction'
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<div class=\"form-item\">\r\n<p><a class=\"button scorecard-introduction-button\" href=\"https://www.smarterlunchrooms.org\">SmarterLunchrooms.org</a>The Smarter Lunchrooms scorecard is a list of simple, no-cost or low-cost strategies that can increase participation, reduce food waste, and increase selection and consumption of healthy school food.</p>\r\n</div>\r\n"
+    format: full_html
+field_type: markup

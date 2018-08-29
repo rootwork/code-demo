@@ -1,0 +1,76 @@
+uuid: 0d3ecc56-9e1a-4646-bd75-b471f362a477
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_award_level
+    - node.type.scorecard
+    - views.view.scorecard_award_level
+  module:
+    - custom_add_another
+    - viewfield
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.scorecard.field_award_level
+field_name: field_award_level
+entity_type: node
+bundle: scorecard
+label: 'Award level'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    token_help: ''
+    display_id: count_fruit
+    arguments: ''
+    target_uuid: 2dbe0e77-c10f-4dbd-b8aa-d0438b92975a
+default_value_callback: ''
+settings:
+  force_default: 1
+  allowed_views:
+    scorecard_award_level: scorecard_award_level
+    associated_schools: 0
+    content: 0
+    count_reimbursable: 0
+    count_fruit: 0
+    count_salads: 0
+    count_atmosphere: 0
+    count_milk: 0
+    count_community: 0
+    count_students: 0
+    count_total: 0
+    count_vegetables: 0
+    block_content: 0
+    entity_browser: 0
+    files: 0
+    frontpage: 0
+    lunchroom_buzz: 0
+    media: 0
+    my_schools: 0
+    my_scorecards: 0
+    user_admin_people: 0
+    content_recent: 0
+    redirect: 0
+    state_schools: 0
+    scorecard_completion_info: 0
+    taps: 0
+    tap_verification: 0
+    taxonomy_term: 0
+    trainings: 0
+    user_links: 0
+    user_sidebar: 0
+    who_s_new: 0
+    who_s_online: 0
+  allowed_display_types:
+    block: block
+    entity_browser: 0
+    entity_reference: 0
+    feed: 0
+    default: 0
+    page: 0
+  handler: 'default:view'
+  handler_settings: {  }
+field_type: viewfield

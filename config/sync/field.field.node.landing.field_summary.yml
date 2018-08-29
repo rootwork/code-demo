@@ -1,0 +1,26 @@
+uuid: d04db754-99a6-4ad5-95f0-7b69bb9bc3f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_summary
+    - node.type.landing
+  module:
+    - custom_add_another
+    - text
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.landing.field_summary
+field_name: field_summary
+entity_type: node
+bundle: landing
+label: 'Short summary'
+description: 'Used when referenced on other landing pages, in social media and search results. <strong>Maximum of 150 characters.</strong>'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

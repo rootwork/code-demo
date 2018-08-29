@@ -1,0 +1,30 @@
+uuid: c94915b8-2592-46e1-a7a0-771a75e17065
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_scorecard_notes
+    - node.type.scorecard
+  module:
+    - custom_add_another
+    - markup
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.scorecard.field_scorecard_notes
+field_name: field_scorecard_notes
+entity_type: node
+bundle: scorecard
+label: Notes
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: '<p></p>'
+    format: basic_html
+field_type: markup

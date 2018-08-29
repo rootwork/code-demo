@@ -1,0 +1,30 @@
+uuid: 531d353a-71fb-4381-8db0-c292320b9982
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link_community
+    - node.type.scorecard
+  module:
+    - custom_add_another
+    - markup
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.scorecard.field_link_community
+field_name: field_link_community
+entity_type: node
+bundle: scorecard
+label: 'Link: School community involvement'
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<p><a target=\"_blank\" href=\"/scorecard-tools/smarter-lunchrooms-strategies#Community%20Involvement\">Find strategies to increase your school community involvement.</a></p>\r\n"
+    format: full_html
+field_type: markup

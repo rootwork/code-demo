@@ -1,0 +1,14 @@
+uuid: 5f2a19dc-261a-4bf1-ad44-ed695133f910
+langcode: en
+status: true
+dependencies: {  }
+name: 110x75_recent_buzz
+label: '110x75 Recent Buzz'
+effects:
+  ea8a7d28-c493-4f81-b99c-c37393d98c2a:
+    uuid: ea8a7d28-c493-4f81-b99c-c37393d98c2a
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 110
+      height: 75

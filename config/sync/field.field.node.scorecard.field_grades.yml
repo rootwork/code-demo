@@ -1,0 +1,26 @@
+uuid: 91f974d9-75c9-4542-8709-494836ee28df
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_grades
+    - node.type.scorecard
+  module:
+    - custom_add_another
+    - options
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.scorecard.field_grades
+field_name: field_grades
+entity_type: node
+bundle: scorecard
+label: 'Grades served in this lunchroom'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,19 @@
+uuid: 20943636-0d1e-412e-b3e7-f305c1099a25
+langcode: en
+status: true
+dependencies:
+  module:
+    - markup
+    - node
+id: node.field_scorecard_end_matter
+field_name: field_scorecard_end_matter
+entity_type: node
+type: markup
+settings: {  }
+module: markup
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
