@@ -40,3 +40,7 @@ sites/simpletest
 
 # Ignore SimpleTest multi-site environment.
 # simpletest
+
+# Ignore local server files
+.user.ini
+.well-known/*
